@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>904,2130</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>705,1392</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExecuteTestCases_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -59,13 +59,15 @@
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
   <Flowchart DisplayName="InvokeTestCases" sap:VirtualizedContainerService.HintSize="665,1312" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="rpaEnvironment" />
       <Variable x:TypeArguments="sd:DataTable" Name="filteredDataTable" />
-      <Variable x:TypeArguments="x:String" Name="svnArgumentsToLockFile" />
-      <Variable x:TypeArguments="x:String" Name="svnArgumentsToUnlockFile" />
-      <Variable x:TypeArguments="x:String" Default="[String.Format(&quot;&quot;&quot;{0}&quot;&quot;&quot;, Path.Combine(Environment.GetEnvironmentVariable(&quot;ProgramW6432&quot;), &quot;TortoiseSVN\bin\svn.exe&quot;))]" Name="pathToSvnExecutable" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -158,13 +160,13 @@
                               <av:Size x:Key="ShapeSize">200,93</av:Size>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="For each Test Case...execute and record results." DataTable="[filteredDataTable]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                          <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="For each Test Case...execute and record results." DataTable="[filteredDataTable]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="749,1635" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                             <ui:ForEachRow.Body>
                               <ActivityAction x:TypeArguments="sd:DataRow">
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="test" />
                                 </ActivityAction.Argument>
-                                <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Body" sap:VirtualizedContainerService.HintSize="264,790" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                                <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Body" sap:VirtualizedContainerService.HintSize="719,1460" sap2010:WorkflowViewState.IdRef="Sequence_3">
                                   <Sequence.Variables>
                                     <Variable x:TypeArguments="x:Boolean" Name="testResult" />
                                     <Variable x:TypeArguments="x:String" Name="testMessage" />
@@ -177,14 +179,14 @@
                                       <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:LookupDataTable CellValue="{x:Null}" LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" sap2010:Annotation.AnnotationText="Find the Filtered Test Case in the Test Cases data table." DataTable="[TestCases]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="242,66" sap2010:WorkflowViewState.IdRef="LookupDataTable_1" LookupColumnName="TestCase" LookupValue="[test(&quot;TestCase&quot;).ToString()]" RowIndex="[testRowIndex]">
+                                  <ui:LookupDataTable CellValue="{x:Null}" LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" sap2010:Annotation.AnnotationText="Find the Filtered Test Case in the Test Cases data table." DataTable="[TestCases]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="697,64" sap2010:WorkflowViewState.IdRef="LookupDataTable_1" LookupColumnName="TestCase" LookupValue="[test(&quot;TestCase&quot;).ToString()]" RowIndex="[testRowIndex]">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ui:LookupDataTable>
-                                  <Assign sap2010:Annotation.AnnotationText="Set the start time of the test case" sap:VirtualizedContainerService.HintSize="242,88" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                  <Assign sap2010:Annotation.AnnotationText="Set the start time of the test case" sap:VirtualizedContainerService.HintSize="697,87" sap2010:WorkflowViewState.IdRef="Assign_1">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:Object">[TestCases.Rows(testRowIndex)("TestExecutionEnvironment")]</OutArgument>
                                     </Assign.To>
@@ -197,7 +199,7 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </Assign>
-                                  <Assign sap2010:Annotation.AnnotationText="Set the start time of the test case" sap:VirtualizedContainerService.HintSize="242,88" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                  <Assign sap2010:Annotation.AnnotationText="Set the start time of the test case" sap:VirtualizedContainerService.HintSize="697,87" sap2010:WorkflowViewState.IdRef="Assign_9">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:Object">[TestCases.Rows(testRowIndex)("TestStarted")]</OutArgument>
                                     </Assign.To>
@@ -210,7 +212,7 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </Assign>
-                                  <If sap2010:Annotation.AnnotationText="Check to see if the current test can be executed in this environment. If the current environment is found in the test's environment black list then do not execute it." Condition="[test(&quot;TestEnvironmentBlackList&quot;).ToString.Contains(rpaEnvironment)]" sap:VirtualizedContainerService.HintSize="242,160" sap2010:WorkflowViewState.IdRef="If_1">
+                                  <If sap2010:Annotation.AnnotationText="Check to see if the current test can be executed in this environment. If the current environment is found in the test's environment black list then do not execute it." Condition="[test(&quot;TestEnvironmentBlackList&quot;).ToString.Contains(rpaEnvironment)]" sap:VirtualizedContainerService.HintSize="697,836" sap2010:WorkflowViewState.IdRef="If_1">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -219,20 +221,20 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                     <If.Then>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="336,389" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                                      <Sequence sap:VirtualizedContainerService.HintSize="336,384" sap2010:WorkflowViewState.IdRef="Sequence_1">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:LogMessage sap2010:Annotation.AnnotationText="Log that this Test Case cannot be run in this environment." DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,137" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn" Message="[string.Format(&quot;The Test Case '{0}' has a black list in effect for environment '{1}' and has not been run&quot;,test(&quot;TestCase&quot;),rpaEnvironment)]">
+                                        <ui:LogMessage sap2010:Annotation.AnnotationText="Log that this Test Case cannot be run in this environment." DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,133" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn" Message="[string.Format(&quot;The Test Case '{0}' has a black list in effect for environment '{1}' and has not been run&quot;,test(&quot;TestCase&quot;),rpaEnvironment)]">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </ui:LogMessage>
-                                        <Assign sap2010:Annotation.AnnotationText="Set the test case test result message " sap:VirtualizedContainerService.HintSize="314,88" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                        <Assign sap2010:Annotation.AnnotationText="Set the test case test result message " sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="Assign_2">
                                           <Assign.To>
                                             <OutArgument x:TypeArguments="x:Object">[TestCases.Rows(testRowIndex)("TestMessage")]</OutArgument>
                                           </Assign.To>
@@ -248,14 +250,14 @@
                                       </Sequence>
                                     </If.Then>
                                     <If.Else>
-                                      <Sequence sap2010:Annotation.AnnotationText="Run the Test Case and record its results." sap:VirtualizedContainerService.HintSize="336,651" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                                      <Sequence sap2010:Annotation.AnnotationText="Run the Test Case and record its results." sap:VirtualizedContainerService.HintSize="336,646" sap2010:WorkflowViewState.IdRef="Sequence_2">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <Assign sap2010:Annotation.AnnotationText="Get the test case XAML file path" sap:VirtualizedContainerService.HintSize="314,88" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                        <Assign sap2010:Annotation.AnnotationText="Get the test case XAML file path" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="Assign_3">
                                           <Assign.To>
                                             <OutArgument x:TypeArguments="ui:GenericValue">[workflow]</OutArgument>
                                           </Assign.To>
@@ -268,7 +270,7 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </Assign>
-                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Invoke the test case workflow." DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="314,115" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="TestFramework\InvokeTestCase.xaml">
+                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Invoke the test case workflow." DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="314,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="TestFramework\InvokeTestCase.xaml">
                                           <ui:InvokeWorkflowFile.Arguments>
                                             <InArgument x:TypeArguments="x:String" x:Key="TestCaseFile">[workflow]</InArgument>
                                             <OutArgument x:TypeArguments="x:Boolean" x:Key="TestResult">[testResult]</OutArgument>
@@ -280,7 +282,7 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </ui:InvokeWorkflowFile>
-                                        <Assign sap2010:Annotation.AnnotationText="Set the test case success/failure flag" sap:VirtualizedContainerService.HintSize="314,88" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                        <Assign sap2010:Annotation.AnnotationText="Set the test case success/failure flag" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="Assign_4">
                                           <Assign.To>
                                             <OutArgument x:TypeArguments="x:Object">[TestCases.Rows(testRowIndex)("TestResult")]</OutArgument>
                                           </Assign.To>
@@ -293,7 +295,7 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </Assign>
-                                        <Assign sap2010:Annotation.AnnotationText="Set the test case test result message " sap:VirtualizedContainerService.HintSize="314,88" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                        <Assign sap2010:Annotation.AnnotationText="Set the test case test result message " sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="Assign_5">
                                           <Assign.To>
                                             <OutArgument x:TypeArguments="x:Object">[TestCases.Rows(testRowIndex)("TestMessage")]</OutArgument>
                                           </Assign.To>
@@ -309,7 +311,7 @@
                                       </Sequence>
                                     </If.Else>
                                   </If>
-                                  <Assign sap2010:Annotation.AnnotationText="Set the completion time of the test case." sap:VirtualizedContainerService.HintSize="242,104" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                  <Assign sap2010:Annotation.AnnotationText="Set the completion time of the test case." sap:VirtualizedContainerService.HintSize="697,102" sap2010:WorkflowViewState.IdRef="Assign_6">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:Object">[TestCases.Rows(testRowIndex)("TestCompleted")]</OutArgument>
                                     </Assign.To>

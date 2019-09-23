@@ -3,7 +3,7 @@
   "description": "A library of foundational activities used in UiPath projects that integrate with the Student Management System",
   "main": "NewActivity.xaml",
   "dependencies": {
-    "Flinders.Foundation": "2.0.2",
+    "Flinders.Foundation": "2.0.3-alpha",
     "UiPath.Excel.Activities": "2.6.3",
     "UiPath.Mail.Activities": "1.6.0",
     "UiPath.System.Activities": "19.8.0",
@@ -23,7 +23,18 @@
   "projectType": "Library",
   "libraryOptions": {
     "includeOriginalXaml": false,
-    "privateWorkflows": []
+    "privateWorkflows": [
+      "TestCases/TestLoginToStudentSystem.xaml",
+      "TestCases/TestLoginToStudentSystemInvalidEnvironment.xaml",
+      "TestFramework/BlankTestCase.xaml",
+      "TestFramework/InvokeTestCase.xaml",
+      "TestFramework/InvokeTestCategoryTestCases.xaml",
+      "TestFramework/TestRunner.xaml",
+      "TestTemplates/InvokeTestSuiteTemplate.xaml",
+      "TestTemplates/TestCaseTemplate.xaml",
+      "TestTemplates/TestRunner.xaml",
+      "ConstantValues.xaml"
+    ]
   },
   "webServices": []
 }
