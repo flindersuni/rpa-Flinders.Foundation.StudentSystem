@@ -35,7 +35,12 @@
       "TestTemplates/TestRunner.xaml",
       "ConstantValues.xaml",
       "InvokeLoginTestCategory.xaml",
-      "InvokeTestsAllCategories.xaml"
+      "InvokeTestsAllCategories.xaml",
+      "TestCases/TestOpenWindowInvalidSearch.xaml",
+      "TestCases/TestOpenWindowStudentComments.xaml",
+      "TestCases/TestOpenWindowStudentStudyPackage.xaml",
+      "TestCases/TestOpenWindowStudentStudyPlanMerge.xaml",
+      "InvokeOpenWindowTestCategory.xaml"
     ]
   },
   "webServices": []
