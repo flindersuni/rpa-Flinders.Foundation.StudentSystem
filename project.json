@@ -40,7 +40,9 @@
       "TestCases/TestOpenWindowStudentComments.xaml",
       "TestCases/TestOpenWindowStudentStudyPackage.xaml",
       "TestCases/TestOpenWindowStudentStudyPlanMerge.xaml",
-      "InvokeOpenWindowTestCategory.xaml"
+      "InvokeOpenWindowTestCategory.xaml",
+      "InvokeEnterCommentTestCategory.xaml",
+      "TestCases/TestEnterCommentInvalidInput.xaml"
     ]
   },
   "webServices": []
