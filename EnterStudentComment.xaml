@@ -62,6 +62,7 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Enter a comment related to a specific student" DisplayName="EnterStudentComment" sap:VirtualizedContainerService.HintSize="454,7281" sap2010:WorkflowViewState.IdRef="Sequence_2">
@@ -101,7 +102,7 @@
         </Assign.Value>
       </Assign>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Validate, as much as possible, incoming arguments" sap:VirtualizedContainerService.HintSize="432,93" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence sap2010:Annotation.AnnotationText="Validate, as much as possible, incoming arguments" sap:VirtualizedContainerService.HintSize="440,1173" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -109,7 +110,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch sap2010:Annotation.AnnotationText="Catch any exceptions and throw a BusinessRule Exception instead" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,895" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch sap2010:Annotation.AnnotationText="Catch any exceptions and throw a BusinessRule Exception instead" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,1022" sap2010:WorkflowViewState.IdRef="TryCatch_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -118,7 +119,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <TryCatch.Try>
-          <Sequence sap:VirtualizedContainerService.HintSize="336,619" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence sap:VirtualizedContainerService.HintSize="336,746" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -132,6 +133,7 @@
               </sap:WorkflowViewStateService.ViewState>
             </ui:CheckTrue>
             <ui:CheckTrue DisplayName="Check True" ErrorMessage="[String.Format(&quot;The StudyPeriod value '{0}' is not a valid entry&quot;, StudyPeriod)]" Expression="[validStudyPeriods.Contains(StudyPeriod)]" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="CheckTrue_2" />
+            <ui:CheckTrue DisplayName="Check True" ErrorMessage="[String.Format(&quot;The StudentID value '{0}' is not numeric&quot;, StudentID)]" Expression="[isNumeric(StudentID)]" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="CheckTrue_8" />
             <ui:CheckTrue DisplayName="Check True" ErrorMessage="[String.Format(&quot;The StudyPackageVersion value '{0}' is not numeric&quot;, StudyPackageVersion)]" Expression="[isNumeric(StudyPackageVersion)]" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="CheckTrue_3" />
             <ui:CheckTrue DisplayName="Check True" ErrorMessage="[String.Format(&quot;The StudyPackageAttempt value '{0}' is not numeric&quot;, StudyPackageAttempt)]" Expression="[isNumeric(StudyPackageAttempt)]" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="CheckTrue_4" />
           </Sequence>
@@ -626,7 +628,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:ClickImage>
-                <ui:TypeInto DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="The Study Periods are listed in a drop down box. To type into this element this activity:&#xD;&#xA;&#xD;&#xA;- Has the DelayBefore argument set to allow the drop down to display prior to typing&#xD;&#xA;- Appends an enter key stroke '[k(enter)] to the end of the supplied StudyPeriod value" ClickBeforeTyping="False" DelayBefore="1000" DisplayName="Type Into" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,251" sap2010:WorkflowViewState.IdRef="TypeInto_7" SendWindowMessages="False" SimulateType="False" Text="[String.Format(&quot;{0}[k(enter)]&quot;, StudyPeriod)]">
+                <ui:TypeInto DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="The Study Periods are listed in a drop down box. To type into this element this activity:&#xA;&#xA;- Has the DelayBefore argument set to allow the drop down to display prior to typing&#xA;- Appends an enter key stroke '[k(enter)] to the end of the supplied StudyPeriod value" ClickBeforeTyping="False" DelayBefore="1000" DisplayName="Type Into" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,251" sap2010:WorkflowViewState.IdRef="TypeInto_7" SendWindowMessages="False" SimulateType="False" Text="[String.Format(&quot;{0}[k(enter)]&quot;, StudyPeriod)]">
                   <ui:TypeInto.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2e299fc0b8d97c7f3229de8e2f7d4177" WaitForReady="INTERACTIVE" />
                   </ui:TypeInto.Target>
