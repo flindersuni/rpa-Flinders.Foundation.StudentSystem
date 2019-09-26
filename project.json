@@ -43,7 +43,8 @@
       "InvokeOpenWindowTestCategory.xaml",
       "InvokeEnterCommentTestCategory.xaml",
       "TestCases/TestEnterCommentInvalidInput.xaml",
-      "TestCases/TestEnterCommentInvalidStudentId.xaml"
+      "TestCases/TestEnterCommentInvalidComplexInput.xaml",
+      "TestCases/TestEnterCommentValidInput.xaml"
     ]
   },
   "webServices": []
