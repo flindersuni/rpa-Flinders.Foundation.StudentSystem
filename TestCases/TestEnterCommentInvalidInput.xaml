@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="TestEnterCommentInvalidInput" this:TestEnterCommentInvalidInput.TestCategory="Flinders.Foundation.StudentSystem.EnterComment" this:TestEnterCommentInvalidInput.TestOrder="0" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="TestEnterCommentInvalidInput" this:TestEnterCommentInvalidInput.TestCategory="Flinders.Foundation.StudentSystem.EnterComment" this:TestEnterCommentInvalidInput.TestOrder="0" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:f="clr-namespace:Flinders_Foundation_Testing;assembly=Flinders.Foundation.Testing" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="TestEnvironmentBlackList" Type="InArgument(x:String)" />
     <x:Property Name="TestCategory" Type="InArgument(x:String)" />
@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>520,4542</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>520,5189</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -58,9 +58,17 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Test the Enter Comment activity by entering some invalid data." DisplayName="TestEnterCommentInvalidInput" sap:VirtualizedContainerService.HintSize="480,4462" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Test the Enter Comment activity by entering some invalid data." DisplayName="TestEnterCommentInvalidInput" sap:VirtualizedContainerService.HintSize="480,5109" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Keep a reference to the underlying project level current directory" Name="projectCurrentDirectory" />
+      <Variable x:TypeArguments="sd:DataTable" sap2010:Annotation.AnnotationText="A data table containing test values" Name="testConfiguration" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="A configuration item used as part of this test" Name="studentId" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="A configuration item used as part of this test" Name="studyPeriod" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="A configuration item used as part of this test" Name="studyYear" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="A configuration item used as part of this test" Name="studyPackageAttempt" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="A configuration item used as part of this test" Name="studyPackageVersion" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="A configuration item used as part of this test" Name="studyPackageCode" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="A configuration item used as part of this test" Name="commentCode" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -106,6 +114,57 @@
         </sap:WorkflowViewStateService.ViewState>
       </Assign>
     </Sequence>
+    <Sequence sap2010:Annotation.AnnotationText="Load the test configuration values" sap:VirtualizedContainerService.HintSize="458,607" sap2010:WorkflowViewState.IdRef="Sequence_8">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <f:LoadTestConfiguration sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="LoadTestConfiguration_1" TestConfiguration="[testConfiguration]" TestConfigurationWorkbookPath="[Path.Combine(Environment.CurrentDirectory, &quot;..\Configuration\Flinders.Foundation.StudentSystem\TestStudentSystem.xlsx&quot;)]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </f:LoadTestConfiguration>
+      <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[testConfiguration]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="LookupDataTable_1" LookupColumnName="EntryName" LookupValue="ValidStudentId" TargetColumnName="EntryValue">
+        <ui:LookupDataTable.CellValue>
+          <OutArgument x:TypeArguments="x:String">[studentId]</OutArgument>
+        </ui:LookupDataTable.CellValue>
+      </ui:LookupDataTable>
+      <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[testConfiguration]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="LookupDataTable_2" LookupColumnName="EntryName" LookupValue="ValidStudyPeriod" TargetColumnName="EntryValue">
+        <ui:LookupDataTable.CellValue>
+          <OutArgument x:TypeArguments="x:String">[studyPeriod]</OutArgument>
+        </ui:LookupDataTable.CellValue>
+      </ui:LookupDataTable>
+      <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[testConfiguration]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="LookupDataTable_3" LookupColumnName="EntryName" LookupValue="ValidStudyYear" TargetColumnName="EntryValue">
+        <ui:LookupDataTable.CellValue>
+          <OutArgument x:TypeArguments="x:String">[studyYear]</OutArgument>
+        </ui:LookupDataTable.CellValue>
+      </ui:LookupDataTable>
+      <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[testConfiguration]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="LookupDataTable_4" LookupColumnName="EntryName" LookupValue="ValidStudyPackageAttempt" TargetColumnName="EntryValue">
+        <ui:LookupDataTable.CellValue>
+          <OutArgument x:TypeArguments="x:String">[studyPackageAttempt]</OutArgument>
+        </ui:LookupDataTable.CellValue>
+      </ui:LookupDataTable>
+      <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[testConfiguration]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="LookupDataTable_5" LookupColumnName="EntryName" LookupValue="ValidStudyPackageVersion" TargetColumnName="EntryValue">
+        <ui:LookupDataTable.CellValue>
+          <OutArgument x:TypeArguments="x:String">[studyPackageVersion]</OutArgument>
+        </ui:LookupDataTable.CellValue>
+      </ui:LookupDataTable>
+      <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[testConfiguration]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="LookupDataTable_6" LookupColumnName="EntryName" LookupValue="ValidStudyPackageCode" TargetColumnName="EntryValue">
+        <ui:LookupDataTable.CellValue>
+          <OutArgument x:TypeArguments="x:String">[studyPackageCode]</OutArgument>
+        </ui:LookupDataTable.CellValue>
+      </ui:LookupDataTable>
+      <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[testConfiguration]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="LookupDataTable_7" LookupColumnName="EntryName" LookupValue="ValidCommentCode" TargetColumnName="EntryValue">
+        <ui:LookupDataTable.CellValue>
+          <OutArgument x:TypeArguments="x:String">[commentCode]</OutArgument>
+        </ui:LookupDataTable.CellValue>
+      </ui:LookupDataTable>
+    </Sequence>
     <TryCatch sap2010:Annotation.AnnotationText="Undertake testing of the activity. Any unexepected exceptions will be caught here." DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="458,3773" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -133,10 +192,14 @@
                 <ui:InvokeWorkflowFile.Arguments>
                   <OutArgument x:TypeArguments="x:Boolean" x:Key="ProcessSuccessful" />
                   <OutArgument x:TypeArguments="x:String" x:Key="ProcessMessage" />
-                  <InArgument x:TypeArguments="x:String" x:Key="StudyYear">20A</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="StudyYear">[String.Format("{0}A", studyYear)]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPeriod" />
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageVersion" />
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt" />
+                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
+                  <InArgument x:TypeArguments="x:String" x:Key="StudentID" />
+                  <InArgument x:TypeArguments="x:String" x:Key="CommentCode" />
+                  <InArgument x:TypeArguments="x:String" x:Key="StudyPackageCode" />
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
             </TryCatch.Try>
@@ -185,10 +248,14 @@
                 <ui:InvokeWorkflowFile.Arguments>
                   <OutArgument x:TypeArguments="x:Boolean" x:Key="ProcessSuccessful" />
                   <OutArgument x:TypeArguments="x:String" x:Key="ProcessMessage" />
-                  <InArgument x:TypeArguments="x:String" x:Key="StudyYear">2019</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="StudyPeriod">Invalid Semester</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="StudyYear">[studyYear]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="StudyPeriod">[String.Format("{0}A", studyPeriod)]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageVersion" />
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt" />
+                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
+                  <InArgument x:TypeArguments="x:String" x:Key="StudentID" />
+                  <InArgument x:TypeArguments="x:String" x:Key="CommentCode" />
+                  <InArgument x:TypeArguments="x:String" x:Key="StudyPackageCode" />
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
             </TryCatch.Try>
@@ -230,12 +297,12 @@
                 <ui:InvokeWorkflowFile.Arguments>
                   <OutArgument x:TypeArguments="x:Boolean" x:Key="ProcessSuccessful" />
                   <OutArgument x:TypeArguments="x:String" x:Key="ProcessMessage" />
-                  <InArgument x:TypeArguments="x:String" x:Key="StudyYear">2019</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="StudyPeriod">Semester 2</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="StudyYear">[studyYear]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="StudyPeriod">[studyPeriod]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageVersion" />
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt" />
                   <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
-                  <InArgument x:TypeArguments="x:String" x:Key="StudentID">1234567A</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="StudentID">[String.Format("{0}A", studentId)]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="CommentCode" />
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageCode" />
                 </ui:InvokeWorkflowFile.Arguments>
@@ -279,12 +346,12 @@
                 <ui:InvokeWorkflowFile.Arguments>
                   <OutArgument x:TypeArguments="x:Boolean" x:Key="ProcessSuccessful" />
                   <OutArgument x:TypeArguments="x:String" x:Key="ProcessMessage" />
-                  <InArgument x:TypeArguments="x:String" x:Key="StudyYear">2019</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="StudyPeriod">Semester 1</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="StudyPackageVersion">2A</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="StudyYear">[studyYear]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="StudyPeriod">[studyPeriod]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="StudyPackageVersion">[String.Format("{0}A", studyPackageVersion)]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt" />
                   <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
-                  <InArgument x:TypeArguments="x:String" x:Key="StudentID">1234567</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="StudentID">[studentId]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="CommentCode" />
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageCode" />
                 </ui:InvokeWorkflowFile.Arguments>
@@ -328,12 +395,12 @@
                 <ui:InvokeWorkflowFile.Arguments>
                   <OutArgument x:TypeArguments="x:Boolean" x:Key="ProcessSuccessful" />
                   <OutArgument x:TypeArguments="x:String" x:Key="ProcessMessage" />
-                  <InArgument x:TypeArguments="x:String" x:Key="StudyYear">2019</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="StudyPeriod">Semester 1</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="StudyPackageVersion">2</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt">1B</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="StudyYear">[studyYear]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="StudyPeriod">[studyPeriod]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="StudyPackageVersion">[studyPackageVersion]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt">[String.Format("{0}A", studyPackageAttempt)]</InArgument>
                   <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
-                  <InArgument x:TypeArguments="x:String" x:Key="StudentID">1234567</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="StudentID">[studentId]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="CommentCode" />
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageCode" />
                 </ui:InvokeWorkflowFile.Arguments>
