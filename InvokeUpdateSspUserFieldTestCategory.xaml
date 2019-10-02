@@ -93,7 +93,7 @@
           <av:Size x:Key="ShapeSize">200,51</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,697" sap2010:WorkflowViewState.IdRef="TryCatch_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -241,7 +241,7 @@
                     <OutArgument x:TypeArguments="x:Boolean" x:Key="ProcessSuccessful" />
                     <OutArgument x:TypeArguments="x:String" x:Key="ProcessMessage" />
                     <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
-                    <InArgument x:TypeArguments="x:String" x:Key="WindowName">Student Comments</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="WindowName">Student Study Package</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
