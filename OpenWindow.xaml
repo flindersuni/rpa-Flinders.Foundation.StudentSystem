@@ -285,7 +285,7 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <TryCatch sap2010:Annotation.AnnotationText="Try to search for the window and click the appropriate search result" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="530,1425" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+    <TryCatch sap2010:Annotation.AnnotationText="Try to search for the window and click the appropriate search result" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="530,1754" sap2010:WorkflowViewState.IdRef="TryCatch_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -294,13 +294,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[ActiveBrowser]" BrowserType="IE" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="512,1171" sap2010:WorkflowViewState.IdRef="BrowserScope_5">
+        <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[ActiveBrowser]" BrowserType="IE" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="512,1500" sap2010:WorkflowViewState.IdRef="BrowserScope_5">
           <ui:BrowserScope.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="498,1063" sap2010:WorkflowViewState.IdRef="Sequence_12">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="498,1392" sap2010:WorkflowViewState.IdRef="Sequence_12">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -316,7 +316,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:TypeInto>
-                <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Search for the appropriate search result to double click on" DisplayName="Switch" Expression="[SearchString]" sap:VirtualizedContainerService.HintSize="476,776" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Search for the appropriate search result to double click on" DisplayName="Switch" Expression="[SearchString]" sap:VirtualizedContainerService.HintSize="476,1105" sap2010:WorkflowViewState.IdRef="Switch`1_1">
                   <Switch.Default>
                     <Sequence sap2010:Annotation.AnnotationText="Reset the search pane and throw an exception. The specified window has not been implemented yet." sap:VirtualizedContainerService.HintSize="336,524" sap2010:WorkflowViewState.IdRef="Sequence_18">
                       <sap:WorkflowViewStateService.ViewState>
@@ -480,7 +480,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:ClickImage>
                   </Sequence>
-                  <Sequence x:Key="Student Study Package" sap:VirtualizedContainerService.HintSize="336,591" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <Sequence x:Key="Student Study Package" sap:VirtualizedContainerService.HintSize="336,851" sap2010:WorkflowViewState.IdRef="Sequence_16">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -522,7 +522,30 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:WaitImageAppear>
-                    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" sap2010:Annotation.AnnotationText="Clikc the Collapse All link to collapse all of the window sections" ClickType="CLICK_SINGLE" DisplayName="Click Image " sap:VirtualizedContainerService.HintSize="314,148" sap2010:WorkflowViewState.IdRef="ClickImage_7" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" sap2010:Annotation.AnnotationText="Collapse this sidebar section to make it more likely that the 'Collapse All' link is available" ClickType="CLICK_SINGLE" DisplayName="Click Image" sap:VirtualizedContainerService.HintSize="314,148" sap2010:WorkflowViewState.IdRef="ClickImage_9" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                      <ui:ClickImage.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:ClickImage.CursorPosition>
+                      <ui:ClickImage.Image>
+                        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMYAAAAZCAYAAABq81GnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARvSURBVHhe7Zsxa9tAFID1B7MUuhQyFNMhmAwlZCihizEeiulQRIYgMhTcoeAMAXkIqEtAHgLOEFCHgjJ08NDBQwcPHa73TvfO7053ilK7hSrv4MPS3bv3nt69Z+msJFr/XAuGYWyi1WotGIax4cJgGA/R6oc8YBjGQhbGSh4wTDdZ3JYiOcvE8O1EHB0n6hPO83nplUei5XIlGKZzfF+J8bupODpMxORTLhayEIq7pfqEcyiSkzcTUX5beudzYTCdY3FTqoLIvhSiqcHdpH8Qi+xqUdMRQWVVLMRwbyie7U1Favo0V1PZL8cOM7Fwx1xQdiSN+cb/NTv1B2PkEovJrU9+Sx4Td0ZR3q9UssNxm7Zer5V8cVdaetoVxmOYbZGIt5no7yIRqJ5t/Kmxoxg1sasYPFGGo2nwTgF54GvwiHX0OrH0RFBhFWTRTd8fQBLRO97EjU6KA5kUvvG2UD3b+FNjRzFqYlcxeIJkV4XaN/iaygGNr8UfUjH9nBtdnsKY1Bd9NqmU4mLhOcUdk4m4OI/N+HCG+jcMZ8TGfSmSAzIu9aVkvsKT3NRGJZPZenxoX2tzod+9Nstmixhp+XRUzR+OwrFq7XtQXtoKrsVD8e4eKrkvcp3qm4bX7x7TBncZuNugrgh25RVk0U2f5lIHXwY8p+fy2TqZLzdJcEnHNHpOrhe1f16Kcr75VlT6ENrv2EQbaj7Kh2RkMtb0uL5iwkJyybnGP/m8Wcl74mBi5AA60I7WVy+MgP02vrvHVN74a+vH/sZ4d4yT40RtqGmrYmMXgq8PigFihrq2KwxcpEFlyFcYqo/OcfspZAETrbN/VtjzB1XiAWi3JiMvMFhges6D4LVatIiR9s/EZNBs3/iOBL4cgvFAHP3GrsYb747R2x+rt9ahBnFoajCOuqLi61JU5GbRp6ZPc4ELlIrccz7FxbjYjPXlwqgFrukryOOCMzZPdVKkViJYPgxyI492azKmMKR/AV8RMxdx5K2xNjHS/pmYmMJoaZ/EgPoejAfi6FdroXQ2xLtj9A8TldS+RmPla/BSr7cfG11/rzDkAmK/exy0de1PCmrDSqSQDBZlg57NN2rlQ36GjyQaLW9sKRpiRH03cuHCCPUHfQ9dKz5KOf1IY7w7BrzQSy8XOtU3DWPhHtMGL/5g4466IvipqmKzmBbuooCsc24WmxbGqVwQorN/mtb0VzJo3/VhIuJTJ1nh29iSlwntlfFci8fX2lzftVqQBKuNFSL2bJytApByjfYf8N0rH1yLup56vLvF5GOmNuC04bXT5utTc2WOoi5SGAzz/4Mb6Mc02Jf0XsbqjTnqkYUBJwzTDeBdBvw5iPils75Fg7s6vMOgeiL4eYthukRynqk/EoQ32E0N7hRQFOP3aU0HFwbTSWAT3nsVqyKBRyP4myho8AnnsKeAxye4U/jmR/BcxTBdBP7nAjbj8DPui+djteGGTziH/vy68M4DuDAYxkMEVcUwjI0sjEIeMAxDieA5i2EYSiF+A8suBdz9Vs3HAAAAAElFTkSuQmCC" />
+                      </ui:ClickImage.Image>
+                      <ui:ClickImage.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                      </ui:ClickImage.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:ClickImage>
+                    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" sap2010:Annotation.AnnotationText="Click the 'Collapse All' link to collapse all of the window sections" ClickType="CLICK_SINGLE" DisplayName="Click Image " sap:VirtualizedContainerService.HintSize="314,148" sap2010:WorkflowViewState.IdRef="ClickImage_7" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                       <ui:ClickImage.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
