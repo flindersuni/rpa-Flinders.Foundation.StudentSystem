@@ -13,7 +13,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>999,6082</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>791,10606</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -60,9 +60,10 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Update a Student Study Package (SSP) user field" DisplayName="UpdateSspUserField" sap:VirtualizedContainerService.HintSize="959,6002" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Update a Student Study Package (SSP) user field" DisplayName="UpdateSspUserField" sap:VirtualizedContainerService.HintSize="751,10526" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" sap2010:Annotation.AnnotationText="A flag indicating if a specific Ui element exists or not" Name="elementExists" />
       <Variable x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="The default delay value for interacting with UI elements" Default="10000" Name="defaultDelayValue" />
@@ -73,7 +74,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Initialise outgoing arguments" sap:VirtualizedContainerService.HintSize="937,78" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="Initialise outgoing arguments" sap:VirtualizedContainerService.HintSize="729,78" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -98,15 +99,15 @@
         </Assign.Value>
       </Assign>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Validate, as much as possible, incoming arguments" sap:VirtualizedContainerService.HintSize="937,93" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence sap2010:Annotation.AnnotationText="Validate, as much as possible, incoming arguments" sap:VirtualizedContainerService.HintSize="729,1303" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch sap2010:Annotation.AnnotationText="Catch any exceptions and throw a BusinessRule Exception instead" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,741" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch sap2010:Annotation.AnnotationText="Catch any exceptions and throw a BusinessRule Exception instead" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,1152" sap2010:WorkflowViewState.IdRef="TryCatch_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -115,7 +116,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <TryCatch.Try>
-          <Sequence sap:VirtualizedContainerService.HintSize="336,465" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence sap:VirtualizedContainerService.HintSize="336,876" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -124,6 +125,21 @@
             <ui:CheckTrue DisplayName="Check True" ErrorMessage="[String.Format(&quot;The StudentID value '{0}' is not numeric&quot;, StudentID)]" Expression="[isNumeric(StudentID)]" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="CheckTrue_1" />
             <ui:CheckTrue DisplayName="Check True" ErrorMessage="[String.Format(&quot;The StudyPackageVersion value '{0}' is not numeric&quot;, StudyPackageVersion)]" Expression="[isNumeric(StudyPackageVersion)]" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="CheckTrue_2" />
             <ui:CheckTrue DisplayName="Check True" ErrorMessage="[String.Format(&quot;The StudyPackageAttempt value '{0}' is not numeric&quot;, StudyPackageAttempt)]" Expression="[isNumeric(StudyPackageAttempt)]" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="CheckTrue_3" />
+            <ui:CheckFalse DisplayName="Check False" ErrorMessage="The 'UserFieldLabel' argument is required" Expression="[isNothing(UserFieldLabel)]" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="CheckFalse_5" />
+            <ui:CheckFalse DisplayName="Check False" ErrorMessage="The 'UserFieldValue' argument is required" Expression="[isNothing(UserFieldValue)]" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="CheckFalse_6" />
+            <Assign sap2010:Annotation.AnnotationText="Standardise the format of the user field label to make comparison more reliable. " sap:VirtualizedContainerService.HintSize="314,117" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[UserFieldLabel]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[UserFieldLabel.Trim().ToLower()]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
           </Sequence>
         </TryCatch.Try>
         <TryCatch.Catches>
@@ -176,11 +192,11 @@
         </TryCatch.Catches>
       </TryCatch>
     </Sequence>
-    <TryCatch sap2010:Annotation.AnnotationText="Try to get a reference to the browser session that has the Ci Application running within it. " DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="937,1173" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch sap2010:Annotation.AnnotationText="Try to get a reference to the browser session that has the Ci Application running within it. " DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="729,123" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -282,10 +298,12 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <TryCatch sap2010:Annotation.AnnotationText="Try to lookup the Student Study Package (SSP) record" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="937,3229" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+    <TryCatch sap2010:Annotation.AnnotationText="Try to lookup the Student Study Package (SSP) record" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="729,3229" sap2010:WorkflowViewState.IdRef="TryCatch_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
@@ -499,32 +517,57 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Error" Message="[exception]" />
-              <f:ThrowBusinessRuleException sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="ThrowBusinessRuleException_5" Message="[String.Format(&quot;An unexpected exception has occurred. {0}&quot;, exception.Message)]" TakeScreenshot="False" />
+              <f:ThrowBusinessRuleException sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="ThrowBusinessRuleException_5" Message="[String.Format(&quot;An unexpected exception has occurred while searching for the record. {0}&quot;, exception.Message)]" TakeScreenshot="False" />
             </Sequence>
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <TryCatch sap2010:Annotation.AnnotationText="Try to show the &quot;User Fields&quot; section of the window" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="937,1118" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+    <TryCatch sap2010:Annotation.AnnotationText="Try to show the &quot;User Fields&quot; section of the window and enter the new user field label" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="729,1494" sap2010:WorkflowViewState.IdRef="TryCatch_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[ActiveBrowser]" BrowserType="IE" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="512,842" sap2010:WorkflowViewState.IdRef="BrowserScope_4">
+        <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[ActiveBrowser]" BrowserType="IE" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="512,1218" sap2010:WorkflowViewState.IdRef="BrowserScope_4">
           <ui:BrowserScope.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="498,734" sap2010:WorkflowViewState.IdRef="Sequence_16">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="498,1110" sap2010:WorkflowViewState.IdRef="Sequence_16">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" sap2010:Annotation.AnnotationText="Click the User Fields section heading" ClickType="CLICK_SINGLE" DisplayName="Click Image" sap:VirtualizedContainerService.HintSize="476,133" sap2010:WorkflowViewState.IdRef="ClickImage_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" sap2010:Annotation.AnnotationText="Clikc the Collapse All link to collapse all of the window sections" ClickType="CLICK_SINGLE" DisplayName="Click Image " sap:VirtualizedContainerService.HintSize="476,148" sap2010:WorkflowViewState.IdRef="ClickImage_11" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                  <ui:ClickImage.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:ClickImage.CursorPosition>
+                  <ui:ClickImage.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEsAAAAOCAYAAABn2+E1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG0SURBVFhH7VTbbcMwDPRIzQj1OkGXKfJVZIoCmaRA1sgIKo/wqSeajh8F4nzEwMGyfKSOR0nd7VbKC8vwMmsF/m3W5cOSdH84fue8CvvfvZdyjeM98FNKHzUn+vhvZFZnFWeIPMCNMujcyZLfNSwRs5dZ10/Taui1hqVmwZTz17nEB3Mjw9CVLYU+kVlo7EXePr/ErCmj+ETD0JW4qyKcwyNK7pRZGJMLBA6OSzNvOApfd3OzrvAboNmDJt9hjI+abMyYxqy5J5rVG/g9gi5qwJF1fiImKwZ8LwAck3ay4jRPs77ucvDZGMOUzsagGB/GjBmZdXg7pMCzZmdVczjHIhIxNMvvQO4IQzVLOE0e5U3kcIDP+AE4emxA863rDWNyNps1d2etNSuaj/i7ZvHbgEIhH/fOaN0M0K5mDvC4RB/jNh9DwLuYCM+KrEUkYmiWFjmXJ5qC+8svafA5NmQnIK7lYPMTfeRsvuAJN2zoDKBHwoXyHwUnYmiEXtg1Fzg6L4UrX4tv1pX8GqdHkPAGoZ6gj/+rWf5h2TPDpox6CIKhe6IxyyfMlAyR9zA8s1kvTKGUX9nlToYdnrkvAAAAAElFTkSuQmCC" />
+                  </ui:ClickImage.Image>
+                  <ui:ClickImage.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                  </ui:ClickImage.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:ClickImage>
+                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" sap2010:Annotation.AnnotationText="Click the User Fields section heading" ClickType="CLICK_SINGLE" DelayMS="1000" DisplayName="Click Image" sap:VirtualizedContainerService.HintSize="476,133" sap2010:WorkflowViewState.IdRef="ClickImage_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                   <ui:ClickImage.CursorPosition>
                     <ui:CursorPosition Position="Center">
                       <ui:CursorPosition.OffsetX>
@@ -549,7 +592,7 @@
                 </ui:ClickImage>
                 <ui:ImageFound sap2010:Annotation.AnnotationText="Check to make sure the section expanded" DisplayName="Image Exists" Found="[elementExists]" sap:VirtualizedContainerService.HintSize="476,133" sap2010:WorkflowViewState.IdRef="ImageFound_5">
                   <ui:ImageFound.Image>
-                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHEAAAAwCAYAAAAmepUZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL+SURBVHhe7ZoxjtswEEV1Pfs6gqttU6VIkVpwl2PY5aYIkDIXSOFjMJqIXx6NZihSKzghMQ/4APk5HMn80ipFuuBUj4fYAB5iAygh3kLfdaHr+nEENO9I0F/qHIZrP41PQ3jE6hV3u+Z2mXr192g0yH8W4s7+HqLEQ6yNnSFi/hQ/pMf1vFj7e7g4aOjC40qEKAJK9o41CI6rv6fvuWZ2hYiDPF/HI/s9hDOt4S3AgcaQ5toTDl8Jau4vRD14QFu9V4E+wnAax6xGvefK2fcm4qCi+BOtvQULqQenXTPCQhkyet/4AzYy/zm92PdcO0qIeHrZgZpP7vNJRz0ODYc4s3hDJGUhpnqjBiGtv4nre64dJcT1D5+/Q/HP2DIo6y2d5uo3jOoW5IX4/K4mevP6ue9T6j1Xjhri8mmNWhy+dTgT24cryQxxnOb0xkPGpf3DZvVGV4oRolMTHmIDeIgN4CE2QNd/HgLXm5Dlv1xfmFJrFejT10lvJGNtrW9Ra99D/AdCAIeFePv+M7iO0/uPSTcppZaE+jL9WshDPFg46JeGGL+NTsV4iA3gITaAh9gAHmIDeIgN4CE2gIfYAB5iA3iIDeAhNkBRiPT/UiSatwerz0f6014uoPXM9Thb66+i6C72/NBcju6d6pd7ra3rb61LeH3p3hRFnfb80FyO7p3am3MtzEv7pOD1pXtTFHXSLiw9mlteypdrhPS1WjkHmgdy6jEv7QNoDQJ8bq1pHsYW9oqC1kheFFgX3/I53MvtAyyfoDVNgI8JOQe5Pubct8aEVp8iryqiNbVuANBcCj5HzgnuWfXaPsLyCW2Ne3K99BrkS8EHciwFP4e8qojWdMuzbkT6pX0w1/YRlk9oa9yjsZTGR3xrzLF8SV5VRGu6dWNyz5bP4V5uH5DqV7pGpPZIpK/1tsaEVp8ir4pBjbkkmm/Vc1+uEal6oO0DvH5rDzxtjbD2SAHNI2QN0OqtscRecarBQ2wAD7EBPMQG8BAbwENsAA+xATzE6gnhDx4nWVa1R1fCAAAAAElFTkSuQmCC" />
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.7" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHEAAAAwCAYAAAAmepUZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL+SURBVHhe7ZoxjtswEEV1Pfs6gqttU6VIkVpwl2PY5aYIkDIXSOFjMJqIXx6NZihSKzghMQ/4APk5HMn80ipFuuBUj4fYAB5iAygh3kLfdaHr+nEENO9I0F/qHIZrP41PQ3jE6hV3u+Z2mXr192g0yH8W4s7+HqLEQ6yNnSFi/hQ/pMf1vFj7e7g4aOjC40qEKAJK9o41CI6rv6fvuWZ2hYiDPF/HI/s9hDOt4S3AgcaQ5toTDl8Jau4vRD14QFu9V4E+wnAax6xGvefK2fcm4qCi+BOtvQULqQenXTPCQhkyet/4AzYy/zm92PdcO0qIeHrZgZpP7vNJRz0ODYc4s3hDJGUhpnqjBiGtv4nre64dJcT1D5+/Q/HP2DIo6y2d5uo3jOoW5IX4/K4mevP6ue9T6j1Xjhri8mmNWhy+dTgT24cryQxxnOb0xkPGpf3DZvVGV4oRolMTHmIDeIgN4CE2QNd/HgLXm5Dlv1xfmFJrFejT10lvJGNtrW9Ra99D/AdCAIeFePv+M7iO0/uPSTcppZaE+jL9WshDPFg46JeGGL+NTsV4iA3gITaAh9gAHmIDeIgN4CE2gIfYAB5iA3iIDeAhNkBRiPT/UiSatwerz0f6014uoPXM9Thb66+i6C72/NBcju6d6pd7ra3rb61LeH3p3hRFnfb80FyO7p3am3MtzEv7pOD1pXtTFHXSLiw9mlteypdrhPS1WjkHmgdy6jEv7QNoDQJ8bq1pHsYW9oqC1kheFFgX3/I53MvtAyyfoDVNgI8JOQe5Pubct8aEVp8iryqiNbVuANBcCj5HzgnuWfXaPsLyCW2Ne3K99BrkS8EHciwFP4e8qojWdMuzbkT6pX0w1/YRlk9oa9yjsZTGR3xrzLF8SV5VRGu6dWNyz5bP4V5uH5DqV7pGpPZIpK/1tsaEVp8ir4pBjbkkmm/Vc1+uEal6oO0DvH5rDzxtjbD2SAHNI2QN0OqtscRecarBQ2wAD7EBPMQG8BAbwENsAA+xATzE6gnhDx4nWVa1R1fCAAAAAElFTkSuQmCC" />
                   </ui:ImageFound.Image>
                   <ui:ImageFound.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
@@ -565,7 +608,7 @@
                   <Switch.Default>
                     <f:ThrowNotImplementedException sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ThrowNotImplementedException_1" Message="[String.Format(&quot;Using the '{0}' user field has not been implemented yet&quot;, UserFieldLabel)]" />
                   </Switch.Default>
-                  <Sequence x:Key="Used for CHA Letter" sap:VirtualizedContainerService.HintSize="336,614" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                  <Sequence x:Key="used for cha letter" sap:VirtualizedContainerService.HintSize="336,614" sap2010:WorkflowViewState.IdRef="Sequence_19">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -612,6 +655,29 @@
                     </ui:TypeInto>
                   </Sequence>
                 </Switch>
+                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" sap2010:Annotation.AnnotationText="Clikc the Collapse All link to collapse all of the window sections" ClickType="CLICK_SINGLE" DisplayName="Click Image " sap:VirtualizedContainerService.HintSize="476,148" sap2010:WorkflowViewState.IdRef="ClickImage_10" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                  <ui:ClickImage.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:ClickImage.CursorPosition>
+                  <ui:ClickImage.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEsAAAAOCAYAAABn2+E1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG0SURBVFhH7VTbbcMwDPRIzQj1OkGXKfJVZIoCmaRA1sgIKo/wqSeajh8F4nzEwMGyfKSOR0nd7VbKC8vwMmsF/m3W5cOSdH84fue8CvvfvZdyjeM98FNKHzUn+vhvZFZnFWeIPMCNMujcyZLfNSwRs5dZ10/Taui1hqVmwZTz17nEB3Mjw9CVLYU+kVlo7EXePr/ErCmj+ETD0JW4qyKcwyNK7pRZGJMLBA6OSzNvOApfd3OzrvAboNmDJt9hjI+abMyYxqy5J5rVG/g9gi5qwJF1fiImKwZ8LwAck3ay4jRPs77ucvDZGMOUzsagGB/GjBmZdXg7pMCzZmdVczjHIhIxNMvvQO4IQzVLOE0e5U3kcIDP+AE4emxA863rDWNyNps1d2etNSuaj/i7ZvHbgEIhH/fOaN0M0K5mDvC4RB/jNh9DwLuYCM+KrEUkYmiWFjmXJ5qC+8svafA5NmQnIK7lYPMTfeRsvuAJN2zoDKBHwoXyHwUnYmiEXtg1Fzg6L4UrX4tv1pX8GqdHkPAGoZ6gj/+rWf5h2TPDpox6CIKhe6IxyyfMlAyR9zA8s1kvTKGUX9nlToYdnrkvAAAAAElFTkSuQmCC" />
+                  </ui:ClickImage.Image>
+                  <ui:ClickImage.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                  </ui:ClickImage.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:ClickImage>
               </Sequence>
             </ActivityAction>
           </ui:BrowserScope.Body>
@@ -637,7 +703,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Error" Message="[exception]" />
-              <f:ThrowBusinessRuleException sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="ThrowBusinessRuleException_6" Message="[String.Format(&quot;An exception has occurred with message '{0}' while retrieving the student record.&quot;, exception.Message)]" TakeScreenshot="True" />
+              <f:ThrowBusinessRuleException sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="ThrowBusinessRuleException_6" Message="[String.Format(&quot;An exception has occurred with message '{0}' while finding the user field.&quot;, exception.Message)]" TakeScreenshot="True" />
             </Sequence>
           </ActivityAction>
         </Catch>
@@ -660,11 +726,300 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Error" Message="[exception]" />
-              <f:ThrowBusinessRuleException sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="ThrowBusinessRuleException_7" Message="[String.Format(&quot;An unexpected exception has occurred. {0}&quot;, exception.Message)]" TakeScreenshot="False" />
+              <f:ThrowBusinessRuleException sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="ThrowBusinessRuleException_7" Message="[String.Format(&quot;An unexpected exception has occurred while updating the user field. {0}&quot;, exception.Message)]" TakeScreenshot="False" />
             </Sequence>
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
+    <TryCatch sap2010:Annotation.AnnotationText="Try to save the newly updated record" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="729,3466" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch.Try>
+        <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[ActiveBrowser]" BrowserType="IE" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="711,3190" sap2010:WorkflowViewState.IdRef="BrowserScope_5">
+          <ui:BrowserScope.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="697,3082" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" sap2010:Annotation.AnnotationText="Click the Save and Clear button.&#xA;&#xA;The DelayAfter property is set to allow the save attempt to complete / error prior to starting the next step. " ClickType="CLICK_SINGLE" DelayMS="[CInt(defaultDelayValue * 0.5)]" DisplayName="Click Image 'iexplore.exe  Technolog...'" sap:VirtualizedContainerService.HintSize="675,193" sap2010:WorkflowViewState.IdRef="ClickImage_7" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                  <ui:ClickImage.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:ClickImage.CursorPosition>
+                  <ui:ClickImage.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGIAAAAVCAYAAAC9gjt3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARYSURBVGhD7ZgxaNtaFIY9dnxjV8Mbmq2GDi/wlhg81PCGGjJU0CEYD8FkCCZDEVmC8RBEh2I6hNChIA8BdSgoQ8FdAsoQUIaAOgT0hg4aOnh4g4cOf885spSraymx38OvHhT4kXR9dO4597vn3qtUwr+nKPXrVYJYEwkI84OH5pGL+pED57OP4Ca409fsfX3fRn3Hwpjswq8ThLf5jkstJwExvIzQ+xSgNnDh3kSY/gBAMkeTe9V+G8EejXMdl1pOMYiLCO2zANXXDtzrCJPvExEPNgPJ0+QfCAij0886vQA2K0AlUUf5bc1kdyiHUfFvaQ6k1G5Ez38Cnmb/XzUDEaL7McDmG58qgpebQMQgwm8TDM9jIOp1fBkIiPqLXsZhm4LuX9w9S0JrCqMIRF7MfRp8sV0lCOtLKBWxMfCkIpI9gUG452M0nzfR2m7Jtb5VR+1pDcZLYwaie+eQq2EFQa5KuSAeymHlID742Dgcz4HoH/XhXXpwPrk4fW/j9OQUJrVxe/vQyYIgcUXkBsoJKKWe2KQzbWbHg7M5iO+9wbx96o9V4DMZrDZJf1dmu/KODkL6vK+CNRC5MT4QlyzdWh8Cov85hPHex+ODMZyrCP6Vj/EXT0CYh31Rd6+H3mtTYDjHFpy3FiyqIh0EK5OsErRuk5a6EhSDtPlea+eEE0BFyvgkP8kSmWlX4tEnAevBflQfC8aoxyX5aRIQ5nmI1jsPv+27MOhqDBzU9mjmE4jgG3VwHSK4JUA3IdwLOt4SGNDyNLc05UigzIKV+wQQKRkEdfCTRHRbkTaL8uzyBjwZCH2gkvbkmSUzPKefVIrv+2JcJC5VAoKPrs03Hh51HDzadVF5MUSlQZVAICLan8PvsfzbeJP2rgNMRzb8rRZaDWPOaUazNdfWElQHgZPne25TZ/FDFaAPWuqzAITaZ8Z+9ixaYo8oinHRuFQJiC4vMcdjVHYcckAwGibqr8wUhE8fbT7ZBfwSnaJ82j8iukbbBpwnG6kzCUDrKAmWf1ODziwLnDwHq77LQdNMSspYTy5py/VZAEJv50qcA0Fie72vXN8FMS4al6oYxMhH7YhAvLRR+WuIIW3I7YNhDIKrIYq/G/iPwVgnDoxdE73dHhyCoTqUYGblKFISko1ckToIHKw+uzK+ChLI9VkEYnaf2PLMV2NQpdqlfvk3zXdRjIvEpUpAGHxiOuAliUA0LDoVWahuxRUxncYfcHy1aVPvHlho73TRH9CGPXLpy9qdc1pqeQmI1omP6j4tS1u0Nzwz5YT0+BkN9hktQ7QsnZ55aO/RyanThXU8lP8z+Ve0gcv/mkia01LLS0A06aRU3SUQf1ioPOkRiC6a220YexZaOyaMpAI+juFfJgDyHZb6dxIQvLzUOlwNfVR+78pXNMt41aYPN4u+rj2pAJn9JYCVSEDwIA/f2dh8bqD6tIl6oynLEwPyygr4XyQgSv16lSDWRCWItdAUPwFBHs8NvMiIFgAAAABJRU5ErkJggg==" />
+                  </ui:ClickImage.Image>
+                  <ui:ClickImage.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                  </ui:ClickImage.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:ClickImage>
+                <ui:ImageFound sap2010:Annotation.AnnotationText="Check to see if the warnings list dialog is displayed" DisplayName="Image Exists" Found="[elementExists]" sap:VirtualizedContainerService.HintSize="675,133" sap2010:WorkflowViewState.IdRef="ImageFound_7">
+                  <ui:ImageFound.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIEAAAAbCAYAAABbXex1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALDSURBVGhD7Zi9auNAEID3Ba/xWwTjKq8gXBhzlbgquDAoRcDNgVIElMbgxrAuAmoCcuHCxRUuUricm9mdlVb2SieTO4hOY/hgd/60mZldraJAfoP/qfP5DMKwUecPHPyRAlaTCEbfdX3+LYL5mm3WK5zHsHp3Pp/gPYN7P/Y/Q8Mcn3P/VFzruq4B/+6gf49Qp18n6EI2o6KvIKP5WwZjTBA1wfixuNb3BtsE7m+4nc/6fw3U8XCELuhFbHZ6snPjBKIpFn6Sgj7kkNDJMN0Y25Tk3CRWjzGeEzMfT8g3gmiRmkaKplZudIvcPm/HumdvHLKrPStGG7uu1Oh4Tezj1lZnA9FFvBJ/DcFYXeL3A1XsC+jE1iWlsIm/SyHlZkj3LpkaClNsktV9rJxtPB0lj+a2mAG/NjuOaez2Gh7uGnRmHMPDlux8vHXX5Ehg7dexWvx7ROeToNo1abV73G5xu9rsmsrW7BAnLxPJNrWdVp0uZheHToKAXc2nIYZbQ3C3dz0JGmO1+PeIG5rAP/7sa4GSQO9EK0sgQzu9pELgheoF9Zw8M36xTWDGFM/XlX42Rk3XYlfzCcyJzHs1jZeXxbLrv5YjF88lrmO1+PcIdTzioCM5F9gkmmX2QohMMsjLOev9wvtj0vHl0s1tbPbzdW12tZiuSX0dNusb6fgCR8UiXUmTHPGf2xirxb9HdP46MHDSRzNdylxjjJd8Q/a+HEZ4CaSx0ZUF41hlkv04WMBLXZsdUjYhFmk+a9LRWrBJWV5hi1jaMKHnhmMV1eno5aRvqNMJB33llf43gYV6tfP8kZoAP1Mv7YRWbjsJvhzeTmRMQwRthSa6fyIK/y1KbzUIw6bnrwPhb6DiHzEIw0YlywyEYaOOhxMIw0alPzcgDBu1WecgDBuldwUIw0aaQJAmEKQJBESaQJAmEKQJhF0BvwEuaSckzGC9LwAAAABJRU5ErkJggg==" />
+                  </ui:ImageFound.Image>
+                  <ui:ImageFound.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+                  </ui:ImageFound.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:ImageFound>
+                <If sap2010:Annotation.AnnotationText="Dismiss the warnings list if required" Condition="[elementExists = True]" sap:VirtualizedContainerService.HintSize="675,696" sap2010:WorkflowViewState.IdRef="If_2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If.Then>
+                    <Sequence sap:VirtualizedContainerService.HintSize="336,522" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Warn" Message="[&quot;The 'Warnings List' window needed to be dismissed&quot;]" />
+                      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" sap2010:Annotation.AnnotationText="Click the OK button to dismiss the warnings" ClickType="CLICK_SINGLE" DisplayName="Click Image" sap:VirtualizedContainerService.HintSize="314,133" sap2010:WorkflowViewState.IdRef="ClickImage_8" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                        <ui:ClickImage.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:ClickImage.CursorPosition>
+                        <ui:ClickImage.Image>
+                          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADsAAAANCAYAAAAXBhYDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC2SURBVEhL7ZTBDcMgDEW9XliHdVA2aUZJDjkwxq9tUQWcVr3giih9EhEyHPxibFq3FXdZhBvxl+3HA5EIVK0w53ImyHnk70Geg96LSwl0xFE2I002aRszsksETYlv+eAnuyeEd4k3QpWsxE2Ve+MmK8+xfbIv6mqWvfwYCki7Bt0YQPZTP/dnCFnt4R9Ud5yeZXQSX3JAccoyedvqfpnGp/O+OMoKbU+e+9LKMjqVfYSdZUcCeAKqpl0cFu3SWAAAAABJRU5ErkJggg==" />
+                        </ui:ClickImage.Image>
+                        <ui:ClickImage.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                        </ui:ClickImage.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:ClickImage>
+                      <Delay sap2010:Annotation.AnnotationText="Add a medium delay to ensure the record saves correctly and the screen updates" Duration="[TimeSpan.FromMilliseconds(CInt(DefaultDelayValue * 0.5))]" sap:VirtualizedContainerService.HintSize="314,94" sap2010:WorkflowViewState.IdRef="Delay_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Delay>
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Trace" Message="[&quot;The 'Warnings List' window did not appear&quot;]" />
+                  </If.Else>
+                </If>
+                <ui:ImageFound sap2010:Annotation.AnnotationText="Check to see if a second warnings list window is displayed" DisplayName="Image Exists" Found="[elementExists]" sap:VirtualizedContainerService.HintSize="675,148" sap2010:WorkflowViewState.IdRef="ImageFound_8">
+                  <ui:ImageFound.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIEAAAAbCAYAAABbXex1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALDSURBVGhD7Zi9auNAEID3Ba/xWwTjKq8gXBhzlbgquDAoRcDNgVIElMbgxrAuAmoCcuHCxRUuUricm9mdlVb2SieTO4hOY/hgd/60mZldraJAfoP/qfP5DMKwUecPHPyRAlaTCEbfdX3+LYL5mm3WK5zHsHp3Pp/gPYN7P/Y/Q8Mcn3P/VFzruq4B/+6gf49Qp18n6EI2o6KvIKP5WwZjTBA1wfixuNb3BtsE7m+4nc/6fw3U8XCELuhFbHZ6snPjBKIpFn6Sgj7kkNDJMN0Y25Tk3CRWjzGeEzMfT8g3gmiRmkaKplZudIvcPm/HumdvHLKrPStGG7uu1Oh4Tezj1lZnA9FFvBJ/DcFYXeL3A1XsC+jE1iWlsIm/SyHlZkj3LpkaClNsktV9rJxtPB0lj+a2mAG/NjuOaez2Gh7uGnRmHMPDlux8vHXX5Ehg7dexWvx7ROeToNo1abV73G5xu9rsmsrW7BAnLxPJNrWdVp0uZheHToKAXc2nIYZbQ3C3dz0JGmO1+PeIG5rAP/7sa4GSQO9EK0sgQzu9pELgheoF9Zw8M36xTWDGFM/XlX42Rk3XYlfzCcyJzHs1jZeXxbLrv5YjF88lrmO1+PcIdTzioCM5F9gkmmX2QohMMsjLOev9wvtj0vHl0s1tbPbzdW12tZiuSX0dNusb6fgCR8UiXUmTHPGf2xirxb9HdP46MHDSRzNdylxjjJd8Q/a+HEZ4CaSx0ZUF41hlkv04WMBLXZsdUjYhFmk+a9LRWrBJWV5hi1jaMKHnhmMV1eno5aRvqNMJB33llf43gYV6tfP8kZoAP1Mv7YRWbjsJvhzeTmRMQwRthSa6fyIK/y1KbzUIw6bnrwPhb6DiHzEIw0YlywyEYaOOhxMIw0alPzcgDBu1WecgDBuldwUIw0aaQJAmEKQJBESaQJAmEKQJhF0BvwEuaSckzGC9LwAAAABJRU5ErkJggg==" />
+                  </ui:ImageFound.Image>
+                  <ui:ImageFound.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+                  </ui:ImageFound.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:ImageFound>
+                <If sap2010:Annotation.AnnotationText="Dismiss the warnings list if required" Condition="[elementExists = True]" sap:VirtualizedContainerService.HintSize="675,562" sap2010:WorkflowViewState.IdRef="If_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If.Then>
+                    <Sequence sap:VirtualizedContainerService.HintSize="336,388" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Warn" Message="[&quot;A second 'Warnings List' window needed to be dismissed&quot;]" />
+                      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" sap2010:Annotation.AnnotationText="Click the OK button to dismiss the warnings" ClickType="CLICK_SINGLE" DisplayName="Click Image" sap:VirtualizedContainerService.HintSize="314,133" sap2010:WorkflowViewState.IdRef="ClickImage_9" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                        <ui:ClickImage.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:ClickImage.CursorPosition>
+                        <ui:ClickImage.Image>
+                          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADsAAAANCAYAAAAXBhYDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC2SURBVEhL7ZTBDcMgDEW9XliHdVA2aUZJDjkwxq9tUQWcVr3giih9EhEyHPxibFq3FXdZhBvxl+3HA5EIVK0w53ImyHnk70Geg96LSwl0xFE2I002aRszsksETYlv+eAnuyeEd4k3QpWsxE2Ve+MmK8+xfbIv6mqWvfwYCki7Bt0YQPZTP/dnCFnt4R9Ud5yeZXQSX3JAccoyedvqfpnGp/O+OMoKbU+e+9LKMjqVfYSdZUcCeAKqpl0cFu3SWAAAAABJRU5ErkJggg==" />
+                        </ui:ClickImage.Image>
+                        <ui:ClickImage.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                        </ui:ClickImage.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:ClickImage>
+                    </Sequence>
+                  </If.Then>
+                </If>
+                <ui:ImageFound sap2010:Annotation.AnnotationText="Check to make sure the Save and Clear link has gone" DisplayName="Image Exists " Found="[elementExists]" sap:VirtualizedContainerService.HintSize="675,148" sap2010:WorkflowViewState.IdRef="ImageFound_9">
+                  <ui:ImageFound.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGYAAAAUCAYAAAB/NUioAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARWSURBVGhD7ZgxaNtaFIY9dnxjV8Mbmq2GDi/wlhg81PCGGjJU0CEID8FkCCZDEVmC8RBEh2I6hNChIA8BdSgoQ8FdAsoQUIaAOgTUoYOGDh7e4OEN/zvnyFKubiQ7j4Q8DzL8SLq6Ojrnfjrn3uta9GOGSqunCsyKSsBYn3y0Dzw0D1y4XwOEV+GNvufPm7sOmls2JtQv+j5FdF1suNL9JGBG5zH6X0I0hh68qxizfwCQrPF0ocz3MZzxpNBwpfspAXMWwzwJUX/rwruMMf01FfHgM6AiTf+GgDG6g7zRM2C9BtRSdZV7KyanSzGMy+9lMZCyfmO6/hPwtf4PrTmYCL3PIdbfBZQxXJ5CEYOJfk4xOk0AqcfJeShgmq/6OYMmBTE4u7mWAFcUThmYIp8HBEP6PiYY+1skGbM29CVj0jmFwXinE7RfttHZ7MixudFE43kDxmtjDqZ3Y5Cz5RGcfigVglkWw6OD+RRgbX9yC8zgYAD/3If7xcPxRwfHR8ewqI3bzX03D4bEGVPoOAeklIa0T/YlzvvxYK0Pk3N/eLt/Zo9VYjMdPJOkPyvZoDyjg5F3LspwDUyhj0v8klK/pIoImMHXCMbHAE/3JnAvYgQXASbffAFj7Q9EvZ0++m8tgeMe2nDf27Apy3QwrFzwShB6n6w0KE4yWIfPtXYegBRYmXI2yU5aUnPtij/6R8Fa+h7Vxh191P2S+JZIwFinEToffPy268GgozF00dihzCAw4U964WWE8JqAXUXwzmg5TaBA5exWKSuQQJo7L+cpMFI6KCqMNDC9r6jgKyu0qQFIB0YfuLQ9vWZJBhS8J5Nie5GPd/FrkQQML5Xb73w86bp4su2h9mqEWosyhcDENN9HvxIF18mk71+GmI0dBBsddFpGoeFM85rtaAGrg8KDwefcpn7lyzJEH8TMZgkY9Z25/vNr0X+YY8p8vKtfiyRgelySDieobblkkOC0LDTfWBmYgDaRAfUL+SFapQU0/8R0jDcNuM/WMmPikPbi1Hm+pwaRKyM8GOy8+iwHQV9amvZ6sGlboc0SMHo7Z+otMCTur7+r0HaJj3f1a5ESMOMAjQMC89pB7a8RRjTBm3ujBAxnS5zsW/jHoOwjF8a2hf52Hy7BUQ2Kc/P0FSkBysJAkToo7Lz+9eVslQRUaLMMzPw87cuZofqgSu2X2eV7mu0yH+/i1yIJGINXZHtcwghMy6ZVl436RpIxs1myoeSjQ4uE3p4Nc6uHwZAWAGOPdv5eoeFK95OA6RwFqO9SGdugueWFJSuwpy9o8E+obFEZOz7xYe7Qyqzbg304kv/JggtaEMh/ZSTNaKX7S8C0aSVW3yYwf9ioPesTmB7amyaMHRudLQtGmiGfJwjOUyDFBis9jAQMl6NGl7NlgNrvPdnls4w3Jm0kbdr9+5Ihkh0VkEeRgOFBH31wsP7SQP15G81WW8oZA/OrDPlfJGAqrZ4qMCupGf4FOXiMdzub0y0AAAAASUVORK5CYII=" />
+                  </ui:ImageFound.Image>
+                  <ui:ImageFound.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html title='TechnologyOne' /&gt;" TimeoutMS="[CInt(DefaultDelayValue * 0.1)]" WaitForReady="INTERACTIVE" />
+                  </ui:ImageFound.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:ImageFound>
+                <If sap2010:Annotation.AnnotationText="Check to see if the screen has refreshed successfully, if not then wait again" Condition="[elementExists = True]" sap:VirtualizedContainerService.HintSize="675,523" sap2010:WorkflowViewState.IdRef="If_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If.Then>
+                    <Sequence sap:VirtualizedContainerService.HintSize="336,349" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Info" Message="[&quot;First delay period has passed, and window is not ready yet. Delaying processing again.&quot;]" />
+                      <Delay sap2010:Annotation.AnnotationText="Add a medium delay to ensure the record saves correctly and the screen updates" Duration="[TimeSpan.FromMilliseconds(CInt(DefaultDelayValue * 0.5))]" sap:VirtualizedContainerService.HintSize="314,94" sap2010:WorkflowViewState.IdRef="Delay_2">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Delay>
+                    </Sequence>
+                  </If.Then>
+                </If>
+                <ui:ImageFound sap2010:Annotation.AnnotationText="Check to make sure the Save and Clear link has gone" DisplayName="Image Exists " Found="[elementExists]" sap:VirtualizedContainerService.HintSize="675,148" sap2010:WorkflowViewState.IdRef="ImageFound_10">
+                  <ui:ImageFound.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGYAAAAUCAYAAAB/NUioAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARWSURBVGhD7ZgxaNtaFIY9dnxjV8Mbmq2GDi/wlhg81PCGGjJU0CEID8FkCCZDEVmC8RBEh2I6hNChIA8BdSgoQ8FdAsoQUIaAOgTUoYOGDh7e4OEN/zvnyFKubiQ7j4Q8DzL8SLq6Ojrnfjrn3uta9GOGSqunCsyKSsBYn3y0Dzw0D1y4XwOEV+GNvufPm7sOmls2JtQv+j5FdF1suNL9JGBG5zH6X0I0hh68qxizfwCQrPF0ocz3MZzxpNBwpfspAXMWwzwJUX/rwruMMf01FfHgM6AiTf+GgDG6g7zRM2C9BtRSdZV7KyanSzGMy+9lMZCyfmO6/hPwtf4PrTmYCL3PIdbfBZQxXJ5CEYOJfk4xOk0AqcfJeShgmq/6OYMmBTE4u7mWAFcUThmYIp8HBEP6PiYY+1skGbM29CVj0jmFwXinE7RfttHZ7MixudFE43kDxmtjDqZ3Y5Cz5RGcfigVglkWw6OD+RRgbX9yC8zgYAD/3If7xcPxRwfHR8ewqI3bzX03D4bEGVPoOAeklIa0T/YlzvvxYK0Pk3N/eLt/Zo9VYjMdPJOkPyvZoDyjg5F3LspwDUyhj0v8klK/pIoImMHXCMbHAE/3JnAvYgQXASbffAFj7Q9EvZ0++m8tgeMe2nDf27Apy3QwrFzwShB6n6w0KE4yWIfPtXYegBRYmXI2yU5aUnPtij/6R8Fa+h7Vxh191P2S+JZIwFinEToffPy268GgozF00dihzCAw4U964WWE8JqAXUXwzmg5TaBA5exWKSuQQJo7L+cpMFI6KCqMNDC9r6jgKyu0qQFIB0YfuLQ9vWZJBhS8J5Nie5GPd/FrkQQML5Xb73w86bp4su2h9mqEWosyhcDENN9HvxIF18mk71+GmI0dBBsddFpGoeFM85rtaAGrg8KDwefcpn7lyzJEH8TMZgkY9Z25/vNr0X+YY8p8vKtfiyRgelySDieobblkkOC0LDTfWBmYgDaRAfUL+SFapQU0/8R0jDcNuM/WMmPikPbi1Hm+pwaRKyM8GOy8+iwHQV9amvZ6sGlboc0SMHo7Z+otMCTur7+r0HaJj3f1a5ESMOMAjQMC89pB7a8RRjTBm3ujBAxnS5zsW/jHoOwjF8a2hf52Hy7BUQ2Kc/P0FSkBysJAkToo7Lz+9eVslQRUaLMMzPw87cuZofqgSu2X2eV7mu0yH+/i1yIJGINXZHtcwghMy6ZVl436RpIxs1myoeSjQ4uE3p4Nc6uHwZAWAGOPdv5eoeFK95OA6RwFqO9SGdugueWFJSuwpy9o8E+obFEZOz7xYe7Qyqzbg304kv/JggtaEMh/ZSTNaKX7S8C0aSVW3yYwf9ioPesTmB7amyaMHRudLQtGmiGfJwjOUyDFBis9jAQMl6NGl7NlgNrvPdnls4w3Jm0kbdr9+5Ihkh0VkEeRgOFBH31wsP7SQP15G81WW8oZA/OrDPlfJGAqrZ4qMCupGf4FOXiMdzub0y0AAAAASUVORK5CYII=" />
+                  </ui:ImageFound.Image>
+                  <ui:ImageFound.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html title='TechnologyOne' /&gt;" TimeoutMS="[CInt(DefaultDelayValue * 0.1)]" WaitForReady="INTERACTIVE" />
+                  </ui:ImageFound.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:ImageFound>
+                <ui:CheckFalse DisplayName="Check False" ErrorMessage="The Student Study Package record was not saved successfully" Expression="[elementExists]" sap:VirtualizedContainerService.HintSize="675,87" sap2010:WorkflowViewState.IdRef="CheckFalse_4" />
+              </Sequence>
+            </ActivityAction>
+          </ui:BrowserScope.Body>
+        </ui:BrowserScope>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="ui:CheckpointException" sap:VirtualizedContainerService.HintSize="715,21" sap2010:WorkflowViewState.IdRef="Catch`1_8">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="ui:CheckpointException">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:CheckpointException" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap2010:Annotation.AnnotationText="Log the underlying exception and throw a BusinessRule exception." sap:VirtualizedContainerService.HintSize="336,319" sap2010:WorkflowViewState.IdRef="Sequence_20">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Error" Message="[exception]" />
+              <f:ThrowBusinessRuleException sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="ThrowBusinessRuleException_8" Message="[String.Format(&quot;An exception has occurred with message '{0}' while saving the student record.&quot;, exception.Message)]" TakeScreenshot="True" />
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="715,21" sap2010:WorkflowViewState.IdRef="Catch`1_9">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap2010:Annotation.AnnotationText="Log the underlying exception and throw a BusinessRule exception." sap:VirtualizedContainerService.HintSize="336,319" sap2010:WorkflowViewState.IdRef="Sequence_22">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Error" Message="[exception]" />
+              <f:ThrowBusinessRuleException sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="ThrowBusinessRuleException_9" Message="[String.Format(&quot;An unexpected exception has occurred while trying to save the record. {0}&quot;, exception.Message)]" TakeScreenshot="False" />
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+    <Sequence sap2010:Annotation.AnnotationText="Finalise outgoing arguments" sap:VirtualizedContainerService.HintSize="729,442" sap2010:WorkflowViewState.IdRef="Sequence_28">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Boolean">[ProcessSuccessful]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[ProcessMessage]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">New student comment record saved successfully</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Info" Message="[&quot;Process end: Update student study package record&quot;]" />
+    </Sequence>
   </Sequence>
 </Activity>

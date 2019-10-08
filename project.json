@@ -45,7 +45,10 @@
       "TestCases/TestEnterCommentInvalidInput.xaml",
       "TestCases/TestEnterCommentInvalidComplexInput.xaml",
       "TestCases/TestEnterCommentValidInput.xaml",
-      "InvokeUpdateSspUserFieldTestCategory.xaml"
+      "InvokeUpdateSspUserFieldTestCategory.xaml",
+      "TestCases/TestUpdateSspUserFieldInvalidComplexInput.xaml",
+      "TestCases/TestUpdateSspUserFieldInvalidInput.xaml",
+      "TestCases/TestUpdateSspUserFieldValidInput.xaml"
     ]
   },
   "webServices": []
