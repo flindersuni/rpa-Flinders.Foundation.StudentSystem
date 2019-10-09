@@ -84,37 +84,37 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID10</x:Reference>
+      <x:Reference>__ReferenceID12</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID10" sap2010:WorkflowViewState.IdRef="FlowStep_1">
+    <FlowStep x:Name="__ReferenceID12" sap2010:WorkflowViewState.IdRef="FlowStep_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,124</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="654,1973" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="694,2649" sap2010:WorkflowViewState.IdRef="TryCatch_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <TryCatch.Try>
-          <Sequence sap:VirtualizedContainerService.HintSize="636,1746" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence sap:VirtualizedContainerService.HintSize="676,2422" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:CopyFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Copy a fresh TestRunner file to stop a hard failure of a previous test run from stopping this run. " Destination=".\TestFramework\TestRunner.xaml" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="614,94" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path=".\TestTemplates\TestRunner.xaml">
+            <ui:CopyFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Copy a fresh TestRunner file to stop a hard failure of a previous test run from stopping this run. " Destination=".\TestFramework\TestRunner.xaml" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="654,94" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path=".\TestTemplates\TestRunner.xaml">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CopyFile>
-            <f:DiscoverTestCases sap:VirtualizedContainerService.HintSize="614,22" sap2010:WorkflowViewState.IdRef="DiscoverTestCases_2" TestCaseDirectory="[System.IO.Directory.GetCurrentDirectory()]" TestCases="[testCases]" />
-            <Flowchart sap2010:Annotation.AnnotationText="Test Suite Initialisation Activities&#xA;&#xA;Place  activites you need to perform before running a suite of tests in this Flowchart." DisplayName="Flowchart Test Suite Initialisation" sap:VirtualizedContainerService.HintSize="614,693" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+            <f:DiscoverTestCases sap:VirtualizedContainerService.HintSize="654,22" sap2010:WorkflowViewState.IdRef="DiscoverTestCases_2" TestCaseDirectory="[System.IO.Directory.GetCurrentDirectory()]" TestCases="[testCases]" />
+            <Flowchart sap2010:Annotation.AnnotationText="Test Suite Initialisation Activities&#xA;&#xA;Place  activites you need to perform before running a suite of tests in this Flowchart." DisplayName="Flowchart Test Suite Initialisation" sap:VirtualizedContainerService.HintSize="654,693" sap2010:WorkflowViewState.IdRef="Flowchart_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -205,7 +205,7 @@
               </FlowStep>
               <x:Reference>__ReferenceID0</x:Reference>
             </Flowchart>
-            <Flowchart sap2010:Annotation.AnnotationText="Test Suite Execution Activities&#xA;&#xA;Place activities that Invoke your Test Cases in this Flowchart. " DisplayName="Flowchart Test Suite Execution" sap:VirtualizedContainerService.HintSize="614,1119" sap2010:WorkflowViewState.IdRef="Flowchart_3">
+            <Flowchart sap2010:Annotation.AnnotationText="Test Suite Execution Activities&#xA;&#xA;Place activities that Invoke your Test Cases in this Flowchart. " DisplayName="Flowchart Test Suite Execution" sap:VirtualizedContainerService.HintSize="654,1369" sap2010:WorkflowViewState.IdRef="Flowchart_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -214,13 +214,14 @@
                   <av:Size x:Key="ShapeSize">60,75</av:Size>
                   <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,114.5</av:PointCollection>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  <x:Double x:Key="Height">1026.5</x:Double>
+                  <x:Double x:Key="Height">1276</x:Double>
+                  <x:Double x:Key="Width">640</x:Double>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <Flowchart.StartNode>
-                <x:Reference>__ReferenceID9</x:Reference>
+                <x:Reference>__ReferenceID11</x:Reference>
               </Flowchart.StartNode>
-              <FlowStep x:Name="__ReferenceID9">
+              <FlowStep x:Name="__ReferenceID11">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">200,114.5</av:Point>
@@ -356,7 +357,7 @@
                                             <av:PointCollection x:Key="ConnectorLocation">300,896.5 300,933.5</av:PointCollection>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Invoke the Student Study Packager User Field tests" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="TestFramework\InvokeTestCategoryTestCases.xaml">
+                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Invoke the Student Study Package User Field tests" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="TestFramework\InvokeTestCategoryTestCases.xaml">
                                           <ui:InvokeWorkflowFile.Arguments>
                                             <InOutArgument x:TypeArguments="sd:DataTable" x:Key="TestCases">[testCases]</InOutArgument>
                                             <InArgument x:TypeArguments="x:String" x:Key="TestCategory">Flinders.Foundation.StudentSystem.UpdateSspUserField</InArgument>
@@ -374,7 +375,7 @@
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <av:Point x:Key="ShapeLocation">200,933.5</av:Point>
                                                 <av:Size x:Key="ShapeSize">200,93</av:Size>
-                                                <av:PointCollection x:Key="ConnectorLocation">310,697.5 310,734.5</av:PointCollection>
+                                                <av:PointCollection x:Key="ConnectorLocation">300,1026.5 300,1074.5</av:PointCollection>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Close the currently open window" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="CloseWindow.xaml">
@@ -388,6 +389,53 @@
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </ui:InvokeWorkflowFile>
+                                            <FlowStep.Next>
+                                              <FlowStep x:Name="__ReferenceID9">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <av:Point x:Key="ShapeLocation">200,1074.5</av:Point>
+                                                    <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                    <av:PointCollection x:Key="ConnectorLocation">300,1125.5 300,1153.5</av:PointCollection>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="OpenWindow.xaml">
+                                                  <ui:InvokeWorkflowFile.Arguments>
+                                                    <OutArgument x:TypeArguments="x:Boolean" x:Key="ProcessSuccessful" />
+                                                    <OutArgument x:TypeArguments="x:String" x:Key="ProcessMessage" />
+                                                    <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
+                                                    <InArgument x:TypeArguments="x:String" x:Key="SearchString">Student Study Plan Merge</InArgument>
+                                                  </ui:InvokeWorkflowFile.Arguments>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </ui:InvokeWorkflowFile>
+                                                <FlowStep.Next>
+                                                  <FlowStep x:Name="__ReferenceID10">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <av:Point x:Key="ShapeLocation">200,1153.5</av:Point>
+                                                        <av:Size x:Key="ShapeSize">200,93</av:Size>
+                                                        <av:PointCollection x:Key="ConnectorLocation">310,906.5 310,943.5</av:PointCollection>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Invoke the Student Study Plan Merge tests" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="TestFramework\InvokeTestCategoryTestCases.xaml">
+                                                      <ui:InvokeWorkflowFile.Arguments>
+                                                        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="TestCases">[testCases]</InOutArgument>
+                                                        <InArgument x:TypeArguments="x:String" x:Key="TestCategory">Flinders.Foundation.StudentSystem.SendCorrespondenceSspMerge</InArgument>
+                                                      </ui:InvokeWorkflowFile.Arguments>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </ui:InvokeWorkflowFile>
+                                                  </FlowStep>
+                                                </FlowStep.Next>
+                                              </FlowStep>
+                                            </FlowStep.Next>
                                           </FlowStep>
                                         </FlowStep.Next>
                                       </FlowStep>
@@ -410,11 +458,13 @@
               <x:Reference>__ReferenceID6</x:Reference>
               <x:Reference>__ReferenceID7</x:Reference>
               <x:Reference>__ReferenceID8</x:Reference>
+              <x:Reference>__ReferenceID9</x:Reference>
+              <x:Reference>__ReferenceID10</x:Reference>
             </Flowchart>
           </Sequence>
         </TryCatch.Try>
         <TryCatch.Catches>
-          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="680,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>

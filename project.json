@@ -50,7 +50,9 @@
       "TestCases/TestUpdateSspUserFieldInvalidInput.xaml",
       "TestCases/TestUpdateSspUserFieldValidInput.xaml",
       "TestCases/TestSendCorrespondenceSspMergeInvalidInput.xaml",
-      "InvokeSendCorrespondenceSspMergeTestCategory.xaml"
+      "InvokeSendCorrespondenceSspMergeTestCategory.xaml",
+      "TestCases/TestSendCorrespondenceSspMergeInvalidComplexInput.xaml",
+      "TestCases/TestSendCorrespondenceSspMergeValidInput.xaml"
     ]
   },
   "webServices": []
