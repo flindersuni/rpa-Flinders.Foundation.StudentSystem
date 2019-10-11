@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>376,1192</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>376,1222</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>InvokeTestCase_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -55,10 +55,9 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invokes a Test Case File and returns its result." DisplayName="InvokeTestCase" sap:VirtualizedContainerService.HintSize="336,1112" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invokes a Test Case File, by dynamically changing the path to it in the TestFramework\TestRunner.xaml file and returns its result." DisplayName="InvokeTestCase" sap:VirtualizedContainerService.HintSize="336,1142" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="projectTestRunnerFilePath" />
       <Variable x:TypeArguments="x:String" Name="projectCurrentDirectory" />
