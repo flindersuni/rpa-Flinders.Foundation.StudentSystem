@@ -9,7 +9,7 @@
     <x:Null />
   </mva:VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF000000E0eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjoiTG9naW4gdG8gdGhlIFN0dWRlbnQgU3lzdGVtIChDaSBDbGllbnQpIGluIHRoZSBUZWNobm9sb2d5T25lIENsb3VkIiwiPFZlcnNpb24+a19fQmFja2luZ0ZpZWxkIjoxfQ==</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>791,4308</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>999,6039</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -339,7 +339,7 @@
         <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="923,346" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -375,7 +375,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="IE" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="711,1008" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="2bf6ee983c7eff0eb48765c7cb5b5c2e" Selector="&lt;html title='Ci Anywhere Workplace' /&gt;" UiBrowser="[ciAnywhereWorkspaceTab]">
+        <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="IE" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="711,1008" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="2bf6ee983c7eff0eb48765c7cb5b5c2e" Selector="&lt;html title='*Ci Anywhere Workplace' /&gt;" UiBrowser="[ciAnywhereWorkspaceTab]">
           <ui:BrowserScope.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
@@ -389,7 +389,7 @@
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:UiElementExists sap2010:Annotation.AnnotationText="Check to see if the Student Management link is visible" DisplayName="Element Exists" Exists="[studentManagementElementExists]" sap:VirtualizedContainerService.HintSize="675,148" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                   <ui:UiElementExists.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6a79ad6f2dbbbe40e0e8407791fda1a9" Selector="&lt;html title='Ci Anywhere Workplace' /&gt;&lt;webctrl aaname='Student Management' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6a79ad6f2dbbbe40e0e8407791fda1a9" Selector="&lt;html title='*Ci Anywhere Workplace' /&gt;&lt;webctrl aaname='Student Management' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
                   </ui:UiElementExists.Target>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
