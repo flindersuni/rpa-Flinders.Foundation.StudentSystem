@@ -1,11 +1,11 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="InvokeTestSuite" this:InvokeTestSuite.TestSuiteName="Flinders.Foundation.StudentSystem.UpdateSspUserField" this:InvokeTestSuite.TestResultsFolder="TestResults\Flinders.Foundation.StudentSystem\UpdateSspUserField" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:f="clr-namespace:Flinders_Foundation_Testing;assembly=Flinders.Foundation.Testing" xmlns:f1="clr-namespace:Flinders_Foundation;assembly=Flinders.Foundation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="TestSuiteName" Type="InArgument(x:String)">
+    <x:Property sap2010:Annotation.AnnotationText="The name of the test suites to execute" Name="TestSuiteName" Type="InArgument(x:String)">
       <x:Property.Attributes>
         <RequiredArgumentAttribute />
       </x:Property.Attributes>
     </x:Property>
-    <x:Property Name="TestResultsFolder" Type="InArgument(x:String)">
+    <x:Property sap2010:Annotation.AnnotationText="The path, relative to the project directory, where the test result report is to be saved" Name="TestResultsFolder" Type="InArgument(x:String)">
       <x:Property.Attributes>
         <RequiredArgumentAttribute />
       </x:Property.Attributes>
@@ -68,11 +68,7 @@
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap2010:Annotation.AnnotationText="Invoke the Flinders.Foundation.StudentSystem.UpdateSspUserField test suite&#xA;&#xA;Assumes the login to the Student Management System has already occurred." DisplayName="InvokeTestSuite" sap:VirtualizedContainerService.HintSize="614,693" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
-      <Variable x:TypeArguments="sd:DataTable" Name="testConfiguration" />
-      <Variable x:TypeArguments="sd:DataTable" Name="testCases" />
-      <Variable x:TypeArguments="x:String" Name="testCredential" />
-      <Variable x:TypeArguments="x:String" Name="testOktaEnvironment" />
-      <Variable x:TypeArguments="ui:Browser" Name="activeBrowser" />
+      <Variable x:TypeArguments="sd:DataTable" sap2010:Annotation.AnnotationText="The list of detected test cases" Name="testCases" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">

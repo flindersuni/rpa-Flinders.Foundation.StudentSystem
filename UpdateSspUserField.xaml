@@ -2,10 +2,10 @@
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="A flag indicating if the activity successfully completed its process" Name="ProcessSuccessful" Type="OutArgument(x:Boolean)" />
     <x:Property sap2010:Annotation.AnnotationText="A message providing context to the success, or failure of the process undertaken by this activity" Name="ProcessMessage" Type="OutArgument(x:String)" />
-    <x:Property sap2010:Annotation.AnnotationText="ID number of the student that needs the comment added to their record" Name="StudentID" Type="InArgument(x:String)" />
-    <x:Property sap2010:Annotation.AnnotationText="The code of the course (Study Package) to be entered into the Spk Cd field on the Student Comments window" Name="StudyPackageCode" Type="InArgument(x:String)" />
-    <x:Property sap2010:Annotation.AnnotationText="The version of the course (Study Package) to be entered into the Ver field on the Student Comments window" Name="StudyPackageVersion" Type="InArgument(x:String)" />
-    <x:Property sap2010:Annotation.AnnotationText="The attempt of the course (Study Package) to be entered into the Att field on the Student Comments window" Name="StudyPackageAttempt" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="The unique id number of the student to be entered into the window" Name="StudentID" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="The version of the course / topic (Study Package) to be entered into the window" Name="StudyPackageCode" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="The version of the course / topic (Study Package) to be entered into the window" Name="StudyPackageVersion" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="The student's attempt of the course / topic (Study Package) to be entered into the window" Name="StudyPackageAttempt" Type="InArgument(x:String)" />
     <x:Property sap2010:Annotation.AnnotationText="The label of the user field to update" Name="UserFieldLabel" Type="InArgument(x:String)" />
     <x:Property sap2010:Annotation.AnnotationText="The new value of the user field" Name="UserFieldValue" Type="InArgument(x:String)" />
     <x:Property sap2010:Annotation.AnnotationText="Reference to the current active browser tab" Name="ActiveBrowser" Type="InOutArgument(ui:Browser)" />
@@ -13,7 +13,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>494,4637</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>791,8010</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -60,7 +60,6 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Update a Student Study Package (SSP) user field" DisplayName="UpdateSspUserField" sap:VirtualizedContainerService.HintSize="751,7930" sap2010:WorkflowViewState.IdRef="Sequence_1">
