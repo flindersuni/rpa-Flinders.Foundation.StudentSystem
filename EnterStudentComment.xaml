@@ -2,19 +2,19 @@
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="A flag indicating if the activity successfully completed its process" Name="ProcessSuccessful" Type="OutArgument(x:Boolean)" />
     <x:Property sap2010:Annotation.AnnotationText="A message providing context to the success, or failure of the process undertaken by this activity" Name="ProcessMessage" Type="OutArgument(x:String)" />
-    <x:Property sap2010:Annotation.AnnotationText="The four digit year to be entered into the Year field on the Student Comments window" Name="StudyYear" Type="InArgument(x:String)" />
-    <x:Property sap2010:Annotation.AnnotationText="The study period (semester) to be entered into the Study Period field on the Student Comments window" Name="StudyPeriod" Type="InArgument(x:String)" />
-    <x:Property sap2010:Annotation.AnnotationText="The version of the course (Study Package) to be entered into the Ver field on the Student Comments window" Name="StudyPackageVersion" Type="InArgument(x:String)" />
-    <x:Property sap2010:Annotation.AnnotationText="The attempt of the course (Study Package) to be entered into the Att field on the Student Comments window" Name="StudyPackageAttempt" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="The four digit year to be entered into the window" Name="StudyYear" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="The study period (semester) to be entered into the window" Name="StudyPeriod" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="The version of the course (Study Package) to be entered into the window" Name="StudyPackageVersion" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="The student's attempt of the course (Study Package) to be entered into the window" Name="StudyPackageAttempt" Type="InArgument(x:String)" />
     <x:Property sap2010:Annotation.AnnotationText="Reference to the current active browser tab" Name="ActiveBrowser" Type="InOutArgument(ui:Browser)" />
-    <x:Property sap2010:Annotation.AnnotationText="ID number of the student that needs the comment added to their record" Name="StudentID" Type="InArgument(x:String)" />
-    <x:Property sap2010:Annotation.AnnotationText="The comment code identifying the type of comment that is to be added" Name="CommentCode" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="The unique id number of the student to be entered into the window" Name="StudentID" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="The comment code identifying the type of comment that is to be entered" Name="CommentCode" Type="InArgument(x:String)" />
     <x:Property sap2010:Annotation.AnnotationText="The code of the course (Study Package) to be entered into the Spk Cd field on the Student Comments window" Name="StudyPackageCode" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>494,6236</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>494,5869</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -62,10 +62,9 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Enter a comment related to a specific student" DisplayName="EnterStudentComment" sap:VirtualizedContainerService.HintSize="454,6156" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Enter a comment related to a specific student" DisplayName="EnterStudentComment" sap:VirtualizedContainerService.HintSize="454,5789" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(x:String)" sap2010:Annotation.AnnotationText="A short list of known valid Study Periods" Default="[new System.Collections.Generic.List(Of String)(new String(){&quot;Semester 1&quot;,&quot;Semester 2&quot;,&quot;Summer&quot;,&quot;Jan to Jun Non-Semester&quot;,&quot;Jul to Dec Non-Semester&quot;,&quot;Non-Semester Study Period&quot;})]" Name="validStudyPeriods" />
       <Variable x:TypeArguments="x:Boolean" sap2010:Annotation.AnnotationText="A flag indicating if a specific Ui element exists or not" Name="elementExists" />
@@ -294,7 +293,7 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <TryCatch sap2010:Annotation.AnnotationText="Try to lookup the student record by Student id" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="432,599" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+    <TryCatch sap2010:Annotation.AnnotationText="Try to lookup the student record by Student id" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="432,232" sap2010:WorkflowViewState.IdRef="TryCatch_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -410,10 +409,10 @@
             </Sequence>
           </ActivityAction>
         </Catch>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,388" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
