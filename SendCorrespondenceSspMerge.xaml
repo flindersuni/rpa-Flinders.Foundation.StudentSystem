@@ -2,10 +2,10 @@
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="A flag indicating if the activity successfully completed its process" Name="ProcessSuccessful" Type="OutArgument(x:Boolean)" />
     <x:Property sap2010:Annotation.AnnotationText="A message providing context to the success, or failure of the process undertaken by this activity" Name="ProcessMessage" Type="OutArgument(x:String)" />
-    <x:Property sap2010:Annotation.AnnotationText="ID number of the student that needs the comment added to their record" Name="StudentID" Type="InArgument(x:String)" />
-    <x:Property sap2010:Annotation.AnnotationText="The code of the course (Study Package) to be entered into the Spk Cd field on the Student Comments window" Name="StudyPackageCode" Type="InArgument(x:String)" />
-    <x:Property sap2010:Annotation.AnnotationText="The version of the course (Study Package) to be entered into the Ver field on the Student Comments window" Name="StudyPackageVersion" Type="InArgument(x:String)" />
-    <x:Property sap2010:Annotation.AnnotationText="The attempt of the course (Study Package) to be entered into the Att field on the Student Comments window" Name="StudyPackageAttempt" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="The unique id number of the student to be entered into the window" Name="StudentID" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="The version of the course (Study Package) to be entered into the window" Name="StudyPackageCode" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="The version of the course (Study Package) to be entered into the window" Name="StudyPackageVersion" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="The student's attempt of the course (Study Package) to be entered into the window" Name="StudyPackageAttempt" Type="InArgument(x:String)" />
     <x:Property sap2010:Annotation.AnnotationText="Reference to the current active browser tab" Name="ActiveBrowser" Type="InOutArgument(ui:Browser)" />
     <x:Property sap2010:Annotation.AnnotationText="The Correspondence Definition used to generate the correspondence to be sent" Name="CorrespondenceDefinition" Type="InArgument(x:String)" />
     <x:Property sap2010:Annotation.AnnotationText="Value to be entered into the 'Text 1' field. This value is then available to the merge when generating the correspondence." Name="TextOneField" Type="InArgument(x:String)" />
