@@ -59,6 +59,9 @@
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap2010:Annotation.AnnotationText="Test the environment checking code of the LoginToStudentSystem activity" DisplayName="TestCase" sap:VirtualizedContainerService.HintSize="614,663" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="ui:Browser" sap2010:Annotation.AnnotationText="Store a reference to the active browser tab for sharing between workflows" Name="activeBrowserInstance" />
+    </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -78,20 +81,20 @@
           <av:Size x:Key="ShapeSize">200,51</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="414,227" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="654,1369" sap2010:WorkflowViewState.IdRef="TryCatch_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <TryCatch.Try>
-          <Sequence sap:VirtualizedContainerService.HintSize="358,513" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence sap:VirtualizedContainerService.HintSize="636,1098" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Sequence - Initialise test Parameters" sap:VirtualizedContainerService.HintSize="336,298" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence DisplayName="Sequence - Initialise test Parameters" sap:VirtualizedContainerService.HintSize="614,298" sap2010:WorkflowViewState.IdRef="Sequence_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -107,13 +110,14 @@
                 </Assign.Value>
               </Assign>
             </Sequence>
-            <Flowchart DisplayName="Flowchart - Execute Test Logic" sap:VirtualizedContainerService.HintSize="336,51" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+            <Flowchart DisplayName="Flowchart - Execute Test Logic" sap:VirtualizedContainerService.HintSize="614,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
                   <av:Size x:Key="ShapeSize">60,75</av:Size>
                   <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,144.5</av:PointCollection>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <Flowchart.StartNode>
@@ -126,11 +130,12 @@
                     <av:Size x:Key="ShapeSize">200,51</av:Size>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="LoginToStudentSystem.xaml">
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="LoginToStudentSystem.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="x:String" x:Key="Environment">invalidenvironment</InArgument>
                     <OutArgument x:TypeArguments="x:Boolean" x:Key="ProcessSuccessful" />
                     <OutArgument x:TypeArguments="x:String" x:Key="ProcessMessage" />
+                    <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[activeBrowserInstance]</InOutArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -143,7 +148,7 @@
           </Sequence>
         </TryCatch.Try>
         <TryCatch.Catches>
-          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="640,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -154,7 +159,7 @@
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
               </ActivityAction.Argument>
-              <Sequence sap:VirtualizedContainerService.HintSize="336,392" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence sap:VirtualizedContainerService.HintSize="336,398" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -180,7 +185,7 @@
               </Sequence>
             </ActivityAction>
           </Catch>
-          <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+          <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="640,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -201,7 +206,7 @@
               </Sequence>
             </ActivityAction>
           </Catch>
-          <Catch x:TypeArguments="sc:ConfigurationException" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+          <Catch x:TypeArguments="sc:ConfigurationException" sap:VirtualizedContainerService.HintSize="640,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -212,7 +217,7 @@
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="sc:ConfigurationException" Name="exception" />
               </ActivityAction.Argument>
-              <Sequence sap:VirtualizedContainerService.HintSize="531,559" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence sap:VirtualizedContainerService.HintSize="531,565" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>

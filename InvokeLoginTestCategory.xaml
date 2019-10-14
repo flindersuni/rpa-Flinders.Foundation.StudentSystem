@@ -78,6 +78,7 @@
       <Variable x:TypeArguments="sd:DataTable" sap2010:Annotation.AnnotationText="The list of detected test cases" Name="testCases" />
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The name of the credential that stores the username and password to use for these tests" Name="testCredential" />
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Identify which Flinders Dashboard (Okta) environment is to be used with this test" Name="testOktaEnvironment" />
+      <Variable x:TypeArguments="ui:Browser" sap2010:Annotation.AnnotationText="Store a reference to the active browser tab for sharing between workflows" Name="activeBrowserInstance" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -141,7 +142,7 @@
                     <av:PointCollection x:Key="ConnectorLocation">300,207.02 300,254.5</av:PointCollection>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <If sap2010:Annotation.AnnotationText="Is it necessary to login to Okta as part of this test?" Condition="[LoginToOktaRequired = True]" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="If_1">
+                <If sap2010:Annotation.AnnotationText="Is it necessary to login to Okta as part of this test?" Condition="[LoginToOktaRequired = True]" sap:VirtualizedContainerService.HintSize="464,507" sap2010:WorkflowViewState.IdRef="If_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -182,7 +183,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:LookupDataTable>
-                      <f1:LoginToOktaDashboard ActiveBrowser="{x:Null}" ProcessMessage="{x:Null}" ProcessSuccessful="{x:Null}" CredentialName="[testCredential]" Environment="[testOktaEnvironment]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="LoginToOktaDashboard_1" />
+                      <f1:LoginToOktaDashboard ProcessMessage="{x:Null}" ProcessSuccessful="{x:Null}" ActiveBrowser="[activeBrowserInstance]" CredentialName="[testCredential]" Environment="[testOktaEnvironment]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="LoginToOktaDashboard_1" />
                     </Sequence>
                   </If.Then>
                 </If>

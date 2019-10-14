@@ -9,7 +9,7 @@
     <x:Null />
   </mva:VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000160eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjoiaHR0cHM6XC9cL2dpdGh1Yi5jb21cL2ZsaW5kZXJzdW5pXC9ycGEtRmxpbmRlcnMuRm91bmRhdGlvbi5TdHVkZW50U3lzdGVtXC93aWtpXC9Mb2dpblRvU3R1ZGVudFN5c3RlbSIsIjxJbml0aWFsVG9vbHRpcD5rX19CYWNraW5nRmllbGQiOiJMb2dpbiB0byB0aGUgU3R1ZGVudCBTeXN0ZW0gKENpIENsaWVudCkgaW4gdGhlIFRlY2hub2xvZ3lPbmUgQ2xvdWQiLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>999,6039</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>999,7520</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -63,7 +63,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Login to the Student System (Ci Client) in the TechnologyOne Cloud" DisplayName="LoginToStudentSystem" sap:VirtualizedContainerService.HintSize="959,5959" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Login to the Student System (Ci Client) in the TechnologyOne Cloud" DisplayName="LoginToStudentSystem" sap:VirtualizedContainerService.HintSize="959,7440" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The selector for the chiclet in Okta to click on to login to the Student Management System" Name="studentSystemChiclet" />
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The partial URL to use to login to the Student Management system" Name="studentSystemUrl" />
@@ -78,12 +78,12 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Initialise variables and arguments prior to process execution" sap:VirtualizedContainerService.HintSize="937,108" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="Initialise variables and arguments prior to process execution" sap:VirtualizedContainerService.HintSize="937,628" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Assign sap:VirtualizedContainerService.HintSize="509,60" sap2010:WorkflowViewState.IdRef="Assign_1">
@@ -142,56 +142,77 @@
         </If.Else>
       </If>
     </Sequence>
-    <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Validate the Environment argument, to determine which Okta dashboard chiclet to use to access the Student Management System" DisplayName="Switch" Expression="[Environment]" sap:VirtualizedContainerService.HintSize="937,138" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+    <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Validate the Environment argument, to determine which Okta dashboard chiclet to use to access the Student Management System" DisplayName="Switch" Expression="[Environment]" sap:VirtualizedContainerService.HintSize="937,1099" sap2010:WorkflowViewState.IdRef="Switch`1_1">
       <Switch.Default>
         <f:ThrowConfigurationException sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ThrowConfigurationException_1" Message="[String.Format(&quot;The specified environment '{0}' is invalid&quot;, Environment)]" />
       </Switch.Default>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="production" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ConstantValues.xaml">
-        <ui:InvokeWorkflowFile.Arguments>
-          <OutArgument x:TypeArguments="x:String" x:Key="StudentSystemProductionUrl">[studentSystemUrl]</OutArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="StudentSystemTestUrl" />
-          <OutArgument x:TypeArguments="x:String" x:Key="StudentSystemDevelopmentUrl" />
-        </ui:InvokeWorkflowFile.Arguments>
+      <Sequence x:Key="production" sap:VirtualizedContainerService.HintSize="336,211" sap2010:WorkflowViewState.IdRef="Sequence_14">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-      </ui:InvokeWorkflowFile>
-      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="test" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="ConstantValues.xaml">
-        <ui:InvokeWorkflowFile.Arguments>
-          <OutArgument x:TypeArguments="x:String" x:Key="StudentSystemProductionUrl" />
-          <OutArgument x:TypeArguments="x:String" x:Key="StudentSystemTestUrl">[studentSystemUrl]</OutArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="StudentSystemDevelopmentUrl" />
-        </ui:InvokeWorkflowFile.Arguments>
+        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ConstantValues.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <OutArgument x:TypeArguments="x:String" x:Key="StudentSystemProductionUrl">[studentSystemUrl]</OutArgument>
+            <OutArgument x:TypeArguments="x:String" x:Key="StudentSystemTestUrl" />
+            <OutArgument x:TypeArguments="x:String" x:Key="StudentSystemDevelopmentUrl" />
+          </ui:InvokeWorkflowFile.Arguments>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:InvokeWorkflowFile>
+      </Sequence>
+      <Sequence x:Key="test" sap:VirtualizedContainerService.HintSize="336,211" sap2010:WorkflowViewState.IdRef="Sequence_15">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-      </ui:InvokeWorkflowFile>
-      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="development" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="ConstantValues.xaml">
-        <ui:InvokeWorkflowFile.Arguments>
-          <OutArgument x:TypeArguments="x:String" x:Key="StudentSystemProductionUrl" />
-          <OutArgument x:TypeArguments="x:String" x:Key="StudentSystemTestUrl" />
-          <OutArgument x:TypeArguments="x:String" x:Key="StudentSystemDevelopmentUrl">[studentSystemUrl]</OutArgument>
-        </ui:InvokeWorkflowFile.Arguments>
+        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="ConstantValues.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <OutArgument x:TypeArguments="x:String" x:Key="StudentSystemProductionUrl" />
+            <OutArgument x:TypeArguments="x:String" x:Key="StudentSystemTestUrl">[studentSystemUrl]</OutArgument>
+            <OutArgument x:TypeArguments="x:String" x:Key="StudentSystemDevelopmentUrl" />
+          </ui:InvokeWorkflowFile.Arguments>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:InvokeWorkflowFile>
+      </Sequence>
+      <Sequence x:Key="development" sap:VirtualizedContainerService.HintSize="336,211" sap2010:WorkflowViewState.IdRef="Sequence_16">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-      </ui:InvokeWorkflowFile>
+        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="ConstantValues.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <OutArgument x:TypeArguments="x:String" x:Key="StudentSystemProductionUrl" />
+            <OutArgument x:TypeArguments="x:String" x:Key="StudentSystemTestUrl" />
+            <OutArgument x:TypeArguments="x:String" x:Key="StudentSystemDevelopmentUrl">[studentSystemUrl]</OutArgument>
+          </ui:InvokeWorkflowFile.Arguments>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:InvokeWorkflowFile>
+      </Sequence>
     </Switch>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="937,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[String.Format(&quot;Attempting to login to the '{0}' Student Management System environment&quot;, Environment)]">
       <sap:WorkflowViewStateService.ViewState>

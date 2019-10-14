@@ -69,6 +69,7 @@
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="A configuration item used as part of this test" Name="studyPackageVersion" />
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="A configuration item used as part of this test" Name="studyPackageCode" />
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="A configuration item used as part of this test" Name="commentCode" />
+      <Variable x:TypeArguments="ui:Browser" sap2010:Annotation.AnnotationText="Store a reference to the active browser tab for sharing between workflows" Name="activeBrowserInstance" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -196,7 +197,7 @@
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPeriod" />
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageVersion" />
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt" />
-                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
+                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[activeBrowserInstance]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="StudentID" />
                   <InArgument x:TypeArguments="x:String" x:Key="CommentCode" />
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageCode" />
@@ -252,7 +253,7 @@
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPeriod">[String.Format("{0}A", studyPeriod)]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageVersion" />
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt" />
-                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
+                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[activeBrowserInstance]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="StudentID" />
                   <InArgument x:TypeArguments="x:String" x:Key="CommentCode" />
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageCode" />
@@ -301,7 +302,7 @@
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPeriod">[studyPeriod]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageVersion" />
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt" />
-                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
+                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[activeBrowserInstance]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="StudentID">[String.Format("{0}A", studentId)]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="CommentCode" />
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageCode" />
@@ -350,7 +351,7 @@
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPeriod">[studyPeriod]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageVersion">[String.Format("{0}A", studyPackageVersion)]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt" />
-                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
+                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[activeBrowserInstance]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="StudentID">[studentId]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="CommentCode" />
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageCode" />
@@ -399,7 +400,7 @@
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPeriod">[studyPeriod]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageVersion">[studyPackageVersion]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt">[String.Format("{0}A", studyPackageAttempt)]</InArgument>
-                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
+                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[activeBrowserInstance]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="StudentID">[studentId]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="CommentCode" />
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageCode" />

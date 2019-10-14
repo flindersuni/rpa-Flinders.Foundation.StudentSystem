@@ -71,6 +71,7 @@
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="A configuration item used as part of this test" Name="textTwoField" />
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="A configuration item used as part of this test" Name="textOneField" />
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="A configuration item used as part of this test" Name="correspondenceDefinition" />
+      <Variable x:TypeArguments="ui:Browser" sap2010:Annotation.AnnotationText="Store a reference to the active browser tab for sharing between workflows" Name="activeBrowserInstance" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -210,7 +211,7 @@
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageCode">[studyPackageCode]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageVersion">[studyPackageVersion]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt">[studyPackageAttempt]</InArgument>
-                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
+                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[activeBrowserInstance]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="CorrespondenceDefinition">[correspondenceDefinition]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="TextOneField">[textOneField]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="TextTwoField">[textTwoField]</InArgument>
@@ -257,7 +258,7 @@
             <ui:InvokeWorkflowFile.Arguments>
               <OutArgument x:TypeArguments="x:Boolean" x:Key="ProcessSuccessful" />
               <OutArgument x:TypeArguments="x:String" x:Key="ProcessMessage" />
-              <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
+              <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[activeBrowserInstance]</InOutArgument>
               <InArgument x:TypeArguments="x:String" x:Key="WindowName">Student Study Plan Merge</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>

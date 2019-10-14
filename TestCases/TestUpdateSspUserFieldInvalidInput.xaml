@@ -56,7 +56,6 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Test the Update SSP User Field activity by entering some invalid data." DisplayName="TestUpdateSspUserFieldInvalidInput" sap:VirtualizedContainerService.HintSize="480,3613" sap2010:WorkflowViewState.IdRef="Sequence_2">
@@ -69,6 +68,7 @@
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="A configuration item used as part of this test" Name="studyPackageCode" />
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The name of the user field to update" Name="userFieldName" />
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="A valid user field value" Name="userFieldValue" />
+      <Variable x:TypeArguments="ui:Browser" sap2010:Annotation.AnnotationText="Store a reference to the active browser tab for sharing between workflows" Name="activeBrowserInstance" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -183,7 +183,7 @@
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt" />
                   <InArgument x:TypeArguments="x:String" x:Key="UserFieldLabel" />
                   <InArgument x:TypeArguments="x:String" x:Key="UserFieldValue" />
-                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
+                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[activeBrowserInstance]</InOutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
             </TryCatch.Try>
@@ -231,7 +231,7 @@
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt" />
                   <InArgument x:TypeArguments="x:String" x:Key="UserFieldLabel" />
                   <InArgument x:TypeArguments="x:String" x:Key="UserFieldValue" />
-                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
+                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[activeBrowserInstance]</InOutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
             </TryCatch.Try>
@@ -279,7 +279,7 @@
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt">[String.Format("{0}A", studyPackageAttempt)]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="UserFieldLabel" />
                   <InArgument x:TypeArguments="x:String" x:Key="UserFieldValue" />
-                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
+                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[activeBrowserInstance]</InOutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
             </TryCatch.Try>

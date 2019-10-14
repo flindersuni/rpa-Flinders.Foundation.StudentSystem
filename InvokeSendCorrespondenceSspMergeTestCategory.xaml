@@ -69,6 +69,7 @@
   <Flowchart sap2010:Annotation.AnnotationText="Invoke the Flinders.Foundation.StudentSystem.SendCorrespondenceSspMerge test suite&#xA;&#xA;Assumes the login to the Student Management System has already occurred." DisplayName="InvokeTestSuite" sap:VirtualizedContainerService.HintSize="614,693" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="sd:DataTable" sap2010:Annotation.AnnotationText="The list of detected test cases" Name="testCases" />
+      <Variable x:TypeArguments="ui:Browser" sap2010:Annotation.AnnotationText="Store a reference to the active browser tab for sharing between workflows" Name="activeBrowserInstance" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -89,7 +90,7 @@
           <av:Size x:Key="ShapeSize">200,51</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="654,1237" sap2010:WorkflowViewState.IdRef="TryCatch_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -237,7 +238,7 @@
                   <ui:InvokeWorkflowFile.Arguments>
                     <OutArgument x:TypeArguments="x:Boolean" x:Key="ProcessSuccessful" />
                     <OutArgument x:TypeArguments="x:String" x:Key="ProcessMessage" />
-                    <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
+                    <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[activeBrowserInstance]</InOutArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="WindowName">Student Study Plan Merge</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                   <sap:WorkflowViewStateService.ViewState>

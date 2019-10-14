@@ -68,6 +68,7 @@
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="A configuration item used as part of this test" Name="studyPackageCode" />
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The name of the user field to update" Name="userFieldLabel" />
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="A valid user field value" Name="userFieldValue" />
+      <Variable x:TypeArguments="ui:Browser" sap2010:Annotation.AnnotationText="Store a reference to the active browser tab for sharing between workflows" Name="activeBrowserInstance" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -192,7 +193,7 @@
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt">[studyPackageAttempt]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="UserFieldLabel">[userFieldLabel]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="UserFieldValue">[userFieldValue]</InArgument>
-                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
+                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[activeBrowserInstance]</InOutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
             </TryCatch.Try>
@@ -225,7 +226,7 @@
             <ui:InvokeWorkflowFile.Arguments>
               <OutArgument x:TypeArguments="x:Boolean" x:Key="ProcessSuccessful" />
               <OutArgument x:TypeArguments="x:String" x:Key="ProcessMessage" />
-              <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
+              <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[activeBrowserInstance]</InOutArgument>
               <InArgument x:TypeArguments="x:String" x:Key="WindowName">Student Study Package</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
             <sap:WorkflowViewStateService.ViewState>
@@ -260,7 +261,7 @@
                     <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt">[studyPackageAttempt]</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="UserFieldLabel">[userFieldLabel]</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="UserFieldValue">[userFieldValue]</InArgument>
-                    <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
+                    <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[activeBrowserInstance]</InOutArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
               </Sequence>
@@ -294,7 +295,7 @@
             <ui:InvokeWorkflowFile.Arguments>
               <OutArgument x:TypeArguments="x:Boolean" x:Key="ProcessSuccessful" />
               <OutArgument x:TypeArguments="x:String" x:Key="ProcessMessage" />
-              <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
+              <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[activeBrowserInstance]</InOutArgument>
               <InArgument x:TypeArguments="x:String" x:Key="WindowName">Student Study Package</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
             <sap:WorkflowViewStateService.ViewState>
@@ -329,7 +330,7 @@
                     <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt">[studyPackageAttempt]</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="UserFieldLabel">[String.Format("{0}A", userFieldLabel)]</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="UserFieldValue">[userFieldValue]</InArgument>
-                    <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
+                    <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[activeBrowserInstance]</InOutArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
               </Sequence>
@@ -363,7 +364,7 @@
             <ui:InvokeWorkflowFile.Arguments>
               <OutArgument x:TypeArguments="x:Boolean" x:Key="ProcessSuccessful" />
               <OutArgument x:TypeArguments="x:String" x:Key="ProcessMessage" />
-              <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
+              <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[activeBrowserInstance]</InOutArgument>
               <InArgument x:TypeArguments="x:String" x:Key="WindowName">Student Study Package</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
             <sap:WorkflowViewStateService.ViewState>

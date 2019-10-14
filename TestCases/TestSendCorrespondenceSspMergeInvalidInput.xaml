@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>520,4527</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>520,4658</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -58,7 +58,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Test the Send Correspondence SSP Merge activity by entering some invalid data." DisplayName="TestSendCorrespondenceSspMergeInvalidInput" sap:VirtualizedContainerService.HintSize="480,4447" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Test the Send Correspondence SSP Merge activity by entering some invalid data." DisplayName="TestSendCorrespondenceSspMergeInvalidInput" sap:VirtualizedContainerService.HintSize="480,4578" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Keep a reference to the underlying project level current directory" Name="projectCurrentDirectory" />
       <Variable x:TypeArguments="sd:DataTable" sap2010:Annotation.AnnotationText="A data table containing test values" Name="testConfiguration" />
@@ -71,6 +71,7 @@
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="A configuration item used as part of this test" Name="textTwoField" />
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="A configuration item used as part of this test" Name="textOneField" />
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="A configuration item used as part of this test" Name="correspondenceDefintion" />
+      <Variable x:TypeArguments="ui:Browser" sap2010:Annotation.AnnotationText="Store a reference to the active browser tab for sharing between workflows" Name="activeBrowserInstance" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -177,14 +178,14 @@
         </ui:LookupDataTable.CellValue>
       </ui:LookupDataTable>
     </Sequence>
-    <TryCatch sap2010:Annotation.AnnotationText="Undertake testing of the activity. Any unexepected exceptions will be caught here." DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="458,2987" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch sap2010:Annotation.AnnotationText="Undertake testing of the activity. Any unexepected exceptions will be caught here." DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="458,3118" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap2010:Annotation.AnnotationText="Undertake the tests for this activity" sap:VirtualizedContainerService.HintSize="440,2718" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence sap2010:Annotation.AnnotationText="Undertake the tests for this activity" sap:VirtualizedContainerService.HintSize="440,2849" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -208,7 +209,7 @@
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageCode" />
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageVersion" />
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt" />
-                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
+                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[activeBrowserInstance]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="CorrespondenceDefinition" />
                   <InArgument x:TypeArguments="x:String" x:Key="TextOneField" />
                   <InArgument x:TypeArguments="x:String" x:Key="TextTwoField" />
@@ -260,7 +261,7 @@
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageCode" />
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageVersion">[String.Format("{0}A", studyPackageVersion)]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt" />
-                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
+                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[activeBrowserInstance]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="CorrespondenceDefinition" />
                   <InArgument x:TypeArguments="x:String" x:Key="TextOneField" />
                   <InArgument x:TypeArguments="x:String" x:Key="TextTwoField" />
@@ -312,7 +313,7 @@
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageCode" />
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageVersion">[studyPackageVersion]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt">[String.Format("{0}A", studyPackageAttempt)]</InArgument>
-                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
+                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[activeBrowserInstance]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="CorrespondenceDefinition" />
                   <InArgument x:TypeArguments="x:String" x:Key="TextOneField" />
                   <InArgument x:TypeArguments="x:String" x:Key="TextTwoField" />
@@ -347,7 +348,7 @@
             </sap:WorkflowViewStateService.ViewState>
             <InArgument x:TypeArguments="x:String">[projectCurrentDirectory]</InArgument>
           </InvokeMethod>
-          <TryCatch sap2010:Annotation.AnnotationText="Test the validation correspondence definition" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,210" sap2010:WorkflowViewState.IdRef="TryCatch_7">
+          <TryCatch sap2010:Annotation.AnnotationText="Test the validation correspondence definition" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,341" sap2010:WorkflowViewState.IdRef="TryCatch_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -364,17 +365,18 @@
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageCode" />
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageVersion">[studyPackageVersion]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt">[studyPackageAttempt]</InArgument>
-                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser" />
+                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[activeBrowserInstance]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="CorrespondenceDefinition" />
                   <InArgument x:TypeArguments="x:String" x:Key="TextOneField" />
                   <InArgument x:TypeArguments="x:String" x:Key="TextTwoField" />
                   <InArgument x:TypeArguments="x:String" x:Key="TextThreeField" />
                   <InArgument x:TypeArguments="x:String" x:Key="TextFourField" />
+                  <InArgument x:TypeArguments="x:String" x:Key="CorrespondenceSubject" />
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_7">
+              <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_7">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
