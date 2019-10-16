@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ClickRetrieveButton" mva:VisualBasic.Settings="{x:Null}" sap2010:Annotation.AnnotationText="UPTF000001DCeyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjoiaHR0cHM6XC9cL2dpdGh1Yi5jb21cL2ZsaW5kZXJzdW5pXC9ycGEtRmxpbmRlcnMuRm91bmRhdGlvbi5TdHVkZW50U3lzdGVtXC93aWtpXC9DbGlja1JldHJpZXZlQnV0dG9uIiwiPEluaXRpYWxUb29sdGlwPmtfX0JhY2tpbmdGaWVsZCI6IkNsaWNrIHRoZSBSZXRyaWV2ZSBidXR0b24sIHRvIHJldHJpZXZlIGEgcmVjb3JkIGFmdGVyIGVudGVyaW5nIHRoZSBhcHBsaWNhYmxlIGNyaXRlcmlhLiBcdTAwMGFcdTAwMGFCb3RoIG9mIHRoZSBrbm93biBjb2xvdXJzIGZvciB0aGUgcmV0cmlldmUgYnV0dG9uIGFyZSB1c2VkLiIsIjxWZXJzaW9uPmtfX0JhY2tpbmdGaWVsZCI6MX0=" sap:VirtualizedContainerService.HintSize="480,1179" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:f="clr-namespace:Flinders_Foundation;assembly=Flinders.Foundation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ClickRetrieveButton" mva:VisualBasic.Settings="{x:Null}" sap2010:Annotation.AnnotationText="UPTF000001DCeyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjoiaHR0cHM6XC9cL2dpdGh1Yi5jb21cL2ZsaW5kZXJzdW5pXC9ycGEtRmxpbmRlcnMuRm91bmRhdGlvbi5TdHVkZW50U3lzdGVtXC93aWtpXC9DbGlja1JldHJpZXZlQnV0dG9uIiwiPEluaXRpYWxUb29sdGlwPmtfX0JhY2tpbmdGaWVsZCI6IkNsaWNrIHRoZSBSZXRyaWV2ZSBidXR0b24sIHRvIHJldHJpZXZlIGEgcmVjb3JkIGFmdGVyIGVudGVyaW5nIHRoZSBhcHBsaWNhYmxlIGNyaXRlcmlhLiBcdTAwMGFcdTAwMGFCb3RoIG9mIHRoZSBrbm93biBjb2xvdXJzIGZvciB0aGUgcmV0cmlldmUgYnV0dG9uIGFyZSB1c2VkLiIsIjxWZXJzaW9uPmtfX0JhY2tpbmdGaWVsZCI6MX0=" sap:VirtualizedContainerService.HintSize="500,1450" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:f="clr-namespace:Flinders_Foundation;assembly=Flinders.Foundation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -44,9 +44,10 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Click the Retrieve button, to retrieve a record after entering the applicable criteria. &#xA;&#xA;Both of the known colours for the retrieve button are used." DisplayName="ClickRetrieveButton" sap:VirtualizedContainerService.HintSize="440,1099" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Click the Retrieve button, to retrieve a record after entering the applicable criteria. &#xA;&#xA;Both of the known colours for the retrieve button are used." DisplayName="ClickRetrieveButton" sap:VirtualizedContainerService.HintSize="460,1330" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="The default delay value for interacting with UI elements" Default="10000" Name="defaultDelayValue" />
     </Sequence.Variables>
@@ -56,8 +57,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="418,112" sap2010:WorkflowViewState.IdRef="Comment_1" Text="There is no unit test for this activity. As it is a core component other unit tests that interact with the Student Management System will highlight issues with it." />
-    <TryCatch sap2010:Annotation.AnnotationText="Try to click the retrieve button. Trying first one known colour, and then the other. " DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,751" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="438,112" sap2010:WorkflowViewState.IdRef="Comment_1" Text="There is no unit test for this activity. As it is a core component other unit tests that interact with the Student Management System will highlight issues with it." />
+    <TryCatch sap2010:Annotation.AnnotationText="Try to click the retrieve button. Trying first one known colour, and then the other. " DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,982" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -71,7 +72,7 @@
               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" sap2010:Annotation.AnnotationText="Click the retrieve button to retrieve the student record. A DelayAfter attribute is set to allow an potential error message to stop flashing before we check for it. " ClickType="CLICK_SINGLE" DelayMS="[Cint(defaultDelayValue * 0.5)]" DisplayName="Click Image" sap:VirtualizedContainerService.HintSize="314,178" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" sap2010:Annotation.AnnotationText="Click the retrieve button to retrieve the student record. A DelayAfter attribute is set to allow an potential error message to stop flashing before we check for it. " ClickType="CLICK_SINGLE" DelayMS="[Cint(defaultDelayValue * 0.3)]" DisplayName="Click Image" sap:VirtualizedContainerService.HintSize="314,178" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
             <ui:ClickImage.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -98,7 +99,7 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="424,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -121,10 +122,10 @@
             </Sequence>
           </ActivityAction>
         </Catch>
-        <Catch x:TypeArguments="ui:ImageOperationException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+        <Catch x:TypeArguments="ui:ImageOperationException" sap:VirtualizedContainerService.HintSize="424,756" sap2010:WorkflowViewState.IdRef="Catch`1_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -145,7 +146,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" sap2010:Annotation.AnnotationText="Click the retrieve button to retrieve the student record. A DelayAfter attribute is set to allow an potential error message to stop flashing before we check for it. " ClickType="CLICK_SINGLE" DelayMS="[Cint(defaultDelayValue * 0.5)]" DisplayName="Click Image 'Retrieve button'" sap:VirtualizedContainerService.HintSize="314,178" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                  <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" sap2010:Annotation.AnnotationText="Click the retrieve button to retrieve the student record. A DelayAfter attribute is set to allow an potential error message to stop flashing before we check for it. " ClickType="CLICK_SINGLE" DelayMS="[Cint(defaultDelayValue * 0.3)]" DisplayName="Click Image 'Retrieve button'" sap:VirtualizedContainerService.HintSize="314,178" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                     <ui:ClickImage.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
