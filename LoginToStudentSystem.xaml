@@ -389,7 +389,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <Delay sap2010:Annotation.AnnotationText="Add a short delay to ensure the Ci Anywhere Workspace UI has a chance to settle (e.g. JavaScript loading completely) prior to attempting the next step in the process. " Duration="00:00:02" sap:VirtualizedContainerService.HintSize="937,139" sap2010:WorkflowViewState.IdRef="Delay_2">
+    <Delay sap2010:Annotation.AnnotationText="Add a mediumdelay to ensure the Ci Anywhere Workspace UI has a chance to settle (e.g. JavaScript loading completely) prior to attempting the next step in the process. " Duration="00:00:06" sap:VirtualizedContainerService.HintSize="937,139" sap2010:WorkflowViewState.IdRef="Delay_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
