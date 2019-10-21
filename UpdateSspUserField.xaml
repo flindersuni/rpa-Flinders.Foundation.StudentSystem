@@ -14,7 +14,7 @@
     <x:Null />
   </mva:VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000144eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjoiaHR0cHM6XC9cL2dpdGh1Yi5jb21cL2ZsaW5kZXJzdW5pXC9ycGEtRmxpbmRlcnMuRm91bmRhdGlvbi5TdHVkZW50U3lzdGVtXC93aWtpXC9VcGRhdGVTc3BVc2VyRmllbGQiLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjoiVXBkYXRlIGEgU3R1ZGVudCBTdHVkeSBQYWNrYWdlIChTU1ApIHVzZXIgZmllbGQiLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>791,8010</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>791,8613</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -61,9 +61,10 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Update a Student Study Package (SSP) user field" DisplayName="UpdateSspUserField" sap:VirtualizedContainerService.HintSize="751,7930" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Update a Student Study Package (SSP) user field" DisplayName="UpdateSspUserField" sap:VirtualizedContainerService.HintSize="751,8493" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" sap2010:Annotation.AnnotationText="A flag indicating if a specific Ui element exists or not" Name="elementExists" />
       <Variable x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="The default delay value for interacting with UI elements" Default="10000" Name="defaultDelayValue" />
@@ -732,7 +733,7 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <TryCatch sap2010:Annotation.AnnotationText="Try to save the newly updated record" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="729,3466" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+    <TryCatch sap2010:Annotation.AnnotationText="Try to save the newly updated record" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="729,4029" sap2010:WorkflowViewState.IdRef="TryCatch_5">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -741,13 +742,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[ActiveBrowser]" BrowserType="IE" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="711,3190" sap2010:WorkflowViewState.IdRef="BrowserScope_5">
+        <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[ActiveBrowser]" BrowserType="IE" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="711,3753" sap2010:WorkflowViewState.IdRef="BrowserScope_5">
           <ui:BrowserScope.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="697,3082" sap2010:WorkflowViewState.IdRef="Sequence_21">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="697,3645" sap2010:WorkflowViewState.IdRef="Sequence_21">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -920,6 +921,30 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Info" Message="[&quot;First delay period has passed, and window is not ready yet. Delaying processing again.&quot;]" />
                       <Delay sap2010:Annotation.AnnotationText="Add a medium delay to ensure the record saves correctly and the screen updates" Duration="[TimeSpan.FromMilliseconds(CInt(DefaultDelayValue * 0.5))]" sap:VirtualizedContainerService.HintSize="314,94" sap2010:WorkflowViewState.IdRef="Delay_2">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Delay>
+                    </Sequence>
+                  </If.Then>
+                </If>
+                <If sap2010:Annotation.AnnotationText="Check to see if the screen has refreshed successfully, if not then wait again" Condition="[elementExists = True]" sap:VirtualizedContainerService.HintSize="675,523" sap2010:WorkflowViewState.IdRef="If_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If.Then>
+                    <Sequence sap:VirtualizedContainerService.HintSize="336,349" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Info" Message="[&quot;Second delay period has passed, and window is not ready yet. Delaying processing one final time.&quot;]" />
+                      <Delay sap2010:Annotation.AnnotationText="Add a medium delay to ensure the record saves correctly and the screen updates" Duration="[TimeSpan.FromMilliseconds(CInt(DefaultDelayValue * 0.5))]" sap:VirtualizedContainerService.HintSize="314,94" sap2010:WorkflowViewState.IdRef="Delay_3">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
