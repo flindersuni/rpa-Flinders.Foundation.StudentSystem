@@ -1,7 +1,7 @@
 {
   "name": "Flinders.Foundation.StudentSystem",
   "description": "A library of foundational activities used in UiPath projects that integrate with the Student Management System",
-  "main": "NewActivity.xaml",
+  "main": "InvokeTestsAllCategories.xaml",
   "dependencies": {
     "Flinders.Foundation": "2.0.4",
     "UiPath.Excel.Activities": "2.6.3",
