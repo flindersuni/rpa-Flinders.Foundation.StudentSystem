@@ -1,15 +1,15 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="TestEnterCommentInvalidInput" this:TestEnterCommentInvalidInput.TestEnvironmentBlackList="production" this:TestEnterCommentInvalidInput.TestCategory="Flinders.Foundation.StudentSystem.EnterComment" this:TestEnterCommentInvalidInput.TestOrder="2" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:f="clr-namespace:Flinders_Foundation_Testing;assembly=Flinders.Foundation.Testing" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="TestEnvironmentBlackList" Type="InArgument(x:String)" />
-    <x:Property Name="TestCategory" Type="InArgument(x:String)" />
-    <x:Property Name="TestResult" Type="OutArgument(x:Boolean)" />
-    <x:Property Name="TestMessage" Type="OutArgument(x:String)" />
-    <x:Property Name="TestOrder" Type="InArgument(x:Int32)" />
+    <x:Property sap2010:Annotation.AnnotationText="A list of environments that this test should not be run in. For example prohibiting tests that write / update data from running in production environments" Name="TestEnvironmentBlackList" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="The unique identifier for the test category that this test is part of. &#xA;&#xA;Typically in the form &#xA;&#xA;[project name].[activity name]" Name="TestCategory" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="A flag indicating if the test was successful or not" Name="TestResult" Type="OutArgument(x:Boolean)" />
+    <x:Property sap2010:Annotation.AnnotationText="A message about the result of running the tests" Name="TestMessage" Type="OutArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="An index that specifies the order in which this test should be executed" Name="TestOrder" Type="InArgument(x:Int32)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>520,2944</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>476,2131</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -59,7 +59,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Test the Enter Comment activity by entering valid data." DisplayName="TestEnterCommentInvalidComplexInput" sap:VirtualizedContainerService.HintSize="480,2864" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Test the Enter Comment activity by entering valid data." DisplayName="TestEnterCommentInvalidComplexInput" sap:VirtualizedContainerService.HintSize="436,2051" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Keep a reference to the underlying project level current directory" Name="projectCurrentDirectory" />
       <Variable x:TypeArguments="sd:DataTable" sap2010:Annotation.AnnotationText="A data table containing test values" Name="testConfiguration" />
@@ -78,7 +78,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Initialise Arguments and Variables" sap:VirtualizedContainerService.HintSize="458,498" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence sap2010:Annotation.AnnotationText="Initialise Arguments and Variables" sap:VirtualizedContainerService.HintSize="414,498" sap2010:WorkflowViewState.IdRef="Sequence_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -116,7 +116,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </Assign>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Load the test configuration values" sap:VirtualizedContainerService.HintSize="458,607" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <Sequence sap2010:Annotation.AnnotationText="Load the test configuration values" sap:VirtualizedContainerService.HintSize="414,607" sap2010:WorkflowViewState.IdRef="Sequence_8">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -167,25 +167,26 @@
         </ui:LookupDataTable.CellValue>
       </ui:LookupDataTable>
     </Sequence>
-    <TryCatch sap2010:Annotation.AnnotationText="Undertake testing of the activity. Any unexepected exceptions will be caught here." DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="458,1528" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch sap2010:Annotation.AnnotationText="Undertake testing of the activity. Any unexepected exceptions will be caught here." DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="414,715" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap2010:Annotation.AnnotationText="Undertake the test by entering valid data, no exceptions can be thrown." sap:VirtualizedContainerService.HintSize="440,1259" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence sap2010:Annotation.AnnotationText="Undertake the test by entering valid data, no exceptions can be thrown." sap:VirtualizedContainerService.HintSize="440,1286" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,314" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+          <TryCatch sap2010:Annotation.AnnotationText="Invoke the activity and check the exception thrown" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,341" sap2010:WorkflowViewState.IdRef="TryCatch_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <TryCatch.Try>
@@ -270,10 +271,10 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="444,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,511" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>

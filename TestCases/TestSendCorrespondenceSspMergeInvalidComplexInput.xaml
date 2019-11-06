@@ -1,10 +1,10 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="TestEnterCommentInvalidInput" this:TestEnterCommentInvalidInput.TestCategory="Flinders.Foundation.StudentSystem.SendCorrespondenceSspMerge" this:TestEnterCommentInvalidInput.TestOrder="1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:f="clr-namespace:Flinders_Foundation_Testing;assembly=Flinders.Foundation.Testing" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="TestEnvironmentBlackList" Type="InArgument(x:String)" />
-    <x:Property Name="TestCategory" Type="InArgument(x:String)" />
-    <x:Property Name="TestResult" Type="OutArgument(x:Boolean)" />
-    <x:Property Name="TestMessage" Type="OutArgument(x:String)" />
-    <x:Property Name="TestOrder" Type="InArgument(x:Int32)" />
+    <x:Property sap2010:Annotation.AnnotationText="A list of environments that this test should not be run in. For example prohibiting tests that write / update data from running in production environments" Name="TestEnvironmentBlackList" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="The unique identifier for the test category that this test is part of. &#xA;&#xA;Typically in the form &#xA;&#xA;[project name].[activity name]" Name="TestCategory" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="A flag indicating if the test was successful or not" Name="TestResult" Type="OutArgument(x:Boolean)" />
+    <x:Property sap2010:Annotation.AnnotationText="A message about the result of running the tests" Name="TestMessage" Type="OutArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="An index that specifies the order in which this test should be executed" Name="TestOrder" Type="InArgument(x:Int32)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
