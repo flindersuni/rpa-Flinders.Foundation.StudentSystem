@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ClickClearButton" mva:VisualBasic.Settings="{x:Null}" sap2010:Annotation.AnnotationText="UPTF00000174eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjoiaHR0cHM6XC9cL2dpdGh1Yi5jb21cL2ZsaW5kZXJzdW5pXC9ycGEtRmxpbmRlcnMuRm91bmRhdGlvbi5TdHVkZW50U3lzdGVtXC93aWtpXC9DbG9zZVdpbmRvdyIsIjxJbml0aWFsVG9vbHRpcD5rX19CYWNraW5nRmllbGQiOiJDbG9zZSBhIHdpbmRvd1x1MDAwYVx1MDAwYURpZmZlcmVudCBhY2N1cmFjeSBsZXZlbHMgZm9yIHRoZSBpbWFnZSByZWNvZ25pdGlvbiBhcmUgdXNlZC4gICAiLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9" sap:VirtualizedContainerService.HintSize="480,670" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:f="clr-namespace:Flinders_Foundation;assembly=Flinders.Foundation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ClickClearButton" mva:VisualBasic.Settings="{x:Null}" sap2010:Annotation.AnnotationText="UPTF00000174eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjoiaHR0cHM6XC9cL2dpdGh1Yi5jb21cL2ZsaW5kZXJzdW5pXC9ycGEtRmxpbmRlcnMuRm91bmRhdGlvbi5TdHVkZW50U3lzdGVtXC93aWtpXC9DbG9zZVdpbmRvdyIsIjxJbml0aWFsVG9vbHRpcD5rX19CYWNraW5nRmllbGQiOiJDbG9zZSBhIHdpbmRvd1x1MDAwYVx1MDAwYURpZmZlcmVudCBhY2N1cmFjeSBsZXZlbHMgZm9yIHRoZSBpbWFnZSByZWNvZ25pdGlvbiBhcmUgdXNlZC4gICAiLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9" sap:VirtualizedContainerService.HintSize="480,743" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:f="clr-namespace:Flinders_Foundation;assembly=Flinders.Foundation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -46,7 +46,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Close an already open window " DisplayName="CloseWindow" sap:VirtualizedContainerService.HintSize="440,590" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Close an already open window " DisplayName="CloseWindow" sap:VirtualizedContainerService.HintSize="440,663" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="The default delay value for interacting with UI elements" Default="10000" Name="defaultDelayValue" />
     </Sequence.Variables>
@@ -57,7 +57,12 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:Comment sap:VirtualizedContainerService.HintSize="418,112" sap2010:WorkflowViewState.IdRef="Comment_2" Text="There is no unit test for this activity. As it is a core component other unit tests that interact with the Student Management System will highlight issues with it." />
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,287" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+    <TryCatch sap2010:Annotation.AnnotationText="Try to click the close window button" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,360" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
         <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="ClickImage_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
           <ui:ClickImage.CursorPosition>

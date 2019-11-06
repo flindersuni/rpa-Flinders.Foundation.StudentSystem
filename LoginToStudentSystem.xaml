@@ -9,7 +9,7 @@
     <x:Null />
   </mva:VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000160eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjoiaHR0cHM6XC9cL2dpdGh1Yi5jb21cL2ZsaW5kZXJzdW5pXC9ycGEtRmxpbmRlcnMuRm91bmRhdGlvbi5TdHVkZW50U3lzdGVtXC93aWtpXC9Mb2dpblRvU3R1ZGVudFN5c3RlbSIsIjxJbml0aWFsVG9vbHRpcD5rX19CYWNraW5nRmllbGQiOiJMb2dpbiB0byB0aGUgU3R1ZGVudCBTeXN0ZW0gKENpIENsaWVudCkgaW4gdGhlIFRlY2hub2xvZ3lPbmUgQ2xvdWQiLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>999,7699</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>999,8385</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -56,7 +56,6 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -64,7 +63,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Login to the Student System (Ci Client) in the TechnologyOne Cloud" DisplayName="LoginToStudentSystem" sap:VirtualizedContainerService.HintSize="959,7619" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Login to the Student System (Ci Client) in the TechnologyOne Cloud" DisplayName="LoginToStudentSystem" sap:VirtualizedContainerService.HintSize="959,8305" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The selector for the chiclet in Okta to click on to login to the Student Management System" Name="studentSystemChiclet" />
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The partial URL to use to login to the Student Management system" Name="studentSystemUrl" />
@@ -143,7 +142,7 @@
         </If.Else>
       </If>
     </Sequence>
-    <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Validate the Environment argument, to determine which Okta dashboard chiclet to use to access the Student Management System" DisplayName="Switch" Expression="[Environment]" sap:VirtualizedContainerService.HintSize="937,1099" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+    <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Validate the Environment argument, to determine which Okta dashboard chiclet to use to access the Student Management System" DisplayName="Switch" Expression="[Environment]" sap:VirtualizedContainerService.HintSize="937,1225" sap2010:WorkflowViewState.IdRef="Switch`1_1">
       <Switch.Default>
         <f:ThrowConfigurationException sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ThrowConfigurationException_1" Message="[String.Format(&quot;The specified environment '{0}' is invalid&quot;, Environment)]" />
       </Switch.Default>
@@ -154,10 +153,11 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence x:Key="production" sap:VirtualizedContainerService.HintSize="336,211" sap2010:WorkflowViewState.IdRef="Sequence_14">
+      <Sequence x:Key="production" sap2010:Annotation.AnnotationText="Get the URL for the appropriate environment frm the ConstantValues workflow" sap:VirtualizedContainerService.HintSize="336,253" sap2010:WorkflowViewState.IdRef="Sequence_14">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ConstantValues.xaml">
@@ -174,10 +174,11 @@
           </sap:WorkflowViewStateService.ViewState>
         </ui:InvokeWorkflowFile>
       </Sequence>
-      <Sequence x:Key="test" sap:VirtualizedContainerService.HintSize="336,211" sap2010:WorkflowViewState.IdRef="Sequence_15">
+      <Sequence x:Key="test" sap2010:Annotation.AnnotationText="Get the URL for the appropriate environment frm the ConstantValues workflow" sap:VirtualizedContainerService.HintSize="336,253" sap2010:WorkflowViewState.IdRef="Sequence_15">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="ConstantValues.xaml">
@@ -194,10 +195,11 @@
           </sap:WorkflowViewStateService.ViewState>
         </ui:InvokeWorkflowFile>
       </Sequence>
-      <Sequence x:Key="development" sap:VirtualizedContainerService.HintSize="336,211" sap2010:WorkflowViewState.IdRef="Sequence_16">
+      <Sequence x:Key="development" sap2010:Annotation.AnnotationText="Get the URL for the appropriate environment frm the ConstantValues workflow" sap:VirtualizedContainerService.HintSize="336,253" sap2010:WorkflowViewState.IdRef="Sequence_16">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="ConstantValues.xaml">
@@ -223,7 +225,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <TryCatch sap2010:Annotation.AnnotationText="Login to the appropriate TechnologyOne environment" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="937,1824" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch sap2010:Annotation.AnnotationText="Login to the appropriate TechnologyOne environment" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="937,1935" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -232,11 +234,12 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="919,1141" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence sap2010:Annotation.AnnotationText="Undertae the steps necessary to login to the identified environment." sap:VirtualizedContainerService.HintSize="919,1210" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Assign sap2010:Annotation.AnnotationText="Build the selector for the chiclet to click on in Okta" sap:VirtualizedContainerService.HintSize="897,102" sap2010:WorkflowViewState.IdRef="Assign_5">
@@ -252,14 +255,14 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </Assign>
-          <If sap2010:Annotation.AnnotationText="Check to see if a browser instance has been passed into the workflow" Condition="[Information.IsNothing(ActiveBrowser) = True]" sap:VirtualizedContainerService.HintSize="897,875" sap2010:WorkflowViewState.IdRef="If_2">
+          <If sap2010:Annotation.AnnotationText="Check to see if a browser instance has been passed into the workflow" Condition="[Information.IsNothing(ActiveBrowser) = True]" sap:VirtualizedContainerService.HintSize="897,917" sap2010:WorkflowViewState.IdRef="If_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap2010:Annotation.AnnotationText="ActiveBrowser argument is not set" sap:VirtualizedContainerService.HintSize="436,700" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence sap2010:Annotation.AnnotationText="ActiveBrowser argument is not set" sap:VirtualizedContainerService.HintSize="436,742" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The URL in Okta for the specified Student Management System environment." Name="studentSystemUrl" />
                 </Sequence.Variables>
@@ -270,16 +273,17 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="414,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;ActiveBrowser argument not set, attempting to bind to browser&quot;]" />
-                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="IE" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="414,418" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="eb7db2cdec395aeb9fbf1178c06f5e99" Selector="&lt;html title='Flinders University - My Applications' /&gt;" UiBrowser="[oktaDashboardTab]">
+                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="IE" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="414,460" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="eb7db2cdec395aeb9fbf1178c06f5e99" Selector="&lt;html title='Flinders University - My Applications' /&gt;" UiBrowser="[oktaDashboardTab]">
                   <ui:BrowserScope.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="336,272" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                      <Sequence sap2010:Annotation.AnnotationText="Once attached to the browser, click on the necessary TechnologyOne 'Chiclet'" DisplayName="Do" sap:VirtualizedContainerService.HintSize="336,314" sap2010:WorkflowViewState.IdRef="Sequence_5">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" sap2010:Annotation.AnnotationText="Click the TechnologyOne chiclet using the predetermined selector" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="314,148" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
@@ -309,23 +313,25 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence sap:VirtualizedContainerService.HintSize="436,673" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <Sequence sap2010:Annotation.AnnotationText="ActiveBrowser argument is set" sap:VirtualizedContainerService.HintSize="436,742" sap2010:WorkflowViewState.IdRef="Sequence_7">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="414,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;ActiveBrowser argument was set, attempting to use it&quot;]" />
-                <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" Browser="[ActiveBrowser]" BrowserType="IE" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="414,418" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="ba5d3eef7915e0f0e10ee7651c341cf5" UiBrowser="[oktaDashboardTab]">
+                <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" Browser="[ActiveBrowser]" BrowserType="IE" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="414,460" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="ba5d3eef7915e0f0e10ee7651c341cf5" UiBrowser="[oktaDashboardTab]">
                   <ui:BrowserScope.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="336,272" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <Sequence sap2010:Annotation.AnnotationText="Once attached to the browser, click on the necessary TechnologyOne 'Chiclet'" DisplayName="Do" sap:VirtualizedContainerService.HintSize="336,314" sap2010:WorkflowViewState.IdRef="Sequence_6">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" sap2010:Annotation.AnnotationText="Click the TechnologyOne chiclet using the predetermined selector" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="314,148" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
@@ -358,7 +364,7 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="923,346" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="923,388" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -369,10 +375,11 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="336,277" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <Sequence sap2010:Annotation.AnnotationText="Log hthe underlying exception and throw a new BusinessRuleException" sap:VirtualizedContainerService.HintSize="336,319" sap2010:WorkflowViewState.IdRef="Sequence_8">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Error" Message="[exception]" />
@@ -397,23 +404,26 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Delay>
-    <TryCatch sap2010:Annotation.AnnotationText="Login to the Ci Application" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="937,1691" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch sap2010:Annotation.AnnotationText="Login to the Ci Application" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="937,1787" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="IE" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="711,1008" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="2bf6ee983c7eff0eb48765c7cb5b5c2e" Selector="&lt;html title='*Ci Anywhere Workplace' /&gt;" UiBrowser="[ciAnywhereWorkspaceTab]">
+        <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="IE" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="711,1062" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="2bf6ee983c7eff0eb48765c7cb5b5c2e" Selector="&lt;html title='*Ci Anywhere Workplace' /&gt;" UiBrowser="[ciAnywhereWorkspaceTab]">
           <ui:BrowserScope.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="697,862" sap2010:WorkflowViewState.IdRef="Sequence_9">
+              <Sequence sap2010:Annotation.AnnotationText="Undertake the steps necessary to login to the Ci environment" DisplayName="Do" sap:VirtualizedContainerService.HintSize="697,916" sap2010:WorkflowViewState.IdRef="Sequence_9">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:UiElementExists sap2010:Annotation.AnnotationText="Check to see if the Student Management link is visible" DisplayName="Element Exists" Exists="[studentManagementElementExists]" sap:VirtualizedContainerService.HintSize="675,148" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
@@ -426,7 +436,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:UiElementExists>
-                <If sap2010:Annotation.AnnotationText="If the Student Management element exists, click on it. Otherwise attempt to show it and then click on it. " Condition="[studentManagementElementExists = True]" sap:VirtualizedContainerService.HintSize="675,550" sap2010:WorkflowViewState.IdRef="If_3">
+                <If sap2010:Annotation.AnnotationText="If the Student Management element exists, click on it. Otherwise attempt to show it and then click on it. " Condition="[studentManagementElementExists = True]" sap:VirtualizedContainerService.HintSize="675,577" sap2010:WorkflowViewState.IdRef="If_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -450,10 +460,11 @@
                     </ui:Click>
                   </If.Then>
                   <If.Else>
-                    <Sequence sap:VirtualizedContainerService.HintSize="336,376" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                    <Sequence sap2010:Annotation.AnnotationText="Try to show the link and then click on it." sap:VirtualizedContainerService.HintSize="336,403" sap2010:WorkflowViewState.IdRef="Sequence_10">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
@@ -495,10 +506,10 @@
         </ui:BrowserScope>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="715,346" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="715,388" sap2010:WorkflowViewState.IdRef="Catch`1_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -506,10 +517,11 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="336,277" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <Sequence sap2010:Annotation.AnnotationText="Log hthe underlying exception and throw a new BusinessRuleException" sap:VirtualizedContainerService.HintSize="336,319" sap2010:WorkflowViewState.IdRef="Sequence_11">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Error" Message="[exception]" />
@@ -526,29 +538,31 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CloseTab>
-    <TryCatch sap2010:Annotation.AnnotationText="Wait for the Ci Application to load and become available" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="937,1102" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+    <TryCatch sap2010:Annotation.AnnotationText="Wait for the Ci Application to load and become available" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="937,1455" sap2010:WorkflowViewState.IdRef="TryCatch_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="436,661" sap2010:WorkflowViewState.IdRef="Sequence_13">
+        <Sequence sap2010:Annotation.AnnotationText="Wait the Ci Application to load, intialise and be ready for use." sap:VirtualizedContainerService.HintSize="436,730" sap2010:WorkflowViewState.IdRef="Sequence_13">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="IE" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="414,537" sap2010:WorkflowViewState.IdRef="BrowserScope_4" InformativeScreenshot="37961a17d5922dd37a001f0285a45449" Selector="&lt;html title='TechnologyOne' /&gt;" UiBrowser="[ciWorkspaceTab]">
+          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="IE" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="414,579" sap2010:WorkflowViewState.IdRef="BrowserScope_4" InformativeScreenshot="37961a17d5922dd37a001f0285a45449" Selector="&lt;html title='TechnologyOne' /&gt;" UiBrowser="[ciWorkspaceTab]">
             <ui:BrowserScope.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="336,391" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                <Sequence sap2010:Annotation.AnnotationText="Check to ensure a known Ci application screen element is visible." DisplayName="Do" sap:VirtualizedContainerService.HintSize="336,433" sap2010:WorkflowViewState.IdRef="Sequence_12">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:WaitImageAppear FoundElement="{x:Null}" sap2010:Annotation.AnnotationText="Wait, possibly a long time, until the default workspace winder header appears" DisplayName="Find Image" sap:VirtualizedContainerService.HintSize="314,148" sap2010:WorkflowViewState.IdRef="WaitImageAppear_1">
@@ -578,7 +592,7 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="440,104" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="440,388" sap2010:WorkflowViewState.IdRef="Catch`1_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -589,7 +603,16 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <f:ThrowBusinessRuleException sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ThrowBusinessRuleException_3" Message="Unable to login to the Ci Application" TakeScreenshot="True" />
+            <Sequence sap2010:Annotation.AnnotationText="Log hthe underlying exception and throw a new BusinessRuleException" sap:VirtualizedContainerService.HintSize="336,319" sap2010:WorkflowViewState.IdRef="Sequence_17">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Error" Message="[exception]" />
+              <f:ThrowBusinessRuleException sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="ThrowBusinessRuleException_4" Message="Unable to login to the Ci Application" TakeScreenshot="True" />
+            </Sequence>
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>
@@ -627,7 +650,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="729,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+    <Assign sap:VirtualizedContainerService.HintSize="937,60" sap2010:WorkflowViewState.IdRef="Assign_8">
       <Assign.To>
         <OutArgument x:TypeArguments="ui:Browser">[ActiveBrowser]</OutArgument>
       </Assign.To>

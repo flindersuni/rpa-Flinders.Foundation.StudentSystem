@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ClickClearButton" mva:VisualBasic.Settings="{x:Null}" sap2010:Annotation.AnnotationText="UPTF00000188eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjoiaHR0cHM6XC9cL2dpdGh1Yi5jb21cL2ZsaW5kZXJzdW5pXC9ycGEtRmxpbmRlcnMuRm91bmRhdGlvbi5TdHVkZW50U3lzdGVtXC93aWtpXC9DbGlja0NsZWFyQnV0dG9uIiwiPEluaXRpYWxUb29sdGlwPmtfX0JhY2tpbmdGaWVsZCI6IkNsaWNrIHRoZSBDbGVhciBidXR0b24uIFx1MDAwYVx1MDAwYURpZmZlcmVudCBhY2N1cmFjeSBsZXZlbHMgZm9yIHRoZSBpbWFnZSByZWNvZ25pdGlvbiBhcmUgdXNlZC4gICAiLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9" sap:VirtualizedContainerService.HintSize="480,1221" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:f="clr-namespace:Flinders_Foundation;assembly=Flinders.Foundation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ClickClearButton" mva:VisualBasic.Settings="{x:Null}" sap2010:Annotation.AnnotationText="UPTF00000188eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjoiaHR0cHM6XC9cL2dpdGh1Yi5jb21cL2ZsaW5kZXJzdW5pXC9ycGEtRmxpbmRlcnMuRm91bmRhdGlvbi5TdHVkZW50U3lzdGVtXC93aWtpXC9DbGlja0NsZWFyQnV0dG9uIiwiPEluaXRpYWxUb29sdGlwPmtfX0JhY2tpbmdGaWVsZCI6IkNsaWNrIHRoZSBDbGVhciBidXR0b24uIFx1MDAwYVx1MDAwYURpZmZlcmVudCBhY2N1cmFjeSBsZXZlbHMgZm9yIHRoZSBpbWFnZSByZWNvZ25pdGlvbiBhcmUgdXNlZC4gICAiLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9" sap:VirtualizedContainerService.HintSize="500,1506" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:f="clr-namespace:Flinders_Foundation;assembly=Flinders.Foundation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -46,7 +46,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Click the Clear button. &#xA;&#xA;Different accuracy levels for the image recognition are used.   " DisplayName="ClickClearButton" sap:VirtualizedContainerService.HintSize="440,1141" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Click the Clear button. &#xA;&#xA;Different accuracy levels for the image recognition are used.   " DisplayName="ClickClearButton" sap:VirtualizedContainerService.HintSize="460,1426" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="The default delay value for interacting with UI elements" Default="10000" Name="defaultDelayValue" />
     </Sequence.Variables>
@@ -56,19 +56,20 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="418,131" sap2010:WorkflowViewState.IdRef="Comment_1" Text="This workaround is required due to inconsistent detection of the clear button caused by different scaling and image compression artefacts as a result of accessing the Student System remotely." />
-    <ui:Comment sap:VirtualizedContainerService.HintSize="418,112" sap2010:WorkflowViewState.IdRef="Comment_2" Text="There is no unit test for this activity. As it is a core component other unit tests that interact with the Student Management System will highlight issues with it." />
-    <TryCatch sap2010:Annotation.AnnotationText="Try and click the Clear button with an accuracy of 0.8" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,637" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="438,131" sap2010:WorkflowViewState.IdRef="Comment_1" Text="This workaround is required due to inconsistent detection of the clear button caused by different scaling and image compression artefacts as a result of accessing the Student System remotely." />
+    <ui:Comment sap:VirtualizedContainerService.HintSize="438,112" sap2010:WorkflowViewState.IdRef="Comment_2" Text="There is no unit test for this activity. As it is a core component other unit tests that interact with the Student Management System will highlight issues with it." />
+    <TryCatch sap2010:Annotation.AnnotationText="Try and click the Clear button with an accuracy of 0.8" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,922" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="336,361" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence sap2010:Annotation.AnnotationText="Try to click the clear button" sap:VirtualizedContainerService.HintSize="336,388" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:ClickImage ContinueOnError="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="[CInt(defaultDelayValue * 0.25)]" DelayMS="[CInt(defaultDelayValue * 0.25)]" DisplayName="Click Image" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
@@ -93,7 +94,7 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="424,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -116,10 +117,10 @@
             </Sequence>
           </ActivityAction>
         </Catch>
-        <Catch x:TypeArguments="ui:ImageOperationException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+        <Catch x:TypeArguments="ui:ImageOperationException" sap:VirtualizedContainerService.HintSize="424,711" sap2010:WorkflowViewState.IdRef="Catch`1_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -127,17 +128,18 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:ImageOperationException" Name="exception" />
             </ActivityAction.Argument>
-            <TryCatch sap2010:Annotation.AnnotationText="Try clicking the retrieve button with an accuracy of 0.7" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,615" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+            <TryCatch sap2010:Annotation.AnnotationText="Try clicking the retrieve button with an accuracy of 0.7" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,642" sap2010:WorkflowViewState.IdRef="TryCatch_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
-                <Sequence sap:VirtualizedContainerService.HintSize="336,361" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence sap2010:Annotation.AnnotationText="Try again to click the clear button" sap:VirtualizedContainerService.HintSize="336,388" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:ClickImage ContinueOnError="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="[CInt(defaultDelayValue * 0.25)]" DelayMS="[CInt(defaultDelayValue * 0.25)]" DisplayName="Click Image" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">

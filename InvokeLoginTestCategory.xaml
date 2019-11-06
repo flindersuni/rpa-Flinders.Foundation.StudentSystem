@@ -96,20 +96,22 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,124</av:Point>
-          <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:Size x:Key="ShapeSize">200,93</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch sap2010:Annotation.AnnotationText="Undertake the steps necessary to run the test" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="654,2703" sap2010:WorkflowViewState.IdRef="TryCatch_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <TryCatch.Try>
-          <Sequence sap:VirtualizedContainerService.HintSize="636,1746" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence sap2010:Annotation.AnnotationText="Undertake the steps necessary to run the test" sap:VirtualizedContainerService.HintSize="636,1773" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:CopyFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Copy a fresh TestRunner file to stop a hard failure of a previous test run from stopping this run. " Destination=".\TestFramework\TestRunner.xaml" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="614,94" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path=".\TestTemplates\TestRunner.xaml">
@@ -142,7 +144,7 @@
                     <av:PointCollection x:Key="ConnectorLocation">300,207.02 300,254.5</av:PointCollection>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <If sap2010:Annotation.AnnotationText="Is it necessary to login to Okta as part of this test?" Condition="[LoginToOktaRequired &lt;&gt; False]" sap:VirtualizedContainerService.HintSize="464,507" sap2010:WorkflowViewState.IdRef="If_1">
+                <If sap2010:Annotation.AnnotationText="Is it necessary to login to Okta as part of this test?" Condition="[LoginToOktaRequired &lt;&gt; False]" sap:VirtualizedContainerService.HintSize="464,534" sap2010:WorkflowViewState.IdRef="If_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -150,10 +152,11 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <If.Then>
-                    <Sequence sap:VirtualizedContainerService.HintSize="222,332" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <Sequence sap2010:Annotation.AnnotationText="Yes, login to okta" sap:VirtualizedContainerService.HintSize="222,359" sap2010:WorkflowViewState.IdRef="Sequence_4">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <f:LoadTestConfiguration sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="LoadTestConfiguration_2" TestConfiguration="[testConfiguration]" TestConfigurationWorkbookPath="[Path.Combine(Environment.CurrentDirectory, &quot;..\Configuration\Flinders.Foundation.StudentSystem\TestStudentSystem.xlsx&quot;)]">
@@ -257,7 +260,7 @@
           </Sequence>
         </TryCatch.Try>
         <TryCatch.Catches>
-          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="640,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="640,160" sap2010:WorkflowViewState.IdRef="Catch`1_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -273,24 +276,14 @@
           </Catch>
         </TryCatch.Catches>
         <TryCatch.Finally>
-          <Sequence sap:VirtualizedContainerService.HintSize="222,470" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence sap2010:Annotation.AnnotationText="Cleanup resources and write the test results" sap:VirtualizedContainerService.HintSize="244,493" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Flowchart sap2010:Annotation.AnnotationText="Test Suite Tear Down&#xA;&#xA;Place activities to clean up resources used conducting  testing in this Flowchart. &#xA;&#xA;e.g. close open application windows etc." DisplayName="Flowchart Test Suite Tear Down Activities" sap:VirtualizedContainerService.HintSize="200,183" sap2010:WorkflowViewState.IdRef="Flowchart_4">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <Flowchart.StartNode>
-                <x:Null />
-              </Flowchart.StartNode>
-            </Flowchart>
-            <Sequence sap2010:Annotation.AnnotationText="Log the results of the Test Suite and output results &#xA;in a  file in the Test Results Folder" DisplayName="Sequence Record Test Suite Results" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence sap2010:Annotation.AnnotationText="Log the results of the Test Suite and output results &#xA;in a  file in the Test Results Folder" DisplayName="Sequence Record Test Suite Results" sap:VirtualizedContainerService.HintSize="222,327" sap2010:WorkflowViewState.IdRef="Sequence_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -298,19 +291,9 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Ensure the Test Results Folder path exists" Code="If(Not System.IO.Directory.Exists(TargetPath)) Then&#xA;    System.IO.Directory.CreateDirectory(TargetPath)&#xA;End If" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="314,191" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
-                <ui:InvokeCode.Arguments>
-                  <InArgument x:TypeArguments="x:String" x:Key="TargetPath">[TestResultsFolder]</InArgument>
-                </ui:InvokeCode.Arguments>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </ui:InvokeCode>
-              <ui:SortDataTable ColumnIndex="{x:Null}" DataColumn="{x:Null}" ColumnName="TestCategory" DataTable="[testCases]" DisplayName="Sort Data Table" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="SortDataTable_1" Order="Ascending" OutputDataTable="[testCases]" />
-              <f:LogResults sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="LogResults_2" TestResults="[testCases]" />
-              <f:SaveResults sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="SaveResults_1" OutputAsCsv="False" OutputDirectory="[TestResultsFolder]" TestResults="[testCases]" />
+              <ui:SortDataTable ColumnIndex="{x:Null}" DataColumn="{x:Null}" ColumnName="TestCategory" DataTable="[testCases]" DisplayName="Sort Data Table" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="SortDataTable_1" Order="Ascending" OutputDataTable="[testCases]" />
+              <f:LogResults sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="LogResults_2" TestResults="[testCases]" />
+              <f:SaveResults sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="SaveResults_1" OutputAsCsv="False" OutputDirectory="[TestResultsFolder]" TestResults="[testCases]" />
             </Sequence>
           </Sequence>
         </TryCatch.Finally>
