@@ -3,57 +3,65 @@
   "description": "A library of foundational activities used in UiPath projects that integrate with the Student Management System",
   "main": "InvokeTestsAllCategories.xaml",
   "dependencies": {
-    "Flinders.Foundation": "2.0.4",
-    "UiPath.Excel.Activities": "2.6.3",
-    "UiPath.Mail.Activities": "1.6.0",
-    "UiPath.System.Activities": "19.8.0",
-    "UiPath.UIAutomation.Activities": "19.7.0"
+    "Flinders.Foundation": "2.0.5",
+    "UiPath.Excel.Activities": "2.7.2",
+    "UiPath.Mail.Activities": "1.7.2",
+    "UiPath.System.Activities": "19.10.1",
+    "UiPath.UIAutomation.Activities": "19.10.1"
   },
-  "schemaVersion": "3.2",
-  "studioVersion": "19.4.4.0",
+  "webServices": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "19.10.1.0",
   "projectVersion": "2.0.2",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
     "excludedLoggedData": [
       "Private:*",
       "*password*"
-    ]
+    ],
+    "executionType": "Workflow"
   },
-  "projectType": "Library",
-  "libraryOptions": {
-    "includeOriginalXaml": false,
-    "privateWorkflows": [
-      "TestCases/TestLoginToStudentSystem.xaml",
-      "TestCases/TestLoginToStudentSystemInvalidEnvironment.xaml",
-      "TestFramework/BlankTestCase.xaml",
-      "TestFramework/InvokeTestCase.xaml",
-      "TestFramework/InvokeTestCategoryTestCases.xaml",
-      "TestFramework/TestRunner.xaml",
-      "TestTemplates/InvokeTestSuiteTemplate.xaml",
-      "TestTemplates/TestCaseTemplate.xaml",
-      "TestTemplates/TestRunner.xaml",
-      "ConstantValues.xaml",
-      "InvokeLoginTestCategory.xaml",
-      "InvokeTestsAllCategories.xaml",
-      "TestCases/TestOpenWindowInvalidSearch.xaml",
-      "TestCases/TestOpenWindowStudentComments.xaml",
-      "TestCases/TestOpenWindowStudentStudyPackage.xaml",
-      "TestCases/TestOpenWindowStudentStudyPlanMerge.xaml",
-      "InvokeOpenWindowTestCategory.xaml",
-      "InvokeEnterCommentTestCategory.xaml",
-      "TestCases/TestEnterCommentInvalidInput.xaml",
-      "TestCases/TestEnterCommentInvalidComplexInput.xaml",
-      "TestCases/TestEnterCommentValidInput.xaml",
-      "InvokeUpdateSspUserFieldTestCategory.xaml",
-      "TestCases/TestUpdateSspUserFieldInvalidComplexInput.xaml",
-      "TestCases/TestUpdateSspUserFieldInvalidInput.xaml",
-      "TestCases/TestUpdateSspUserFieldValidInput.xaml",
-      "TestCases/TestSendCorrespondenceSspMergeInvalidInput.xaml",
-      "InvokeSendCorrespondenceSspMergeTestCategory.xaml",
-      "TestCases/TestSendCorrespondenceSspMergeInvalidComplexInput.xaml",
-      "TestCases/TestSendCorrespondenceSspMergeValidInput.xaml"
-    ]
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Library",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": [
+        "TestCases/TestLoginToStudentSystem.xaml",
+        "TestCases/TestLoginToStudentSystemInvalidEnvironment.xaml",
+        "TestFramework/BlankTestCase.xaml",
+        "TestFramework/InvokeTestCase.xaml",
+        "TestFramework/InvokeTestCategoryTestCases.xaml",
+        "TestFramework/TestRunner.xaml",
+        "TestTemplates/InvokeTestSuiteTemplate.xaml",
+        "TestTemplates/TestCaseTemplate.xaml",
+        "TestTemplates/TestRunner.xaml",
+        "ConstantValues.xaml",
+        "InvokeLoginTestCategory.xaml",
+        "InvokeTestsAllCategories.xaml",
+        "TestCases/TestOpenWindowInvalidSearch.xaml",
+        "TestCases/TestOpenWindowStudentComments.xaml",
+        "TestCases/TestOpenWindowStudentStudyPackage.xaml",
+        "TestCases/TestOpenWindowStudentStudyPlanMerge.xaml",
+        "InvokeOpenWindowTestCategory.xaml",
+        "InvokeEnterCommentTestCategory.xaml",
+        "TestCases/TestEnterCommentInvalidInput.xaml",
+        "TestCases/TestEnterCommentInvalidComplexInput.xaml",
+        "TestCases/TestEnterCommentValidInput.xaml",
+        "InvokeUpdateSspUserFieldTestCategory.xaml",
+        "TestCases/TestUpdateSspUserFieldInvalidComplexInput.xaml",
+        "TestCases/TestUpdateSspUserFieldInvalidInput.xaml",
+        "TestCases/TestUpdateSspUserFieldValidInput.xaml",
+        "TestCases/TestSendCorrespondenceSspMergeInvalidInput.xaml",
+        "InvokeSendCorrespondenceSspMergeTestCategory.xaml",
+        "TestCases/TestSendCorrespondenceSspMergeInvalidComplexInput.xaml",
+        "TestCases/TestSendCorrespondenceSspMergeValidInput.xaml"
+      ]
+    },
+    "fileInfos": []
   },
-  "webServices": []
+  "expressionLanguage": "VisualBasic"
 }
