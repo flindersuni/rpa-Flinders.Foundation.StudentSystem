@@ -3,11 +3,11 @@
   "description": "A library of foundational activities used in UiPath projects that integrate with the Student Management System",
   "main": "InvokeTestsAllCategories.xaml",
   "dependencies": {
-    "Flinders.Foundation": "2.0.5",
+    "Flinders.Foundation": "2.0.6",
     "UiPath.Excel.Activities": "2.7.2",
     "UiPath.Mail.Activities": "1.7.2",
     "UiPath.System.Activities": "19.10.1",
-    "UiPath.UIAutomation.Activities": "19.10.1"
+    "UiPath.UIAutomation.Activities": "19.11.1"
   },
   "webServices": [],
   "schemaVersion": "4.0",
