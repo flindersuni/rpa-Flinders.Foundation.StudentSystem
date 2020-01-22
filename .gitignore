@@ -6,3 +6,5 @@
 .settings
 # Ignore ConstantValues.xaml which contains sensitive information.
 ConstantValues.xaml
+# Ignore node_modules directory created by using the rpa-lint app via the package.json file
+node_modules
