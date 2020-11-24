@@ -67,7 +67,38 @@
     "processOptions": {
       "ignoredFiles": []
     },
-    "fileInfoCollection": [],
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "9e36b3d6-7f2f-44d4-b536-60812b1f5cec",
+        "fileName": "TestLoginToStudentSystem.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "3e18754c-d1de-4e0e-adf1-e4e289b88cfd",
+        "fileName": "TestLoginToStudenSystemInvalidEnvironment.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "1b2665e0-f663-4b12-bb97-65a1d439a27e",
+        "fileName": "TestOpenWindowInvalidSearch.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "9670e353-d377-4aae-b155-753b0cd437f0",
+        "fileName": "TestOpenWindowStudentComments.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "84198774-ce3b-497d-a099-8126b5024ecc",
+        "fileName": "TestOpenWindowStudentStudyPlanMerge.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "2ccf0d30-0605-4987-8cda-777a725d00bc",
+        "fileName": "TestOpenWindowStudentStudyPackage.xaml"
+      }
+    ],
     "modernBehavior": false
   },
   "expressionLanguage": "VisualBasic",
