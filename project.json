@@ -3,7 +3,7 @@
   "description": "A library of foundational activities used in UiPath projects that integrate with the Student Management System",
   "main": "InvokeTestsAllCategories.xaml",
   "dependencies": {
-    "Flinders.Foundation": "2.1.0-alpha.4",
+    "Flinders.Foundation": "2.1.0",
     "UiPath.Excel.Activities": "2.9.3",
     "UiPath.Mail.Activities": "1.9.3",
     "UiPath.System.Activities": "20.10.1",
@@ -97,6 +97,51 @@
         "editingStatus": "InProgress",
         "testCaseId": "2ccf0d30-0605-4987-8cda-777a725d00bc",
         "fileName": "TestOpenWindowStudentStudyPackage.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "33ed7250-e7ff-46c6-b358-45b055bb37a5",
+        "fileName": "TestEnterCommentValidInput.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "c8daa42b-394b-45aa-aed4-89e13bbef3c8",
+        "fileName": "TestEnterCommentInvalidInput.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "f31ef115-4d04-477a-981d-a75b64ebbff2",
+        "fileName": "TestEnterCommentInvalidComplexInput.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "513b2cc1-1ef8-4929-91b7-6280f4425fbc",
+        "fileName": "TestSendCorrespondenceSspMergeValidInput.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "2c105604-35e7-4a44-a2ac-5fe2ce741822",
+        "fileName": "TestSendCorrespondenceSspMergeInvalidInput.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "8f1da4d6-85fe-43bc-9f68-fdb0c526d1e7",
+        "fileName": "TestSendCorrespondenceSspMergeInvalidComplexInput.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "9b85fe64-9126-42be-b9ad-902642cc1723",
+        "fileName": "TestUpdateSspUserFieldValidInput.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "31b622b9-64f3-45e2-9fbb-22263c486238",
+        "fileName": "TestUpdateSspUserFieldInvalidInput.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "3a74ab98-7fc6-4db7-bc44-4b4417ac7140",
+        "fileName": "TestUpdateSspUserFieldInvalidComplexInput.xaml"
       }
     ],
     "modernBehavior": false
