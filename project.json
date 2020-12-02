@@ -35,13 +35,6 @@
       "privateWorkflows": [
         "TestCases/TestLoginToStudentSystem.xaml",
         "TestCases/TestLoginToStudentSystemInvalidEnvironment.xaml",
-        "TestFramework/BlankTestCase.xaml",
-        "TestFramework/InvokeTestCase.xaml",
-        "TestFramework/InvokeTestCategoryTestCases.xaml",
-        "TestFramework/TestRunner.xaml",
-        "TestTemplates/InvokeTestSuiteTemplate.xaml",
-        "TestTemplates/TestCaseTemplate.xaml",
-        "TestTemplates/TestRunner.xaml",
         "ConstantValues.xaml",
         "InvokeLoginTestCategory.xaml",
         "InvokeTestsAllCategories.xaml",
@@ -69,79 +62,79 @@
     },
     "fileInfoCollection": [
       {
-        "editingStatus": "InProgress",
+        "editingStatus": "Publishable",
         "testCaseId": "9e36b3d6-7f2f-44d4-b536-60812b1f5cec",
-        "fileName": "TestLoginToStudentSystem.xaml"
+        "fileName": "TestCases\\TestLoginToStudentSystem.xaml"
       },
       {
-        "editingStatus": "InProgress",
+        "editingStatus": "Publishable",
         "testCaseId": "3e18754c-d1de-4e0e-adf1-e4e289b88cfd",
-        "fileName": "TestLoginToStudenSystemInvalidEnvironment.xaml"
+        "fileName": "TestCases\\TestLoginToStudenSystemInvalidEnvironment.xaml"
       },
       {
-        "editingStatus": "InProgress",
+        "editingStatus": "Publishable",
         "testCaseId": "1b2665e0-f663-4b12-bb97-65a1d439a27e",
-        "fileName": "TestOpenWindowInvalidSearch.xaml"
+        "fileName": "TestCases\\TestOpenWindowInvalidSearch.xaml"
       },
       {
-        "editingStatus": "InProgress",
+        "editingStatus": "Publishable",
         "testCaseId": "9670e353-d377-4aae-b155-753b0cd437f0",
-        "fileName": "TestOpenWindowStudentComments.xaml"
+        "fileName": "TestCases\\TestOpenWindowStudentComments.xaml"
       },
       {
-        "editingStatus": "InProgress",
+        "editingStatus": "Publishable",
         "testCaseId": "84198774-ce3b-497d-a099-8126b5024ecc",
-        "fileName": "TestOpenWindowStudentStudyPlanMerge.xaml"
+        "fileName": "TestCases\\TestOpenWindowStudentStudyPlanMerge.xaml"
       },
       {
-        "editingStatus": "InProgress",
+        "editingStatus": "Publishable",
         "testCaseId": "2ccf0d30-0605-4987-8cda-777a725d00bc",
-        "fileName": "TestOpenWindowStudentStudyPackage.xaml"
+        "fileName": "TestCases\\TestOpenWindowStudentStudyPackage.xaml"
       },
       {
-        "editingStatus": "InProgress",
+        "editingStatus": "Publishable",
         "testCaseId": "33ed7250-e7ff-46c6-b358-45b055bb37a5",
-        "fileName": "TestEnterCommentValidInput.xaml"
+        "fileName": "TestCases\\TestEnterCommentValidInput.xaml"
       },
       {
-        "editingStatus": "InProgress",
+        "editingStatus": "Publishable",
         "testCaseId": "c8daa42b-394b-45aa-aed4-89e13bbef3c8",
-        "fileName": "TestEnterCommentInvalidInput.xaml"
+        "fileName": "TestCases\\TestEnterCommentInvalidInput.xaml"
       },
       {
-        "editingStatus": "InProgress",
+        "editingStatus": "Publishable",
         "testCaseId": "f31ef115-4d04-477a-981d-a75b64ebbff2",
-        "fileName": "TestEnterCommentInvalidComplexInput.xaml"
+        "fileName": "TestCases\\TestEnterCommentInvalidComplexInput.xaml"
       },
       {
-        "editingStatus": "InProgress",
+        "editingStatus": "Publishable",
         "testCaseId": "513b2cc1-1ef8-4929-91b7-6280f4425fbc",
-        "fileName": "TestSendCorrespondenceSspMergeValidInput.xaml"
+        "fileName": "TestCases\\TestSendCorrespondenceSspMergeValidInput.xaml"
       },
       {
-        "editingStatus": "InProgress",
+        "editingStatus": "Publishable",
         "testCaseId": "2c105604-35e7-4a44-a2ac-5fe2ce741822",
-        "fileName": "TestSendCorrespondenceSspMergeInvalidInput.xaml"
+        "fileName": "TestCases\\TestSendCorrespondenceSspMergeInvalidInput.xaml"
       },
       {
-        "editingStatus": "InProgress",
+        "editingStatus": "Publishable",
         "testCaseId": "8f1da4d6-85fe-43bc-9f68-fdb0c526d1e7",
-        "fileName": "TestSendCorrespondenceSspMergeInvalidComplexInput.xaml"
+        "fileName": "TestCases\\TestSendCorrespondenceSspMergeInvalidComplexInput.xaml"
       },
       {
-        "editingStatus": "InProgress",
+        "editingStatus": "Publishable",
         "testCaseId": "9b85fe64-9126-42be-b9ad-902642cc1723",
-        "fileName": "TestUpdateSspUserFieldValidInput.xaml"
+        "fileName": "TestCases\\TestUpdateSspUserFieldValidInput.xaml"
       },
       {
-        "editingStatus": "InProgress",
+        "editingStatus": "Publishable",
         "testCaseId": "31b622b9-64f3-45e2-9fbb-22263c486238",
-        "fileName": "TestUpdateSspUserFieldInvalidInput.xaml"
+        "fileName": "TestCases\\TestUpdateSspUserFieldInvalidInput.xaml"
       },
       {
-        "editingStatus": "InProgress",
+        "editingStatus": "Publishable",
         "testCaseId": "3a74ab98-7fc6-4db7-bc44-4b4417ac7140",
-        "fileName": "TestUpdateSspUserFieldInvalidComplexInput.xaml"
+        "fileName": "TestCases\\TestUpdateSspUserFieldInvalidComplexInput.xaml"
       }
     ],
     "modernBehavior": false
