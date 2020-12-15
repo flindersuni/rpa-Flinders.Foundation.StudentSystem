@@ -62,7 +62,7 @@
       {
         "editingStatus": "Publishable",
         "testCaseId": "3e18754c-d1de-4e0e-adf1-e4e289b88cfd",
-        "fileName": "TestCases\\TestLoginToStudenSystemInvalidEnvironment.xaml"
+        "fileName": "TestCases\\TestLoginToStudentSystemInvalidEnvironment.xaml"
       },
       {
         "editingStatus": "Publishable",

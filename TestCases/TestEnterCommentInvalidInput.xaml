@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="TestEnterCommentValidInput" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1651,7942" sap2010:WorkflowViewState.IdRef="TestEnterCommentValidInput_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:f="clr-namespace:Flinders_Foundation;assembly=Flinders.Foundation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="TestEnterCommentValidInput" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1146,5958" sap2010:WorkflowViewState.IdRef="TestEnterCommentValidInput_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:f="clr-namespace:Flinders_Foundation;assembly=Flinders.Foundation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
       <x:String>System.Activities</x:String>
@@ -72,46 +72,47 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="TestEnterCommentInvalidInput" sap:VirtualizedContainerService.HintSize="618,7777" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Test the EnterStudentComment activity using valid input" DisplayName="TestEnterCommentInvalidInput" sap:VirtualizedContainerService.HintSize="618,5793" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:Boolean" Name="testResult" />
-      <Variable x:TypeArguments="x:String" Name="testMessage" />
-      <Variable x:TypeArguments="x:String" Name="validStudyYear" />
-      <Variable x:TypeArguments="x:String" Name="validStudyPeriod" />
-      <Variable x:TypeArguments="x:String" Name="validStudyPackageVersion" />
-      <Variable x:TypeArguments="x:String" Name="validStudyPackageAttempt" />
-      <Variable x:TypeArguments="ui:Browser" Name="testBrowser" />
-      <Variable x:TypeArguments="x:String" Name="validStudentId" />
-      <Variable x:TypeArguments="x:String" Name="validCommentCode" />
-      <Variable x:TypeArguments="x:String" Name="validStudyPackageCode" />
-      <Variable x:TypeArguments="x:String" Name="testSearchString" />
-      <Variable x:TypeArguments="x:String" Name="testProjectCurrentDirectory" />
-      <Variable x:TypeArguments="x:String" Name="invalidStudyYearValue" />
-      <Variable x:TypeArguments="x:String" Name="invalidStudyYearMessage" />
-      <Variable x:TypeArguments="x:String" Name="invalidStudyPeriodValue" />
-      <Variable x:TypeArguments="x:String" Name="invalidStudyPeriodStart" />
-      <Variable x:TypeArguments="x:String" Name="invalidStudyPeriodEnd" />
-      <Variable x:TypeArguments="x:String" Name="invalidStudentIdValue" />
-      <Variable x:TypeArguments="x:String" Name="invalidStudentIdStart" />
-      <Variable x:TypeArguments="x:String" Name="invalidStudentIdEnd" />
-      <Variable x:TypeArguments="x:String" Name="invalidStudyPackageVersionValue" />
-      <Variable x:TypeArguments="x:String" Name="invalidStudyPackageVersionStart" />
-      <Variable x:TypeArguments="x:String" Name="invalidStudyPackageVersionEnd" />
-      <Variable x:TypeArguments="x:String" Name="invalidStudyPackageAttemptValue" />
-      <Variable x:TypeArguments="x:String" Name="invalidStudyPackageAttemptStart" />
-      <Variable x:TypeArguments="x:String" Name="invalidStudyPackageAttemptEnd" />
+      <Variable x:TypeArguments="x:Boolean" sap2010:Annotation.AnnotationText="The result of running a test" Name="testResult" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The message from the activity under test" Name="testMessage" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="An example valid study year" Name="validStudyYear" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="An example valid study period" Name="validStudyPeriod" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="An example valid study package version number" Name="validStudyPackageVersion" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="An example valid study package attempt number" Name="validStudyPackageAttempt" />
+      <Variable x:TypeArguments="ui:Browser" sap2010:Annotation.AnnotationText="A reference to the browser started as part of this test" Name="testBrowserInstance" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="An example valid student id number" Name="validStudentId" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="An example valid comment code" Name="validCommentCode" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="An example valid study package (topic) code" Name="validStudyPackageCode" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The name of the window in the Student Management Sytem used in the test" Name="testSearchString" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="An example invalid study year value" Name="invalidStudyYearValue" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The message from the activity under test when the study year is invalid" Name="invalidStudyYearMessage" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="An example invaid study period (semester) value" Name="invalidStudyPeriodValue" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The start of the expected message when the study period is invalid" Name="invalidStudyPeriodStart" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The end of the expected message when the study period is invalid" Name="invalidStudyPeriodEnd" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="An example invalid student id number" Name="invalidStudentIdValue" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The start of the message from an activity when the student id number is invalid" Name="invalidStudentIdStart" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The end of the message from an activity when the student id number is invalid" Name="invalidStudentIdEnd" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="An example invalid study package version" Name="invalidStudyPackageVersionValue" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The start of the message from an activity when the study package version number is invalid" Name="invalidStudyPackageVersionStart" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The start of the message from an activity when the study package version number is invalid" Name="invalidStudyPackageVersionEnd" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="An example invalid study package attempt value" Name="invalidStudyPackageAttemptValue" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The start of the message from an activity when the study package attempt number is invalid" Name="invalidStudyPackageAttemptStart" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The end of the message from an activity when the study package attempt number is invalid" Name="invalidStudyPackageAttemptEnd" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="576,1476" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="Setup the test" DisplayName="... Given" sap:VirtualizedContainerService.HintSize="576,1320" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:MultipleAssign sap2010:Annotation.AnnotationText="Initialise the test result, message and browser instance. Also initialise the search string to use when opening a Student System window." DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="334,248" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
@@ -135,7 +136,7 @@
             </ui:AssignOperation>
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
               <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="ui:Browser">[testBrowser]</OutArgument>
+                <OutArgument x:TypeArguments="ui:Browser">[testBrowserInstance]</OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
                 <InArgument x:TypeArguments="ui:Browser">[Nothing]</InArgument>
@@ -350,28 +351,16 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:MultipleAssign>
-      <Assign sap2010:Annotation.AnnotationText="Store the current project level current directory to workaround a bug where the property is incorrectly updated if the invocation of the workflow file throws an exception. " sap:VirtualizedContainerService.HintSize="334,147" sap2010:WorkflowViewState.IdRef="Assign_9">
-        <Assign.To>
-          <OutArgument x:TypeArguments="x:String">[testProjectCurrentDirectory]</OutArgument>
-        </Assign.To>
-        <Assign.Value>
-          <InArgument x:TypeArguments="x:String">[System.Environment.CurrentDirectory]</InArgument>
-        </Assign.Value>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </Assign>
     </Sequence>
-    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="576,5976" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence sap2010:Annotation.AnnotationText="Run the tests" DisplayName="... When" sap:VirtualizedContainerService.HintSize="576,4024" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch sap2010:Annotation.AnnotationText="Undertake testing of the activity. Any unexepected exceptions will be caught here." DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="518,5884" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch sap2010:Annotation.AnnotationText="Undertake testing of the activity. Any unexepected exceptions will be caught here." DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="518,3901" sap2010:WorkflowViewState.IdRef="TryCatch_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsPinned">True</x:Boolean>
@@ -379,7 +368,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <TryCatch.Try>
-          <Sequence sap2010:Annotation.AnnotationText="Undertake the tests for this activity." sap:VirtualizedContainerService.HintSize="480,5626" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence sap2010:Annotation.AnnotationText="Undertake the tests for this activity." sap:VirtualizedContainerService.HintSize="480,3643" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -402,7 +391,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <f:LoginToOktaDashboard ActiveBrowser="[testBrowser]" CredentialName="StudentSystem" Environment="production" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="LoginToOktaDashboard_3" ProcessMessage="[testMessage]" ProcessSuccessful="[testResult]" />
+              <f:LoginToOktaDashboard ActiveBrowser="[testBrowserInstance]" CredentialName="StudentSystem" Environment="production" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="LoginToOktaDashboard_3" ProcessMessage="[testMessage]" ProcessSuccessful="[testResult]" />
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_27" Level="Trace" Message="[&quot;Calling LoginToOktaDashboard: success!&quot;]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -422,7 +411,7 @@
                   <InArgument x:TypeArguments="x:String" x:Key="Environment" />
                   <OutArgument x:TypeArguments="x:Boolean" x:Key="ProcessSuccessful">[testResult]</OutArgument>
                   <OutArgument x:TypeArguments="x:String" x:Key="ProcessMessage">[testMessage]</OutArgument>
-                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[testBrowser]</InOutArgument>
+                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[testBrowserInstance]</InOutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -448,7 +437,7 @@
                 <ui:InvokeWorkflowFile.Arguments>
                   <OutArgument x:TypeArguments="x:Boolean" x:Key="ProcessSuccessful">[testResult]</OutArgument>
                   <OutArgument x:TypeArguments="x:String" x:Key="ProcessMessage">[testMessage]</OutArgument>
-                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[testBrowser]</InOutArgument>
+                  <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[testBrowserInstance]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="SearchString">[testSearchString]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
                 <sap:WorkflowViewStateService.ViewState>
@@ -465,7 +454,7 @@
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
             </Sequence>
-            <TryCatch sap2010:Annotation.AnnotationText="Test the validation of the Study Year." DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,479" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+            <TryCatch sap2010:Annotation.AnnotationText="Test the validation of the Study Year." DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,318" sap2010:WorkflowViewState.IdRef="TryCatch_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -496,7 +485,7 @@
                       <InArgument x:TypeArguments="x:String" x:Key="StudyPeriod" />
                       <InArgument x:TypeArguments="x:String" x:Key="StudyPackageVersion" />
                       <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt" />
-                      <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[testBrowser]</InOutArgument>
+                      <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[testBrowserInstance]</InOutArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="StudentID" />
                       <InArgument x:TypeArguments="x:String" x:Key="CommentCode" />
                       <InArgument x:TypeArguments="x:String" x:Key="StudyPackageCode" />
@@ -538,18 +527,8 @@
                   </ActivityAction>
                 </Catch>
               </TryCatch.Catches>
-              <TryCatch.Finally>
-                <InvokeMethod sap2010:Annotation.AnnotationText="Use the stored current project level current directory to workaround a bug where the property is incorrectly updated if the invocation of the workflow file throws an exception. " DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="238,221" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="SetCurrentDirectory" TargetType="si:Directory">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <InArgument x:TypeArguments="x:String">[testProjectCurrentDirectory]</InArgument>
-                </InvokeMethod>
-              </TryCatch.Finally>
             </TryCatch>
-            <TryCatch sap2010:Annotation.AnnotationText="Test the validation of the Study Period." DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,766" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+            <TryCatch sap2010:Annotation.AnnotationText="Test the validation of the Study Period." DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,318" sap2010:WorkflowViewState.IdRef="TryCatch_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -580,7 +559,7 @@
                       <InArgument x:TypeArguments="x:String" x:Key="StudyPeriod">[invalidStudyPeriodValue]</InArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="StudyPackageVersion" />
                       <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt" />
-                      <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[testBrowser]</InOutArgument>
+                      <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[testBrowserInstance]</InOutArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="StudentID" />
                       <InArgument x:TypeArguments="x:String" x:Key="CommentCode" />
                       <InArgument x:TypeArguments="x:String" x:Key="StudyPackageCode" />
@@ -622,18 +601,8 @@
                   </ActivityAction>
                 </Catch>
               </TryCatch.Catches>
-              <TryCatch.Finally>
-                <InvokeMethod sap2010:Annotation.AnnotationText="Use the stored current project level current directory to workaround a bug where the property is incorrectly updated if the invocation of the workflow file throws an exception. " DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="238,221" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="SetCurrentDirectory" TargetType="si:Directory">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <InArgument x:TypeArguments="x:String">[testProjectCurrentDirectory]</InArgument>
-                </InvokeMethod>
-              </TryCatch.Finally>
             </TryCatch>
-            <TryCatch sap2010:Annotation.AnnotationText="Test the validation of the Student ID." DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,766" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+            <TryCatch sap2010:Annotation.AnnotationText="Test the validation of the Student ID." DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,318" sap2010:WorkflowViewState.IdRef="TryCatch_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -664,7 +633,7 @@
                       <InArgument x:TypeArguments="x:String" x:Key="StudyPeriod">[validStudyPeriod]</InArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="StudyPackageVersion" />
                       <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt" />
-                      <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[testBrowser]</InOutArgument>
+                      <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[testBrowserInstance]</InOutArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="StudentID">[invalidStudentIdValue]</InArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="CommentCode" />
                       <InArgument x:TypeArguments="x:String" x:Key="StudyPackageCode" />
@@ -706,18 +675,8 @@
                   </ActivityAction>
                 </Catch>
               </TryCatch.Catches>
-              <TryCatch.Finally>
-                <InvokeMethod sap2010:Annotation.AnnotationText="Use the stored current project level current directory to workaround a bug where the property is incorrectly updated if the invocation of the workflow file throws an exception. " DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="238,221" sap2010:WorkflowViewState.IdRef="InvokeMethod_4" MethodName="SetCurrentDirectory" TargetType="si:Directory">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <InArgument x:TypeArguments="x:String">[testProjectCurrentDirectory]</InArgument>
-                </InvokeMethod>
-              </TryCatch.Finally>
             </TryCatch>
-            <TryCatch sap2010:Annotation.AnnotationText="Test the validation of the Study Package Version." DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,781" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+            <TryCatch sap2010:Annotation.AnnotationText="Test the validation of the Study Package Version." DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,318" sap2010:WorkflowViewState.IdRef="TryCatch_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -748,7 +707,7 @@
                       <InArgument x:TypeArguments="x:String" x:Key="StudyPeriod">[validStudyPeriod]</InArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="StudyPackageVersion">[invalidStudyPackageVersionValue]</InArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt" />
-                      <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[testBrowser]</InOutArgument>
+                      <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[testBrowserInstance]</InOutArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="StudentID">[validStudentId]</InArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="CommentCode" />
                       <InArgument x:TypeArguments="x:String" x:Key="StudyPackageCode" />
@@ -790,18 +749,8 @@
                   </ActivityAction>
                 </Catch>
               </TryCatch.Catches>
-              <TryCatch.Finally>
-                <InvokeMethod sap2010:Annotation.AnnotationText="Use the stored current project level current directory to workaround a bug where the property is incorrectly updated if the invocation of the workflow file throws an exception. " DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="238,221" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" MethodName="SetCurrentDirectory" TargetType="si:Directory">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <InArgument x:TypeArguments="x:String">[testProjectCurrentDirectory]</InArgument>
-                </InvokeMethod>
-              </TryCatch.Finally>
             </TryCatch>
-            <TryCatch sap2010:Annotation.AnnotationText="Test the validation of the Study Package Attempt." DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,781" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+            <TryCatch sap2010:Annotation.AnnotationText="Test the validation of the Study Package Attempt." DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,318" sap2010:WorkflowViewState.IdRef="TryCatch_6">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -832,7 +781,7 @@
                       <InArgument x:TypeArguments="x:String" x:Key="StudyPeriod">[validStudyPeriod]</InArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="StudyPackageVersion">[validStudyPackageVersion]</InArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="StudyPackageAttempt">[invalidStudyPackageAttemptValue]</InArgument>
-                      <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[testBrowser]</InOutArgument>
+                      <InOutArgument x:TypeArguments="ui:Browser" x:Key="ActiveBrowser">[testBrowserInstance]</InOutArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="StudentID">[validStudentId]</InArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="CommentCode" />
                       <InArgument x:TypeArguments="x:String" x:Key="StudyPackageCode" />
@@ -874,16 +823,6 @@
                   </ActivityAction>
                 </Catch>
               </TryCatch.Catches>
-              <TryCatch.Finally>
-                <InvokeMethod sap2010:Annotation.AnnotationText="Use the stored current project level current directory to workaround a bug where the property is incorrectly updated if the invocation of the workflow file throws an exception. " DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="238,222" sap2010:WorkflowViewState.IdRef="InvokeMethod_5" MethodName="SetCurrentDirectory" TargetType="si:Directory">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <InArgument x:TypeArguments="x:String">[testProjectCurrentDirectory]</InArgument>
-                </InvokeMethod>
-              </TryCatch.Finally>
             </TryCatch>
             <Sequence sap2010:Annotation.AnnotationText="Finalise test results." sap:VirtualizedContainerService.HintSize="438,414" sap2010:WorkflowViewState.IdRef="Sequence_14">
               <sap:WorkflowViewStateService.ViewState>
@@ -1010,11 +949,12 @@
         </TryCatch.Finally>
       </TryCatch>
     </Sequence>
-    <Sequence DisplayName="... Then" sap:VirtualizedContainerService.HintSize="576,153" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence sap2010:Annotation.AnnotationText="Verify the results of the test" DisplayName="... Then" sap:VirtualizedContainerService.HintSize="576,246" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <uta:VerifyExpression KeepScreenshots="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression" Expression="[testResult = True]" sap:VirtualizedContainerService.HintSize="534,61" sap2010:WorkflowViewState.IdRef="VerifyExpression_1" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
@@ -1024,6 +964,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uta:VerifyExpression>
+      <ui:CloseTab Browser="[testBrowserInstance]" ContinueOnError="True" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="534,22" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
     </Sequence>
   </Sequence>
 </Activity>
