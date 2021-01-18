@@ -9,7 +9,7 @@
     <x:Null />
   </mva:VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000160eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjoiaHR0cHM6XC9cL2dpdGh1Yi5jb21cL2ZsaW5kZXJzdW5pXC9ycGEtRmxpbmRlcnMuRm91bmRhdGlvbi5TdHVkZW50U3lzdGVtXC93aWtpXC9Mb2dpblRvU3R1ZGVudFN5c3RlbSIsIjxJbml0aWFsVG9vbHRpcD5rX19CYWNraW5nRmllbGQiOiJMb2dpbiB0byB0aGUgU3R1ZGVudCBTeXN0ZW0gKENpIENsaWVudCkgaW4gdGhlIFRlY2hub2xvZ3lPbmUgQ2xvdWQiLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>1146,8375</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1109,8479</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -64,7 +64,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Login to the Student System (Ci Client) in the TechnologyOne Cloud" DisplayName="LoginToStudentSystem" sap:VirtualizedContainerService.HintSize="1119,8210" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Login to the Student System (Ci Client) in the TechnologyOne Cloud" DisplayName="LoginToStudentSystem" sap:VirtualizedContainerService.HintSize="1119,8314" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The selector for the chiclet in Okta to click on to login to the Student Management System" Name="studentSystemChiclet" />
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="The partial URL to use to login to the Student Management system" Name="studentSystemUrl" />
@@ -72,9 +72,9 @@
       <Variable x:TypeArguments="ui:Browser" sap2010:Annotation.AnnotationText="A reference to the Okta Dashboard browser tab" Name="oktaDashboardTab" />
       <Variable x:TypeArguments="ui:Browser" sap2010:Annotation.AnnotationText="A reference to the Ci Anywhere Workspace browser tab" Name="ciAnywhereWorkspaceTab" />
       <Variable x:TypeArguments="ui:Browser" sap2010:Annotation.AnnotationText="A reference to the Ci Workspace browser tab" Name="ciWorkspaceTab" />
-      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Name of the asset in UiPath Orchestrator that specifies the url to the test instance of the Student Management System" Name="studentSystemTestUrlAsset" />
-      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Name of the asset in UiPath Orchestrator that specifies the url to the development instance of the Student Management System" Name="studentSystemDevelopmentUrlAsset" />
-      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Name of the asset in UiPath Orchestrator that specifies the url to the production instance of the Student Management System" Name="studentSystemProductionUrlAsset" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Name of the asset in Orchestrator that contains the URL to the Student System test environment." Name="studentSystemTestUrlAsset" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Name of the asset in Orchestrator that contains the URL to the Student System development environment." Name="studentSystemDevelopmentUrlAsset" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Name of the asset in Orchestrator that contains the URL to the Student System production environment." Name="studentSystemProductionUrlAsset" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -176,7 +176,7 @@
         </If.Else>
       </If>
     </Sequence>
-    <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Validate the Environment argument, to determine which Okta dashboard chiclet to use to access the Student Management System" DisplayName="Switch" Expression="[Environment]" sap:VirtualizedContainerService.HintSize="1077,1142" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+    <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Validate the Environment argument, to determine which Okta dashboard chiclet to use to access the Student Management System" DisplayName="Switch" Expression="[Environment]" sap:VirtualizedContainerService.HintSize="1077,1246" sap2010:WorkflowViewState.IdRef="Switch`1_1">
       <Switch.Default>
         <f:ThrowConfigurationException sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ThrowConfigurationException_1" Message="[String.Format(&quot;The specified environment '{0}' is invalid&quot;, Environment)]" />
       </Switch.Default>
@@ -213,14 +213,14 @@
           </ui:GetRobotAsset.Value>
         </ui:GetRobotAsset>
       </Sequence>
-      <Sequence x:Key="development" sap2010:Annotation.AnnotationText="Get the URL for the appropriate environment from Orchestrator." sap:VirtualizedContainerService.HintSize="242,156" sap2010:WorkflowViewState.IdRef="Sequence_16">
+      <Sequence x:Key="development" sap2010:Annotation.AnnotationText="Get the URL for the appropriate environment from Orchestrator." sap:VirtualizedContainerService.HintSize="486,260" sap2010:WorkflowViewState.IdRef="Sequence_16">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="[StudentSystemDevelopmentUrlAsset]" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
+        <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="[StudentSystemDevelopmentUrlAsset]" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="444,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
           <ui:GetRobotAsset.Value>
             <OutArgument x:TypeArguments="x:String">[studentSystemUrl]</OutArgument>
           </ui:GetRobotAsset.Value>
@@ -308,7 +308,7 @@
                             </ui:CursorPosition>
                           </ui:Click.CursorPosition>
                           <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b261995c-1dc9-4301-a388-3cfd7a54bfdf" InformativeScreenshot="061bc40859b0c66d9ad143e9bfa1e4b0" Selector="[studentSystemChiclet]" WaitForReady="INTERACTIVE">
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e5f907d5-f2dc-4dc1-838f-2009c82cdcd5" InformativeScreenshot="061bc40859b0c66d9ad143e9bfa1e4b0" Selector="[studentSystemChiclet]" WaitForReady="INTERACTIVE">
                               <ui:Target.TimeoutMS>
                                 <InArgument x:TypeArguments="x:Int32" />
                               </ui:Target.TimeoutMS>
@@ -360,7 +360,7 @@
                             </ui:CursorPosition>
                           </ui:Click.CursorPosition>
                           <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ffad0b0a-7074-4b6f-bfd8-55f8168c15ce" InformativeScreenshot="4425d8db285def615bed98bff94c267a" Selector="[studentSystemChiclet]" WaitForReady="INTERACTIVE">
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6fa6e626-5d2e-4e0e-a90c-a1880d3dee7b" InformativeScreenshot="4425d8db285def615bed98bff94c267a" Selector="[studentSystemChiclet]" WaitForReady="INTERACTIVE">
                               <ui:Target.TimeoutMS>
                                 <InArgument x:TypeArguments="x:Int32" />
                               </ui:Target.TimeoutMS>
@@ -447,7 +447,7 @@
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:UiElementExists sap2010:Annotation.AnnotationText="Check to see if the Student Management link is visible" DisplayName="Element Exists" Exists="[studentManagementElementExists]" sap:VirtualizedContainerService.HintSize="755,137" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                   <ui:UiElementExists.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a5b6f666-a1b9-4546-b6fc-8b8b48d77909" InformativeScreenshot="6a79ad6f2dbbbe40e0e8407791fda1a9" Selector="&lt;html title='*Ci Anywhere Workplace' /&gt;&lt;webctrl aaname='Student Management' tag='A' /&gt;" WaitForReady="INTERACTIVE">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6aa2e57e-4a0e-446a-92ea-de45dfda4f6f" InformativeScreenshot="6a79ad6f2dbbbe40e0e8407791fda1a9" Selector="&lt;html title='*Ci Anywhere Workplace' /&gt;&lt;webctrl aaname='Student Management' tag='A' /&gt;" WaitForReady="INTERACTIVE">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>
@@ -478,7 +478,7 @@
                         </ui:CursorPosition>
                       </ui:Click.CursorPosition>
                       <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6f46a13c-a5d8-479c-9e6a-28e3fcb66f7b" InformativeScreenshot="e15721ea501732fe3135aebeaa8b6d7d" Selector="&lt;webctrl aaname='Student Management' tag='A' /&gt;" WaitForReady="INTERACTIVE">
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="03903fe2-0b92-4461-a1cf-05b9c9ff894a" InformativeScreenshot="e15721ea501732fe3135aebeaa8b6d7d" Selector="&lt;webctrl aaname='Student Management' tag='A' /&gt;" WaitForReady="INTERACTIVE">
                           <ui:Target.TimeoutMS>
                             <InArgument x:TypeArguments="x:Int32" />
                           </ui:Target.TimeoutMS>
@@ -506,7 +506,7 @@
                           </ui:CursorPosition>
                         </ui:Click.CursorPosition>
                         <ui:Click.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a068b03d-5957-4153-84d7-f86430506144" InformativeScreenshot="907b2fb6ea56e7ed303265c63cdfd640" Selector="&lt;webctrl isleaf='1' parentid='2413' tag='A' /&gt;" WaitForReady="INTERACTIVE">
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7ad339d2-e562-4338-b9bf-8eb91678fe62" InformativeScreenshot="907b2fb6ea56e7ed303265c63cdfd640" Selector="&lt;webctrl isleaf='1' parentid='2413' tag='A' /&gt;" WaitForReady="INTERACTIVE">
                             <ui:Target.TimeoutMS>
                               <InArgument x:TypeArguments="x:Int32" />
                             </ui:Target.TimeoutMS>
@@ -525,7 +525,7 @@
                           </ui:CursorPosition>
                         </ui:Click.CursorPosition>
                         <ui:Click.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59f98fd3-fd72-46fa-b0c6-d2249430ee90" InformativeScreenshot="e15721ea501732fe3135aebeaa8b6d7d" Selector="&lt;webctrl aaname='Student Management' parentid='2413' tag='A' /&gt;" WaitForReady="INTERACTIVE">
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="16d876be-4cc4-4402-b544-1aa6454413e1" InformativeScreenshot="e15721ea501732fe3135aebeaa8b6d7d" Selector="&lt;webctrl aaname='Student Management' parentid='2413' tag='A' /&gt;" WaitForReady="INTERACTIVE">
                             <ui:Target.TimeoutMS>
                               <InArgument x:TypeArguments="x:Int32" />
                             </ui:Target.TimeoutMS>
@@ -605,7 +605,7 @@
                       <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJUAAAAVCAYAAABPEqyXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQTSURBVGhD7Zg7S1xREMcXP4FfY8HG0q+w3RbbrIgYFTHYLGJgCxuxEAkx2QRksY2xEwyRYIiQiISEDTZJk8omIZDGOtXJnfOcM2f2vty7Nwu3+BHvPTNz5vE/5y6pLQ/uRIVj+9X5xLF09YutpSwqUREWzr+zg8vK3tkH9j0mjU0auDrKpBIVAze4rHz881c8Pr9m1wBYAxtuLStcDWVSiYqBG1xWQDDAk7efgjV4Z9bpWla4/MumEhXD4sUPdoBZMKIBnl58tu+fvfvirWGfPHD5lw0rqkazJmo1RPM4sLkv7c5sIXHjUHXNirlTfn15cCzqul5ugFl4/n7giQeeX1x+Dd5xvmlZePONqaF8iKhuxNxMKKJGZ1e0zXOvLWoz6DknIxdVirzMYZnu3LDrkNP0jMqLG2JW4IbCIsLg2ysvXA1jI6bfvqhOd8V07EmOmHBRSdHU2qIRrKsDZUS1eHnLDjIr+PeTgfudlQc//zGTWlT6+q/38DsH/1kEHyJEKU5/cJ5vlEyDEZUUmo2PY6qB13v6JiXrfF4urkGKqnOsY5F13SSclxze0b6Yb7VEy7C2L7p2sCdiY60lVg/Uv8pmXWwcucGD/8OVFdHv9yUrj/rIX7G55cff3FkXra1Dz6YL74xNtMfcy1ubO67L9EDWJ+dg3oUHqah+B7+pzEbDPhGhQpNFJZPAPhCDJCP3DWxMDFMcKYzae3mFqObfhHvRNSSq7k4XiUSLxw7ciMkJSQoECc/4w/9J7Z29Jv6h/fZBVwkH2UhBERssEjVk1xsrFluj7t+Y+s3+UMcKD8QVBEsSFbMeIZO0RXI25rS4v71c6G2YQVTBfigWFtXS1U87WAsM3Q5YiWp+58Sty5utKzbNM8XzPxSr9GaLkEKzouJsTlBvaC8BqI/cxl5/iu03LyoDOJIbJbOoaDIaPDy7DwMu0muSjIv2jSnS4ETl/41z8fKKgCH6nx58s5jPHxq4FJUvgqH+QwQo7Y2ozM2FmJqaQr3xa1EwM8H9Kbjf8aICEoMliEoWkEZUoY1j9KJyOUJsF8cXlTrx9NOTXlRwyyARUX8pmDSicjYPrn/r3Bz5RFVcv5NFpRtrNwiCDSnAJE2T0UAj7PCG2DgKEJWJ2fT9PFFZ4bkYct3aJ+SV5D+k7my9ySGqxJijFBU42lOqkE3AjcGCkagE6OnGNrJJOAEZA/toGxq3mXJ48BzkFRI0X+eB34WiQnvIZ1xLGlEl+9+vNzlEFVFkv8lNZQSBoY66EV7h2C+ylwmQhI2P9vOGp1GFOoJbJa5INi8fvvl+fTQvdah0XBiKN5zkvOL9gfv2Jp+ogKL6neLzVzFuQpFMFpWo/jdiPiuTQiWqkqGfoEkXFFCJqmLkVKKqGDF34h8hrn0PFRAZ5QAAAABJRU5ErkJggg==" />
                     </ui:WaitImageAppear.Image>
                     <ui:WaitImageAppear.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="d1d133ea-dbdd-47be-a2a9-87e5850261f5" TimeoutMS="60000" WaitForReady="INTERACTIVE" />
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="fd40ca8b-bf47-499a-974f-20edcc76575e" TimeoutMS="60000" WaitForReady="INTERACTIVE" />
                     </ui:WaitImageAppear.Target>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
