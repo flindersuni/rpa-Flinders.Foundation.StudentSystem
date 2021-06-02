@@ -1,3 +1,0 @@
-# Ensure JSON and XAML files are treated as text
-*.json diff
-*.xaml diff
