@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ClickRetrieveButton" mva:VisualBasic.Settings="{x:Null}" sap2010:Annotation.AnnotationText="UPTF000001DCeyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjoiaHR0cHM6XC9cL2dpdGh1Yi5jb21cL2ZsaW5kZXJzdW5pXC9ycGEtRmxpbmRlcnMuRm91bmRhdGlvbi5TdHVkZW50U3lzdGVtXC93aWtpXC9DbGlja1JldHJpZXZlQnV0dG9uIiwiPEluaXRpYWxUb29sdGlwPmtfX0JhY2tpbmdGaWVsZCI6IkNsaWNrIHRoZSBSZXRyaWV2ZSBidXR0b24sIHRvIHJldHJpZXZlIGEgcmVjb3JkIGFmdGVyIGVudGVyaW5nIHRoZSBhcHBsaWNhYmxlIGNyaXRlcmlhLiBcdTAwMGFcdTAwMGFCb3RoIG9mIHRoZSBrbm93biBjb2xvdXJzIGZvciB0aGUgcmV0cmlldmUgYnV0dG9uIGFyZSB1c2VkLiIsIjxWZXJzaW9uPmtfX0JhY2tpbmdGaWVsZCI6MX0=" sap:VirtualizedContainerService.HintSize="500,1437" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:f="clr-namespace:Flinders_Foundation;assembly=Flinders.Foundation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ClickRetrieveButton" mva:VisualBasic.Settings="{x:Null}" sap2010:Annotation.AnnotationText="UPTF000001DCeyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjoiaHR0cHM6XC9cL2dpdGh1Yi5jb21cL2ZsaW5kZXJzdW5pXC9ycGEtRmxpbmRlcnMuRm91bmRhdGlvbi5TdHVkZW50U3lzdGVtXC93aWtpXC9DbGlja1JldHJpZXZlQnV0dG9uIiwiPEluaXRpYWxUb29sdGlwPmtfX0JhY2tpbmdGaWVsZCI6IkNsaWNrIHRoZSBSZXRyaWV2ZSBidXR0b24sIHRvIHJldHJpZXZlIGEgcmVjb3JkIGFmdGVyIGVudGVyaW5nIHRoZSBhcHBsaWNhYmxlIGNyaXRlcmlhLiBcdTAwMGFcdTAwMGFCb3RoIG9mIHRoZSBrbm93biBjb2xvdXJzIGZvciB0aGUgcmV0cmlldmUgYnV0dG9uIGFyZSB1c2VkLiIsIjxWZXJzaW9uPmtfX0JhY2tpbmdGaWVsZCI6MX0=" sap:VirtualizedContainerService.HintSize="768,1142.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:f="clr-namespace:Flinders_Foundation;assembly=Flinders.Foundation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -44,9 +44,17 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Click the Retrieve button, to retrieve a record after entering the applicable criteria. &#xA;&#xA;Both of the known colours for the retrieve button are used." DisplayName="ClickRetrieveButton" sap:VirtualizedContainerService.HintSize="460,1357" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Click the Retrieve button, to retrieve a record after entering the applicable criteria. &#xA;&#xA;Both of the known colours for the retrieve button are used." DisplayName="ClickRetrieveButton" sap:VirtualizedContainerService.HintSize="478.4,1077.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="The default delay value for interacting with UI elements" Default="10000" Name="defaultDelayValue" />
     </Sequence.Variables>
@@ -56,22 +64,22 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="438,112" sap2010:WorkflowViewState.IdRef="Comment_1" Text="There is no unit test for this activity. As it is a core component other unit tests that interact with the Student Management System will highlight issues with it." />
-    <TryCatch sap2010:Annotation.AnnotationText="Try to click the retrieve button. Trying first one known colour, and then the other. " DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,1009" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="436.8,113.6" sap2010:WorkflowViewState.IdRef="Comment_1" Text="There is no unit test for this activity. As it is a core component other unit tests that interact with the Student Management System will highlight issues with it." />
+    <TryCatch sap2010:Annotation.AnnotationText="Try to click the retrieve button. Trying first one known colour, and then the other. " DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,771.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap2010:Annotation.AnnotationText="Try to click the retrieve button with a green arrow." sap:VirtualizedContainerService.HintSize="336,460" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence sap2010:Annotation.AnnotationText="Try to click the retrieve button with a green arrow." sap:VirtualizedContainerService.HintSize="375.2,472.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" sap2010:Annotation.AnnotationText="Click the retrieve button to retrieve the student record. A DelayAfter attribute is set to allow an potential error message to stop flashing before we check for it. " ClickType="CLICK_SINGLE" DelayMS="[Cint(defaultDelayValue * 0.3)]" DisplayName="Click Image" sap:VirtualizedContainerService.HintSize="314,178" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" sap2010:Annotation.AnnotationText="Click the retrieve button to retrieve the student record. A DelayAfter attribute is set to allow an potential error message to stop flashing before we check for it. " ClickType="CLICK_SINGLE" DelayMS="[Cint(defaultDelayValue * 0.1)]" DisplayName="Click Image 'Retrieve button'" sap:VirtualizedContainerService.HintSize="333.6,216" sap2010:WorkflowViewState.IdRef="ClickImage_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
             <ui:ClickImage.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -83,10 +91,10 @@
               </ui:CursorPosition>
             </ui:ClickImage.CursorPosition>
             <ui:ClickImage.Image>
-              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="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" />
             </ui:ClickImage.Image>
             <ui:ClickImage.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="[Cint(defaultDelayValue * 0.25)]" WaitForReady="INTERACTIVE" />
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="74cd5574-2038-413b-a2c7-414ee81c36ec" TimeoutMS="[Cint(defaultDelayValue * 0.25)]" WaitForReady="INTERACTIVE" />
             </ui:ClickImage.Target>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -94,11 +102,11 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:ClickImage>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;The retrieve button with the green arrow was clicked&quot;]" />
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;The retrieve button with the blue arrow was clicked&quot;]" />
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="424,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -109,22 +117,22 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence sap2010:Annotation.AnnotationText="Log the underlying exception and throw a BusinessRule exception." sap:VirtualizedContainerService.HintSize="336,319" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence sap2010:Annotation.AnnotationText="Log the underlying exception and throw a BusinessRule exception." sap:VirtualizedContainerService.HintSize="375.2,350.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[exception]" />
-              <f:ThrowBusinessRuleException sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="ThrowBusinessRuleException_1" Message="The Retrieve button could not be clicked. Check the screen capture for more information" TakeScreenshot="True" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[exception]" />
+              <f:ThrowBusinessRuleException sap:VirtualizedContainerService.HintSize="333.6,80.8" sap2010:WorkflowViewState.IdRef="ThrowBusinessRuleException_1" Message="The Retrieve button could not be clicked. Check the screen capture for more information" TakeScreenshot="True" />
             </Sequence>
           </ActivityAction>
         </Catch>
-        <Catch x:TypeArguments="ui:ImageOperationException" sap:VirtualizedContainerService.HintSize="424,783" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+        <Catch x:TypeArguments="ui:ImageOperationException" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -132,21 +140,21 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:ImageOperationException" Name="exception" />
             </ActivityAction.Argument>
-            <TryCatch sap2010:Annotation.AnnotationText="Try to click the Retrieve button with a blue arrow" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="418,714" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+            <TryCatch sap2010:Annotation.AnnotationText="Try to click the Retrieve button with a blue arrow" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,735.2" sap2010:WorkflowViewState.IdRef="TryCatch_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
-                <Sequence sap2010:Annotation.AnnotationText="Try to click the second version of the retrieve button" sap:VirtualizedContainerService.HintSize="336,460" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence sap2010:Annotation.AnnotationText="Try to click the second version of the retrieve button" sap:VirtualizedContainerService.HintSize="375.2,472.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" sap2010:Annotation.AnnotationText="Click the retrieve button to retrieve the student record. A DelayAfter attribute is set to allow an potential error message to stop flashing before we check for it. " ClickType="CLICK_SINGLE" DelayMS="[Cint(defaultDelayValue * 0.3)]" DisplayName="Click Image 'Retrieve button'" sap:VirtualizedContainerService.HintSize="314,178" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                  <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" sap2010:Annotation.AnnotationText="Click the retrieve button to retrieve the student record. A DelayAfter attribute is set to allow an potential error message to stop flashing before we check for it. " ClickType="CLICK_SINGLE" DelayMS="[Cint(defaultDelayValue * 0.1)]" DisplayName="Click Image" sap:VirtualizedContainerService.HintSize="333.6,216" sap2010:WorkflowViewState.IdRef="ClickImage_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                     <ui:ClickImage.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -158,10 +166,10 @@
                       </ui:CursorPosition>
                     </ui:ClickImage.CursorPosition>
                     <ui:ClickImage.Image>
-                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAAAgCAYAAAC1v+5NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAR8SURBVGhD7Ze/i9tIFMf1r1x5cE26S5sykGbLbcMVi7kiuDRpFpHicHWIFCGkCGgLg7cwyMWBtzHIxYJcLMiFQS5cTOFiChcqtnj3ffNDO5JH6+UuKdYrwQePZkZP0kdPb+RA7kvqOE4gJRodR+lEPZFA7tDoOApESTQ6jhEIIelHEgSht/+581NEnaKsQGzRaJBf/VLDN8fFyqn4LdGyPHOfKweiWExxc07u1iarEvO7OOTEZAXFRpJFSzozeiIHLculktTEkeTGfu5AlEBDPCLpQZbdWEK2Lmm8KCmaSOp/kzT8PqPB1UOW2binQlCs0QAsSm91QWKXULrKKJ4XNJwILQVyxvMS/SXGicp7IrHJKBxpUTbmKdEqqv/dZApLQeZkG0iReobdWJAlX6U0ns5ULLHoUzF9q7PUxH/uBPkKkpimKEiym9wD7LIoBS+ZdzGJ24Eq/Pn1KwW3uU9uYioFpPGYjf9fuI6p9yX3j80T6r0LKbz2jP0EDkXdD1HlY4qmWhRnEpNviQq8ZmKTq2zhrJGrSAmhe4GZpZqvf0tV78Ti/4hKKYSI3jfE3vnGAa5LnXHrGfvBBPkdGowVtR9Shmzh+sOZVJOE/zzF9A2VuzFfnqFogFcUWaUk2dguo5jOWMBFpH7DkaDZZ91WXKaYl1N0YfaZv7LD4z6bjMLxHPcwhqDxJdoXCc3UuU1MM+ab/xgQVaABrKgdVjQjqoQHzgwes3AW1QSpbLKS8L8Ir10xea1j+jA33EftI9Q2WibYjynBg+AYEY+NeG5KQzuPt/m4fpxIqY/9aImrmXJMTwx1rq+U8BJ/o8UOFzaW75ztBNmyIKYStR1oUcucxPw9OnR661/btmJYVK7Zo73Hkxn9quK1YkSpGxR46h/NU3X5u8BYSgO0WQzPax6XmRvn/fTT8Rj5F86gMaW46vb5iOu7ZuAVlfyT6KJ8N0SHkz2uGEVWgzPJDe7l6uGG5aYwohJChPoms7qoxnEZrrEuyhcDKzbH/5BQ9CdeW6zkfD9J6zml/5pBkN2iASpR6z7Fk5laxVSW1OQYKSWeiwKFfA/QFnMu8Ocq1qM0b7jaR/0zNz+44rk6G3pHRA15f9IW42He2buI4g0utRbLM7+FQ1GrHs0mXIx72OF64JGjSCrksqezyQncinvDa90Xu6/CZaZyWK4ziv4wfZ/Sw+OmCb3HvhKFfX8Mjo84XMQ/4GGiT6DetJ9Tj/kI0kVBTCXK3LRa2TiLmmJkjCzCGCO/krw9x1N5rWI8Gfz94Y0vzPYVpmarTYqqX+ipuq953B2yzdlvi1HFKVGrnL7H5jc5ECXnZ+oTQGcRxCgpkAMp+le3eR4Xbq5lbsBTJUjnOTFWlMDngFyHJnsgR+JzwIqS+BhFLVKClqE67qVQF4XirYs4v1ZY8ZQcsA1Rs0wGvTBBlmB2kxPDonjVkrf4drKZxIKqDBqqeS+VmigWQgKZtMGqZwXhW8o94KVSE8UrGP+FEVjFOkF1KlFMJ6idmqiOdjpRT6QT9SRy+heRPfJH1JpXQgAAAABJRU5ErkJggg==" />
+                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
                     </ui:ClickImage.Image>
                     <ui:ClickImage.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="[Cint(defaultDelayValue * 0.25)]" WaitForReady="INTERACTIVE" />
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="8d38502b-223f-4707-9d56-4c885e6d52db" TimeoutMS="[Cint(defaultDelayValue * 0.15)]" WaitForReady="INTERACTIVE" />
                     </ui:ClickImage.Target>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -169,11 +177,11 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:ClickImage>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;The retrieve button with the blue arrow was clicked&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;The retrieve button with the green arrow was clicked&quot;]" />
                 </Sequence>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -184,15 +192,15 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                     </ActivityAction.Argument>
-                    <Sequence sap2010:Annotation.AnnotationText="Log the underlying exception and throw a BusinessRule exception." sap:VirtualizedContainerService.HintSize="336,319" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <Sequence sap2010:Annotation.AnnotationText="Log the underlying exception and throw a BusinessRule exception." sap:VirtualizedContainerService.HintSize="376,292" sap2010:WorkflowViewState.IdRef="Sequence_5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="314,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Error" Message="[exception]" />
-                      <f:ThrowBusinessRuleException sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="ThrowBusinessRuleException_2" Message="The Retrieve button could not be clicked. Check the screen capture for more information" TakeScreenshot="True" />
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Error" Message="[exception.ToString]" />
+                      <f:ThrowBusinessRuleException sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="ThrowBusinessRuleException_2" Message="The Retrieve button could not be clicked. Check the screen capture for more information" TakeScreenshot="True" />
                     </Sequence>
                   </ActivityAction>
                 </Catch>
